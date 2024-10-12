@@ -2,11 +2,12 @@
   --gradient: linear-gradient(
     45deg,
     #ff9ca1,
-    #7a74c5,
-    #4d3f6d,
-    #27dbb1,
-    #ffdc18,
-    #ff3706
+    #ff6aa3,
+    #8078f0,
+    hsl(252, 60%, 52%),
+    #3651da,
+    #ff18f7,
+    #ff8f06
   );
 }
 
