@@ -1,9 +1,10 @@
 :root {
-  --gradient: linear-gradient(
+  --gradient: repeating-linear-gradient(
     45deg,
     #ffece8,
     #ff9ca1,
-    #ff6aa3,
+    #f7745f,
+    #fe577b,
     #8078f0,
     #4d3f6d
   );
