@@ -86,7 +86,7 @@ html {
   --background-color-footer: #ffece8;
   --alt-background-color: #000000;
   --background-color-holding-page: rgba(82, 0, 255, 0.6);
-  --h1-color: rgb(99, 85, 152);
+  --h1-color: #ffece8;
   --h2-color: #ff9ca1;
   --h3-color: #ff9ca1;
   --h4-color: #ff9ca1;
@@ -216,7 +216,7 @@ em {
 
 .overlay-title {
   font-size: 2.875rem;
-  color: var(--h1-color);
+  color: var(--overlay-title-color);
 }
 
 .overlay-description {
