@@ -78,7 +78,7 @@ html {
 /* TODO: Adjust the variables below, create new variables as desired, and delete the variables that you do not want to use. */
 
 :root {
-  --body-typeface: "Inter", sans-serif;
+  --body-typeface: "Caudex", sans-serif;
   --heading-typeface: "Caudex", serif;
   --project-title-typeface: "Caudex", serif;
   --background-color: #ffece8;
