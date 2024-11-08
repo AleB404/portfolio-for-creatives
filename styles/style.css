@@ -86,28 +86,28 @@ html {
   --background-color-footer: #ffece8;
   --alt-background-color: #000000;
   --background-color-holding-page: rgba(82, 0, 255, 0.6);
-  --h1-color: #ffece8;
-  --h2-color: #ff9ca1;
-  --h3-color: #ff9ca1;
-  --h4-color: #ff9ca1;
-  --h5-color: #ff9ca1;
-  --h6-color: #ff9ca1;
+  --h1-color: rgb(99, 85, 152);
+  --h2-color: rgb(99, 85, 152);
+  --h3-color: rgb(99, 85, 152);
+  --h4-color: rgb(99, 85, 152);
+  --h5-color: rgb(99, 85, 152);
+  --h6-color: rgb(99, 85, 152);
   --primary-text-color: #222;
   --holding-page-title-color: #ebedf0;
-  --accent-color: #ff9ca1;
-  --overlay-color: #ff9ca1;
+  --accent-color: rgb(99, 85, 152);
+  --overlay-color: rgb(99, 85, 152);
   --overlay-title-color: #ffffff;
   --overlay-description-color: #ffffff;
-  --hyperlink-color: #ff9ca1;
+  --hyperlink-color: rgb(99, 85, 152);
   --hyperlink-alternate-color: orangered;
   --hover-color: #111;
-  --visited-color: #ff9ca1;
-  --project-title-color: #ff9ca1;
+  --visited-color: rgb(99, 85, 152);
+  --project-title-color: rgb(99, 85, 152);
   --project-sidebar-background-color: transparent;
-  --project-sidebar-text-color: #ff9ca1;
+  --project-sidebar-text-color: rgb(99, 85, 152);
   --heart-color: darkred;
   --holding-page-footer-color: #ffece8;
-  --text-selection-background-color: #ff9ca1;
+  --text-selection-background-color: rgb(99, 85, 152);
   --linear-gradient-color-1: #ff057c;
   --linear-gradient-color-2: #8d0b93;
   --linear-gradient-color-3: #321575;
@@ -155,6 +155,7 @@ h1 {
   font-family: var(--heading-typeface);
   margin-bottom: 1rem;
   color: var(--h1-color);
+  font-weight: 900;
 }
 
 h2 {
