@@ -639,7 +639,7 @@ a.nav-link-primary:hover {
   align-items: center;
   justify-content: center;
   padding: var(--padding-small);
-  text-align: center; /* Keeps text centered */
+  text-align: left; /* Keeps text centered */
 }
 
 .hero-icon {
