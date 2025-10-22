@@ -377,6 +377,7 @@ h1 {
   font-size: 2.2rem;
   font-family: var(--font-family-heading);
   line-height: 1.2;
+  font-weight: 600;
   margin-bottom: 1rem;
   color: var(--h1-color);
 }
@@ -447,6 +448,7 @@ em {
   max-width: 40ch; /* Optimal line length for readability (~40 characters) */
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: auto; /* Horizontally centers the text in its container */
+  font-size: 3.625rem;
 }
 
 /* Large project title — appears on individual project pages */
@@ -617,6 +619,10 @@ a.nav-link-primary:hover {
   align-items: center;
 }
 
+.nav-branding-group-wrapper {
+  padding: var(--padding-small);
+}
+
 .nav-branding-group {
   display: flex;
   flex-direction: row;
@@ -631,7 +637,6 @@ a.nav-link-primary:hover {
 }
 
 .hero-headline-wrapper {
-  width: 100%;
   display: flex;
   flex-direction: column;
   flex: 1;
