@@ -635,7 +635,7 @@ a.nav-link-primary:hover {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 3rem;
+  gap: 1rem;
   align-items: center;
   justify-content: center;
   padding: var(--padding-small);
