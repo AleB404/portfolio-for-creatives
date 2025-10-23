@@ -608,7 +608,7 @@ a.nav-link-primary:hover {
   flex-direction: column;
 }
 .hero-header {
-  min-height: 6rem; /* Space reserved for logo + nav */
+  min-height: 4rem; /* Space reserved for logo + nav */
 }
 
 .nav-branding {
