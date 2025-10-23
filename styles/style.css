@@ -448,7 +448,7 @@ em {
   max-width: 40ch; /* Optimal line length for readability (~40 characters) */
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: auto; /* Horizontally centers the text in its container */
-  font-size: 3.625rem;
+  font-size: 5.625rem;
 }
 
 /* Large project title — appears on individual project pages */
@@ -1338,7 +1338,7 @@ to keep your styles reusable and consistent.
   }
 
   .hero-headline-wrapper {
-    flex-direction: row;
+    flex-direction: column;
     padding-top: var(--padding-jumbo);
     padding-bottom: var(--padding-jumbo);
     padding-left: var(--padding-ultra);
