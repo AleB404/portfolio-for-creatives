@@ -114,9 +114,9 @@
   --color-highlight: lemonchiffon;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
-  --color-bg: #fcf9f0;
-  --color-bg-about: #fcf9f0;
-  --color-bg-footer: #fcf9f0;
+  --color-bg: #000000;
+  --color-bg-about: #000000;
+  --color-bg-footer: #000000;
   --color-bg-holding-page: rgba(82, 0, 255, 0.6);
   /* Headings */
   --h1-color: #ff9ca1;
@@ -133,11 +133,11 @@
   --color-text-project-title: #ff9ca1;
   --color-text-work-grid-title: #ffffff;
   /* Link States */
-  --color-link: #4b406a;
+  --color-link: #ffffff;
   --color-link-hover: #ba9ded;
   --color-link-visited: #4b406a;
   /* Navigation */
-  --color-nav-link: #4b406a;
+  --color-nav-link: #ffffff;
   --color-nav-link-hover: #ba9ded;
   --color-nav-arrow: #5200ff;
   --color-nav-arrow-hover: #000;
@@ -1344,7 +1344,7 @@ to keep your styles reusable and consistent.
     padding-bottom: var(--padding-jumbo);
     padding-left: var(--padding-ultra);
     padding-right: var(--padding-ultra);
-    width: 70%;
+    width: 60%;
   }
   .error-headline-wrapper {
     padding-top: var(--padding-small);
