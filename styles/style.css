@@ -1329,9 +1329,18 @@ to keep your styles reusable and consistent.
   .padding-jumbo {
     padding: var(--padding-jumbo);
   }
+
   .nav-branding-logo {
     width: 5rem;
     /* TODO: Adjust the width of the logo on large devices here. */
+  }
+
+  .nav-branding {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--padding-jumbo);
+    align-items: center;
   }
 
   .hero {
@@ -1342,9 +1351,9 @@ to keep your styles reusable and consistent.
     flex-direction: column;
     padding-top: var(--padding-jumbo);
     padding-bottom: var(--padding-jumbo);
-    padding-left: var(--padding-ultra);
-    padding-right: var(--padding-ultra);
-    width: 60%;
+    padding-left: var(--padding-jumbo);
+    padding-right: var(--padding-jumbo);
+    width: 70%;
   }
   .error-headline-wrapper {
     padding-top: var(--padding-small);
@@ -1380,7 +1389,7 @@ to keep your styles reusable and consistent.
   .portfolio,
   .project-wrapper,
   .work-sidebar-wrapper {
-    padding: var(--padding-small);
+    padding: var(--padding-jumbo);
   }
 
   /* Project Page Flex Direction on Large Devices */
