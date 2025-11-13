@@ -180,6 +180,29 @@
   --padding-ultra: 8rem; /* Full-bleed spacing: edge-to-edge layouts, super-sized headers */
 }
 
+/* Cursor base */
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  z-index: 9999;
+  background: url("../assets/cursor/lilyrosen-cursor.svg") no-repeat center
+    center;
+  background-size: contain;
+
+  transition: transform 0.5s ease, background-image 0s;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* On hover, swap image + scale */
+#custom-cursor.hover {
+  background-image: url("../assets/cursor/lilyrosen-cursor-hover.svg");
+  transform: translate(-50%, -50%) scale(1.4);
+}
+
 /* ======================
    #BASE STYLES
    ====================== */
@@ -201,7 +224,7 @@
 html {
   box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
-  cursor: url("../assets/temp/up-cursor.png"), auto !important; /* Custom cursor (change the URL below to use your own) */
+  cursor: none !important; /* Custom cursor (change the URL below to use your own) */
 
   /* TODO: Replace the URL above to add a custom cursor. 
      If you want to use the default browser cursor, just delete this line. */
@@ -1533,6 +1556,12 @@ to keep your styles reusable and consistent.
 
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  #custom-cursor {
+    display: none !important;
   }
 }
 
