@@ -106,7 +106,7 @@
   --font-family-heading: "Noto Sans", sans-serif;
   --font-family-project-title: "Noto Sans", sans-serif;
   /* Core Colours */
-  --color-text-primary: #222;
+  --color-text-primary: #ffffff;
   --color-text-secondary: #333;
   --color-accent-primary: #ff9ca1;
   --color-accent-secondary: #ff057c;
@@ -128,8 +128,8 @@
   /* Special Text Colours */
   --color-text-holding-title: #ebedf0;
   --color-text-project-category: #ffffff;
-  --color-text-project-description: #222;
-  --color-text-project-sidebar: #222;
+  --color-text-project-description: #ffffff;
+  --color-text-project-sidebar: #ffffff;
   --color-text-project-title: #ff9ca1;
   --color-text-work-grid-title: #ffffff;
   /* Link States */
@@ -139,13 +139,13 @@
   /* Navigation */
   --color-nav-link: #ffffff;
   --color-nav-link-hover: #ba9ded;
-  --color-nav-arrow: #5200ff;
+  --color-nav-arrow: #ba9ded;
   --color-nav-arrow-hover: #000;
   --color-nav-arrow-stroke: #5200ff;
   --color-nav-arrow-stroke-hover: #000;
   /* Components */
   --color-bg-full-width: #f5f5f5;
-  --color-bg-project-description: #f5f5f5;
+  --color-bg-project-description: #000000;
   --color-bg-sidebar-project: orangered;
   --color-bg-sidebar-work: lemonchiffon;
   --color-gradient-hero: linear-gradient(90deg, #ffff);
@@ -741,6 +741,28 @@ a.nav-link-primary:hover {
 .section-item {
   padding: var(--padding-small);
   margin: 1rem;
+}
+
+/* Tags / categories */
+.project-content .tags {
+  opacity: 0;
+}
+
+.tag {
+  display: inline-block; /* shrink to fit text */
+  border: 1px solid var(--color-nav-link-hover);
+  color: var(--color-nav-link-hover);
+  padding: 0.5rem 1rem; /* adjust as needed */
+  border-radius: var(--radius-lg);
+  white-space: nowrap; /* optional: prevent text wrap inside tag */
+  text-transform: uppercase;
+}
+
+.tags {
+  display: flex;
+  flex-direction: column; /* allow multiple rows of tags */
+  gap: 1rem; /* spacing between tags */
+  align-items: flex-start;
 }
 
 /* 
