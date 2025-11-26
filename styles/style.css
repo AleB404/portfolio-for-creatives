@@ -32,6 +32,9 @@
 /* TODO: Replace these Google Fonts with the ones you want to use on your site. */
 /* Remember, the more fonts you load, the longer it can take for your page to load. */
 
+/* Asap (for headers or special text) */
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap");
+
 /* Noto Sans (for headers or special text) */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
@@ -102,15 +105,15 @@
 
 :root {
   /* Typography */
-  --font-family-body: "Inter", sans-serif;
-  --font-family-heading: "Noto Sans", sans-serif;
-  --font-family-project-title: "Noto Sans", sans-serif;
+  --font-family-body: "Noto Sans", sans-serif;
+  --font-family-heading: "Asap", sans-serif;
+  --font-family-project-title: "Asap", sans-serif;
   /* Core Colours */
   --color-text-primary: #ffffff;
   --color-text-secondary: #333;
-  --color-accent-primary: #ff9ca1;
+  --color-accent-primary: #ff909a;
   --color-accent-secondary: #ff057c;
-  --color-overlay-primary: #ff9ca1;
+  --color-overlay-primary: #ff909a;
   --color-highlight: lemonchiffon;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
@@ -119,18 +122,18 @@
   --color-bg-footer: #000000;
   --color-bg-holding-page: rgba(82, 0, 255, 0.6);
   /* Headings */
-  --h1-color: #ff9ca1;
-  --h2-color: #ff9ca1;
-  --h3-color: #ff9ca1;
-  --h4-color: #ff9ca1;
-  --h5-color: #ff9ca1;
-  --h6-color: #ff9ca1;
+  --h1-color: #ff909a;
+  --h2-color: #ff909a;
+  --h3-color: #ff909a;
+  --h4-color: #ff909a;
+  --h5-color: #ff909a;
+  --h6-color: #ff909a;
   /* Special Text Colours */
   --color-text-holding-title: #ebedf0;
   --color-text-project-category: #ffffff;
   --color-text-project-description: #ffffff;
   --color-text-project-sidebar: #ffffff;
-  --color-text-project-title: #ff9ca1;
+  --color-text-project-title: #ff909a;
   --color-text-work-grid-title: #ffffff;
   /* Link States */
   --color-link: #ffffff;
@@ -476,10 +479,21 @@ em {
 
 /* Large project title — appears on individual project pages */
 .project-title {
+  margin-bottom: 1rem;
+}
+
+/* Only the H2 gets large title styling */
+.project-title h2 {
   font-size: 3.625rem;
   font-family: var(--font-family-project-title);
   color: var(--color-text-project-title);
-  margin-bottom: 1rem;
+  font-weight: 700; /* ← BOLD */
+}
+/* Normal paragraph styling */
+.project-title p {
+  font-size: 1rem; /* adjust as preferred */
+  color: var(var(--color-text-project-description));
+  line-height: 1.5;
 }
 
 /* Project description text — pairs with the project title */
@@ -520,6 +534,15 @@ em {
   color: var(--color-text-project-category);
 }
 
+.project-subtitle {
+  font-size: 1.325rem;
+  line-height: 1.3;
+  font-weight: 400; /* ← REGULAR */
+  font-style: italic; /* ← ITALIC */
+  color: var(--color-text-project-title);
+  margin-bottom: 0.75rem;
+  opacity: 0.9;
+}
 /*
 
 ██   ██ ██    ██ ██████  ███████ ██████  ██      ██ ███    ██ ██   ██ ███████ 
