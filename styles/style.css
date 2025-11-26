@@ -760,9 +760,13 @@ a.nav-link-primary:hover {
 
 .tags {
   display: flex;
-  flex-direction: column; /* allow multiple rows of tags */
-  gap: 1rem; /* spacing between tags */
-  align-items: flex-start;
+  flex-wrap: wrap; /* allows multi-row layout */
+  gap: 0.75rem; /* spacing between tags */
+  max-width: 700px; /* optional: limit container width */
+}
+
+.top-padding-small {
+  padding-top: var(--padding-small);
 }
 
 /* 
@@ -1116,7 +1120,7 @@ a.nav-link-primary:hover {
 .project-description-container {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-direction: column;
   background: var(--color-bg-project-description);
   padding: var(--padding-small);
