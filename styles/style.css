@@ -811,18 +811,12 @@ a.nav-link-primary:hover {
   gap: 0.75rem;
 }
 
-/* Arrow column now sits to the left */
-.arrow-col {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-/* Arrow scales to match H2 size */
 .arrow-col img {
-  height: 24px; /* or 2rem if you prefer */
-  width: auto;
-  display: block; /* prevent inline spacing issues */
+  height: 2rem;
+  width: 2rem; /* force consistent box */
+  object-fit: contain; /* keeps the shape correct */
+  display: block;
+  padding: 0;
 }
 
 /* Extra improvement for top section */
