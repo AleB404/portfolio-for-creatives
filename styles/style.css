@@ -798,6 +798,27 @@ a.nav-link-primary:hover {
   justify-content: flex-end;
 }
 
+/* Wrapper for arrow + content layout */
+.inner-with-arrow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+/* Arrow column now sits to the left */
+.arrow-col {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Arrow scales to match H2 size */
+.arrow-col img {
+  height: 2rem; /* matches your h2 font-size value */
+  width: auto;
+}
+
 /* Tags / categories */
 .project-content .tags {
   opacity: 0;
