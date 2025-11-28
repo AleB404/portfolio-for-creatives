@@ -118,9 +118,9 @@
   --color-text-project-title: #ff909a;
   --color-text-work-grid-title: #ffffff;
   /* Link States */
-  --color-link: #ffffff;
-  --color-link-hover: #ba9ded;
-  --color-link-visited: #4b406a;
+  --color-link: #ba9ded;
+  --color-link-hover: #ff909a;
+  --color-link-visited: #6d5596;
   /* Navigation */
   --color-nav-link: #ffffff;
   --color-nav-link-hover: #ba9ded;
@@ -621,6 +621,11 @@ a.nav-link-primary:hover {
 .stroke:hover {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--color-nav-arrow-stroke-hover);
+}
+
+.designer-link {
+  text-decoration: none; /* ensures no underline */
+  font-style: italic; /* ensures italic even inside <a> */
 }
 
 /* 
