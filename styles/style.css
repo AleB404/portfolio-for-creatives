@@ -775,7 +775,11 @@ a.nav-link-primary:hover {
 }
 
 .stagger h2 {
-  margin: 0;
+  font-size: 2rem; /* your default h2 size */
+  font-family: var(--font-family-heading);
+  color: var(var(--color-text-project-description)); /* white in your theme */
+  font-weight: 700; /* BOLD */
+  margin: 1;
   line-height: 1.1;
 }
 
