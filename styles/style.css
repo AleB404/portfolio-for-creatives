@@ -811,12 +811,22 @@ a.nav-link-primary:hover {
   gap: 0.75rem;
 }
 
+.arrow-col {
+  width: 2rem; /* fixed box width */
+  height: 2rem; /* fixed box height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto; /* prevent flex grow/shrink */
+}
+
 .arrow-col img {
-  height: 2rem;
-  width: 2rem; /* force consistent box */
-  object-fit: contain; /* keeps the shape correct */
+  width: 100% !important; /* force full container width */
+  height: 100% !important; /* force full container height */
+  object-fit: contain; /* preserve aspect ratio */
+  max-width: none !important; /* ignore inherited max-width */
+  max-height: none !important;
   display: block;
-  padding: 0;
 }
 
 /* Extra improvement for top section */
