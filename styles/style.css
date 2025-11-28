@@ -774,6 +774,11 @@ a.nav-link-primary:hover {
   margin: 1rem 0;
 }
 
+.stagger h2 {
+  margin: 0;
+  line-height: 1.1;
+}
+
 /* Column container */
 .stagger-column {
   display: flex;
@@ -794,7 +799,7 @@ a.nav-link-primary:hover {
   justify-content: flex-start;
 }
 
-.align-bottom .inner {
+.align-bottom {
   justify-content: flex-end;
 }
 
@@ -815,8 +820,14 @@ a.nav-link-primary:hover {
 
 /* Arrow scales to match H2 size */
 .arrow-col img {
-  height: 2rem; /* matches your h2 font-size value */
+  height: 24px; /* or 2rem if you prefer */
   width: auto;
+  display: block; /* prevent inline spacing issues */
+}
+
+/* Extra improvement for top section */
+.align-top .inner-with-arrow {
+  margin-top: 0;
 }
 
 /* Tags / categories */
@@ -1575,12 +1586,12 @@ to keep your styles reusable and consistent.
     height: 100%;
   }
 
-  .project-navigation {
-    justify-content: flex-start;
-  }
-
   .arrow {
     padding-right: 1rem;
+  }
+
+  .project-navigation {
+    justify-content: flex-start;
   }
 
   /* About Page Grid for Large Devices */
