@@ -765,6 +765,39 @@ a.nav-link-primary:hover {
   margin-bottom: 1rem;
 }
 
+/* Base stagger layout */
+.stagger {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+/* Column container */
+.stagger-column {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  flex: 1;
+}
+
+/* Inner wrapper — this is what aligns vertically */
+.inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Alignment utilities */
+.align-top .inner {
+  justify-content: flex-start;
+}
+
+.align-bottom .inner {
+  justify-content: flex-end;
+}
+
 /* Tags / categories */
 .project-content .tags {
   opacity: 0;
@@ -1504,6 +1537,21 @@ to keep your styles reusable and consistent.
   }
   .col-2 {
     width: 50%;
+  }
+
+  .stagger {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2rem;
+    min-height: 260px;
+  }
+
+  .stagger-column {
+    width: 50%;
+  }
+
+  .inner {
+    height: 100%;
   }
 
   .project-navigation {
