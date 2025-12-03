@@ -1585,7 +1585,7 @@ to keep your styles reusable and consistent.
     flex-direction: row;
     align-items: stretch;
     gap: 2rem;
-    min-height: 260px;
+    min-height: 400px;
   }
 
   .stagger-column {
