@@ -472,7 +472,7 @@ em {
 }
 /* Normal paragraph styling */
 .project-title p {
-  color: var(var(--color-text-project-description));
+  color: var(--color-text-project-description);
 }
 
 /* Project description text — pairs with the project title */
