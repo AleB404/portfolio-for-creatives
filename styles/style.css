@@ -1222,7 +1222,6 @@ a.nav-link-primary:hover {
   justify-content: space-between;
   flex-direction: column;
   background: var(--color-bg-project-description);
-  padding: var(--padding-tiny);
   width: 100%;
   margin-bottom: 1rem; /* Space below the description */
 }
