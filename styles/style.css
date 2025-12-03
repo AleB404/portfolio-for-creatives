@@ -757,9 +757,6 @@ a.nav-link-primary:hover {
   padding: var(--padding-tiny);
   margin-bottom: 1rem;
 }
-.section-item {
-  padding: var(--padding-small);
-}
 
 .section-item h2 {
   font-size: 2rem; /* your default h2 size */
