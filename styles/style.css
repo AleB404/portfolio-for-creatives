@@ -754,7 +754,7 @@ a.nav-link-primary:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-small);
+  padding: var(--padding-tiny);
   margin-bottom: 1rem;
 }
 .section-item {
@@ -1222,7 +1222,7 @@ a.nav-link-primary:hover {
   justify-content: space-between;
   flex-direction: column;
   background: var(--color-bg-project-description);
-  padding: var(--padding-small);
+  padding: var(--padding-tiny);
   width: 100%;
   margin-bottom: 1rem; /* Space below the description */
 }
@@ -1230,7 +1230,6 @@ a.nav-link-primary:hover {
 /* Column styles for two-column layouts */
 .col-2 {
   width: 100%;
-  padding: var(--padding-small);
 }
 
 /* Project image styling */
@@ -1580,8 +1579,9 @@ to keep your styles reusable and consistent.
     flex-direction: row;
   }
   .col-2 {
-    width: 50%;
+    width: 100%;
   }
+
   .stagger {
     flex-direction: row;
     align-items: stretch;
