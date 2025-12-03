@@ -340,7 +340,7 @@ svg {
   overflow: hidden;
   width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio (because 9 ÷ 16 = 0.5625) */
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .project-video-iframe {
@@ -472,7 +472,7 @@ em {
 
 /* Large project title — appears on individual project pages */
 .project-title {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* Only the H2 gets large title styling */
@@ -754,7 +754,8 @@ a.nav-link-primary:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .section-item h2 {
@@ -1219,12 +1220,13 @@ a.nav-link-primary:hover {
   flex-direction: column;
   background: var(--color-bg-project-description);
   width: 100%;
-  margin-bottom: 1rem; /* Space below the description */
+  margin-bottom: 2rem; /* Space below the description */
 }
 
 /* Column styles for two-column layouts */
 .col-2 {
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 /* Project image styling */
