@@ -1569,11 +1569,13 @@ to keep your styles reusable and consistent.
   .project-image-container,
   .project-description-container {
     flex-direction: row;
+    gap: 6rem;
   }
 
   .section-container {
     width: 100%; /* Adjust this width for larger screens if needed */
     flex-direction: row;
+    gap: 6rem;
   }
   .col-2 {
     width: 100%;
