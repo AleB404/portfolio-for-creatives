@@ -91,7 +91,7 @@
   --font-family-heading: "Asap", sans-serif;
   --font-family-project-title: "Asap", sans-serif;
   /* Core Colours */
-  --color-text-primary: #ffffff;
+  --color-text-primary: #fff2f2;
   --color-text-secondary: #333;
   --color-accent-primary: #ff909a;
   --color-accent-secondary: #ff057c;
@@ -133,13 +133,7 @@
   --color-bg-project-description: #000000;
   --color-bg-sidebar-project: orangered;
   --color-bg-sidebar-work: lemonchiffon;
-  --color-gradient-hero: linear-gradient(90deg, #ffff);
-  --color-gradient-project-details: linear-gradient(
-    -225deg,
-    #ff057c 0%,
-    #8d0b93 50%,
-    #321575 100%
-  );
+
   /* Special Elements */
   --color-icon-heart: darkred;
   --color-text-holding-footer: #f8f8ff;
@@ -321,12 +315,6 @@ svg {
 .width-third,
 .width-two-thirds {
   width: 100%;
-}
-
-/* Adds a dashed border to help you see the box while you're designing */
-.border {
-  border: 1px dashed var(--color-accent-primary); /* This uses your custom accent color */
-  /* TODO: Delete this later – it’s just here to help you see the box while you work */
 }
 
 /* ---------------------------------------- */
@@ -863,6 +851,13 @@ a.nav-link-primary:hover {
 
 .top-padding-small {
   padding-top: var(--padding-small);
+}
+
+.bordered-figure {
+  border: 1px solid var(--color-text-primary);
+  border-radius: var(--radius-md); /* match your image radius */
+  overflow: hidden; /* makes image corners clip to the figure’s radius */
+  display: inline-block; /* makes border wrap tight */
 }
 
 /* 
