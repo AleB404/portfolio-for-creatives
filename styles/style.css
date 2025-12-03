@@ -111,18 +111,18 @@
   --h5-color: #ff909a;
   --h6-color: #ff909a;
   /* Special Text Colours */
-  --color-text-holding-title: #ebedf0;
-  --color-text-project-category: #ffffff;
-  --color-text-project-description: #ffffff;
-  --color-text-project-sidebar: #ffffff;
+  --color-text-holding-title: #fff2f2;
+  --color-text-project-category: #fff2f2;
+  --color-text-project-description: #fff2f2;
+  --color-text-project-sidebar: #fff2f2;
   --color-text-project-title: #ff909a;
-  --color-text-work-grid-title: #ffffff;
+  --color-text-work-grid-title: #fff2f2;
   /* Link States */
   --color-link: #ba9ded;
   --color-link-hover: #ff909a;
   --color-link-visited: #6d5596;
   /* Navigation */
-  --color-nav-link: #ffffff;
+  --color-nav-link: #fff2f2;
   --color-nav-link-hover: #ba9ded;
   --color-nav-arrow: #ba9ded;
   --color-nav-arrow-hover: #000;
@@ -576,7 +576,6 @@ a.nav-link-primary {
 a.nav-link-primary:hover {
   color: var(--color-nav-link-hover);
 }
-
 /* -------------------------------------------------------------------------- */
 /* 🧭 Previous & Next Project Navigation Arrows                               */
 /* These styles are for the left and right arrows used to move between       */
@@ -608,11 +607,6 @@ a.nav-link-primary:hover {
 .stroke:hover {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--color-nav-arrow-stroke-hover);
-}
-
-.designer-link {
-  text-decoration: none; /* ensures no underline */
-  font-style: italic; /* ensures italic even inside <a> */
 }
 
 /* 
@@ -671,11 +665,11 @@ a.nav-link-primary:hover {
   flex-direction: column;
   flex: 1;
   gap: 0.1rem;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   padding: var(--padding-small);
   text-align: left; /* Keeps text centered */
-  width: 100%;
+  width: 80%;
 }
 
 .hero-icon {
@@ -1486,13 +1480,17 @@ to keep your styles reusable and consistent.
     min-height: 100vh;
   }
 
+  .hero-headline {
+    font-size: 7.625rem;
+  }
+
   .hero-headline-wrapper {
     flex-direction: column;
     padding-top: var(--padding-jumbo);
     padding-bottom: var(--padding-jumbo);
     padding-left: var(--padding-jumbo);
     padding-right: var(--padding-jumbo);
-    width: 70%;
+    width: 65%;
   }
   .error-headline-wrapper {
     padding-top: var(--padding-small);
