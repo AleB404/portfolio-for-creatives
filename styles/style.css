@@ -1742,6 +1742,8 @@ That’s a wrap, class! 🧑‍🎓✨
   background: var(--color-bg);
   color: var(--color-text-project-description);
   width: 100%;
+  padding-top: var(--padding-jumbo);
+  padding-bottom: var(--padding-jumbo);
 }
 
 /* Two-column layout */
