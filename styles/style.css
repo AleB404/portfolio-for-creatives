@@ -102,7 +102,7 @@
   --color-bg: #000000;
   --color-bg-about: #000000;
   --color-bg-footer: #000000;
-  --color-bg-holding-page: rgba(82, 0, 255, 0.6);
+  --color-bg-holding-page: #ba9ded;
   /* Headings */
   --h1-color: #ff909a;
   --h2-color: #ff909a;
@@ -1311,49 +1311,58 @@ a.nav-link-primary:hover {
 ██   ██  ██████  ███████ ██████  ██ ██   ████  ██████  
                                                        
 */
-
-/* Holding page styles */
-
+/* Holding page wrapper */
 .holding-page-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center logo */
+  align-items: center; /* horizontally center */
+  min-height: 100vh; /* full viewport height */
+  width: 100%;
   text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: var(
+    --color-bg-holding-page,
+    #ba9ded
+  ); /* fallback included */
+}
+
+/* Inner container for the logo/link */
+.holding-page-inner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  min-height: 100vh;
-  /* TODO: Delete the following if you do not want a grainy gradient background on index.html. Be careful not to delete the closing } */
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 1),
-      var(--color-bg-holding-page)
-    ),
-    var(--image-noise-texture);
-  /* For more on grainy gradients see https://grainy-gradients.vercel.app/ */
+  flex-grow: 1; /* make sure it expands to fill available space */
 }
 
-.holding-page-animation {
-  margin-bottom: 1rem;
+/* Logo link */
+.holding-page-link {
+  display: inline-block;
 }
 
-.holding-page-title {
-  font-size: 1.5rem;
-  color: var(--color-text-holding-title);
+/* Logo image */
+.holding-page-animation img {
+  display: block;
+  width: 250px; /* increase size */
+  max-width: 50vw; /* responsive max width */
+  height: auto;
 }
 
+/* Footer */
 .holding-page-footer {
-  display: grid;
-  place-items: center;
-  min-height: 10vh;
   width: 100%;
+  text-align: center;
+  margin-top: auto; /* keeps footer at the bottom */
+  padding-bottom: 1rem;
 }
 
+/* Footer text */
 .holding-page-copyright {
-  font-size: 0.8rem; /* Smaller font size for copyright text */
-  color: var(
-    --color-text-holding-footer
-  ); /* Custom color for the footer text */
-  margin-bottom: 0; /* Removes default margin from the bottom of the copyright text */
+  font-size: 0.8rem;
+  color: #000000; /* make it visible on purple bg */
+  margin: 0;
 }
 
 /*
