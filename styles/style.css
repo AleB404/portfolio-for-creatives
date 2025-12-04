@@ -787,7 +787,7 @@ a.nav-link-primary:hover {
   justify-content: flex-start;
 }
 
-.align-bottom {
+.align-bottom .inner {
   justify-content: flex-end;
 }
 
@@ -1598,10 +1598,6 @@ to keep your styles reusable and consistent.
 
   .inner {
     height: 100%;
-  }
-
-  .arrow {
-    padding-right: 1rem;
   }
 
   .project-navigation {
