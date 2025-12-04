@@ -1883,35 +1883,6 @@ That’s a wrap, class! 🧑‍🎓✨
   min-width: 0; /* Allows proper grid shrink without collapse */
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .play-two-column {
-    grid-template-columns: 1fr;
-  }
-
-  .play-media-grid,
-  .play-media-grid-reverse,
-  .play-media-grid-custom {
-    /* added custom grid */
-    grid-template-columns: 1fr;
-    row-gap: 2rem;
-  }
-
-  .col-left,
-  .col-left-reverse,
-  .col-right,
-  .col-right-reverse {
-    width: 100%;
-    align-items: center; /* center cards on mobile */
-  }
-
-  .play-card.large,
-  .play-card.medium,
-  .play-card.small {
-    max-width: 100%; /* cards scale to container */
-  }
-}
-
 /* ----------------------------------------------
    2×2 MEDIA GRID SECTION
 ---------------------------------------------- */
@@ -1966,42 +1937,69 @@ That’s a wrap, class! 🧑‍🎓✨
 }
 
 /* ----------------------------------------------
-   MOBILE — stack smoothly like your playful grids
+   MOBILE — unified responsive rules (single source of truth)
 ---------------------------------------------- */
-/* MOBILE STACKING FOR BOTH NORMAL + REVERSE */
+/* ----------------------------------------------
+   MOBILE — clean, unified rules
+---------------------------------------------- */
 @media (max-width: 992px) {
-  /* Turn the grid into 1 column */
-  .play-two-column,
-  .play-media-grid,
-  .play-media-grid-reverse {
+  /* 1. All play grids collapse into one column */
+  .project-play-section .play-two-column,
+  .project-play-section .play-media-grid,
+  .project-play-section .play-media-grid-reverse,
+  .project-play-section .play-media-grid-custom {
     grid-template-columns: 1fr !important;
+    row-gap: 1.5rem !important; /* spacing between stacked left + right blocks */
   }
 
-  /* Force all grid children to behave like block-level stacked items */
-  .play-two-column > *,
-  .play-media-grid > *,
-  .play-media-grid-reverse > * {
+  /* 2. Children become full-width blocks */
+  .project-play-section .play-two-column > *,
+  .project-play-section .play-media-grid > *,
+  .project-play-section .play-media-grid-reverse > *,
+  .project-play-section .play-media-grid-custom > * {
     width: 100% !important;
     max-width: 100% !important;
     display: block !important;
   }
 
-  /* Reset column wrappers so they don't collapse */
-  .col-left,
-  .col-right,
-  .col-left-reverse,
-  .col-right-reverse {
-    width: 100% !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  /* 3. Inside each column, spacing between cards = 1.5rem */
+  .project-play-section .col-left,
+  .project-play-section .col-left-reverse,
+  .project-play-section .col-right,
+  .project-play-section .col-right-reverse {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem !important; /* consistent spacing between multiple cards */
   }
 
-  /* Make cards scale properly */
-  .play-card.large,
-  .play-card.medium,
-  .play-card.small {
+  /* 4. Fallback for older browsers (gap substitute) */
+  .project-play-section .col-left > .play-card,
+  .project-play-section .col-left-reverse > .play-card,
+  .project-play-section .col-right > .play-card,
+  .project-play-section .col-right-reverse > .play-card {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Remove fallback margin on last card */
+  .project-play-section .col-left > .play-card:last-child,
+  .project-play-section .col-left-reverse > .play-card:last-child,
+  .project-play-section .col-right > .play-card:last-child,
+  .project-play-section .col-right-reverse > .play-card:last-child {
+    margin-bottom: 0;
+  }
+
+  /* 5. Single-card right columns — ensure they match the same spacing */
+  .project-play-section .col-right,
+  .project-play-section .col-right-reverse {
+    padding-top: 1.5rem !important; /* matches col-left gap exactly */
+  }
+
+  /* 6. Make play-cards scale nicely */
+  .project-play-section .play-card.large,
+  .project-play-section .play-card.medium,
+  .project-play-section .play-card.small {
+    width: 100% !important;
     max-width: 100% !important;
-    width: 100%;
   }
 }
