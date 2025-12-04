@@ -536,6 +536,17 @@ em {
   margin-bottom: 0.5rem;
 }
 
+.styled-list-about {
+  margin: 1rem 0;
+  padding-left: 1.4rem;
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+.styled-list-about li {
+  margin-bottom: 0.5rem;
+}
+
 /*
 
 
@@ -1034,7 +1045,9 @@ a.nav-link-primary:hover {
   grid-column: 1 / 2; /* Text spans the first column */
   grid-row: 2 / 3; /* Text spans the second row */
 }
-
+.about-grid-text h2 {
+  font-weight: 700;
+}
 /* 
 
 ███████  ██████   ██████  ████████ ███████ ██████  
