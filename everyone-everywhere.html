@@ -110,12 +110,12 @@
         <div class="project-description-container">
           <ul class="project-navigation">
             <li class="arrow-left">
-              <a href="taco-fusion.html" class="navigation-arrow"
+              <a href="sol-del-cusco.html" class="navigation-arrow"
                 ><i class="fa-sharp fa-solid fa-arrow-left fa-2x"></i
               ></a>
             </li>
             <li class="arrow-right">
-              <a href="sol-del-cusco.html" class="navigation-arrow"
+              <a href="hide-and-seek.html" class="navigation-arrow"
                 ><i class="fa-sharp fa-solid fa-arrow-right fa-2x"></i
               ></a>
             </li>
@@ -484,25 +484,24 @@
     <ul class="footer-global">
       <li class="footer-tagline">
         <h2>Let's Connect!</h2>
-        <p>
-          Feel free to reach out with any questions, collaborations, or just to
-          chat about design.
-        </p>
+        <ul class="footer-socials-list">
+          <li class="footer-item">
+            <a href="mailto:alejandrabernuyvaldivia@gmail.com">Email</a>
+          </li>
+        </ul>
       </li>
       <li class="footer-highlights">
         <h2>Awards & Recognition</h2>
         <ul class="footer-awards-list">
+          <li class="footer-item">Dean’s List – 2022-2025</li>
+
           <li class="footer-item">
-            <a href="#">Dean’s List – Year or Term</a>
-          </li>
-          <li class="footer-item">
-            <a href="#">Your Award – Name of Student Award and Year</a>
-          </li>
-          <li class="footer-item">
-            <a href="#">Honourable Mention – Project or Competition Name</a>
-          </li>
-          <li class="footer-item">
-            <a href="#">Other Recognition or Accolade</a>
+            <a
+              href="https://graphis.com/entry/102fc165-4e40-4bb5-9b94-558130fb186c"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Honourable Mention – Graphis New Talent Awards 2025</a
+            >
           </li>
         </ul>
       </li>
@@ -510,9 +509,30 @@
       <li class="footer-contact-social">
         <h2>Contact & Social</h2>
         <ul class="footer-socials-list">
-          <li class="footer-item"><a href="#">Insta</a></li>
-          <li class="footer-item"><a href="#">LinkedIn</a></li>
-          <li class="footer-item"><a href="#">Behance</a></li>
+          <li class="footer-item">
+            <a
+              href="https://www.instagram.com/a.bernuy_design/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Insta</a
+            >
+          </li>
+          <li class="footer-item">
+            <a
+              href="https://www.linkedin.com/in/alejandra-bernuy-v/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+          <li class="footer-item">
+            <a
+              href="https://www.behance.net/alejandrabernuy"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Behance</a
+            >
+          </li>
         </ul>
       </li>
 
@@ -546,28 +566,6 @@
       };
 
       window.addEventListener("scroll", myScrollFunc);
-    </script>
-    <!-- Custom Cursor -->
-    <div id="custom-cursor"></div>
-
-    <script>
-      const cursor = document.getElementById("custom-cursor");
-
-      // Track mouse movement separately from scale transform
-      document.addEventListener("mousemove", (e) => {
-        cursor.style.left = `${e.clientX}px`;
-        cursor.style.top = `${e.clientY}px`;
-      });
-
-      // Add hover effects
-      document.querySelectorAll("a, button, .hover-target").forEach((el) => {
-        el.addEventListener("mouseenter", () => {
-          cursor.classList.add("hover");
-        });
-        el.addEventListener("mouseleave", () => {
-          cursor.classList.remove("hover");
-        });
-      });
     </script>
   </body>
 </html>

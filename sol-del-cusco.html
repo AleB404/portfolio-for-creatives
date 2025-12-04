@@ -86,7 +86,7 @@
           <div class="section-item col-2">
             <figure>
               <img
-                src="assets/project-3/alejandra-bernuy--everyone-everywhere3--digital-product--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
+                src="assets/sol-del-cusco/alejandra-bernuy--sol-del-cusco--1--graphic-design--packaging-design--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--graphis-honorable.jpg"
                 width="1500"
                 height="1500"
                 alt="Your Photo"
@@ -99,12 +99,12 @@
         <div class="project-description-container">
           <ul class="project-navigation">
             <li class="arrow-left">
-              <a href="taco-fusion.html" class="navigation-arrow"
+              <a href="ritmovan.html" class="navigation-arrow"
                 ><i class="fa-sharp fa-solid fa-arrow-left fa-2x"></i
               ></a>
             </li>
             <li class="arrow-right">
-              <a href="sol-del-cusco.html" class="navigation-arrow"
+              <a href="everyone-everywhere.html" class="navigation-arrow"
                 ><i class="fa-sharp fa-solid fa-arrow-right fa-2x"></i
               ></a>
             </li>
@@ -112,15 +112,36 @@
         </div>
       </aside>
       <main class="project-full-width">
-        <div class="project-video-container">
-          <iframe
-            src="https://player.vimeo.com/video/1141027066?autoplay=1&loop=1&muted=1&background=1"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-            class="project-video-iframe rounded-medium"
-          >
-          </iframe>
+        <div class="section-container">
+          <div class="section-item h2 col-2">
+            <h2>Redesign Rationale</h2>
+            <h3>Design Goal</h3>
+            <p>
+              Create a modern, globally appealing package that retains cultural
+              authenticity and reflects the brand’s premium quality.
+            </p>
+          </div>
+          <div class="section-item col-2">
+            <div class="section-item h2 col-2">
+              <h3>Cultural Context</h3>
+              <p>
+                In Peru, red and green evoke hot chocolate and Christmas, making
+                Sol del Cusco instantly recognizable.
+              </p>
+              <h3>Global Disconnect</h3>
+              <p>
+                These colours don’t carry the same meaning abroad, limiting
+                international appeal.
+              </p>
+              <h3>Visual Hierarchy:</h3>
+              <p>Cluttered layout weakens readability and shelf presence.</p>
+              <h3>Perceived Value</h3>
+              <p>
+                Current design lacks a premium look, misaligning with the
+                brand’s quality.
+              </p>
+            </div>
+          </div>
         </div>
         <div class="section-container">
           <div class="section-item h2 col-2">
@@ -292,25 +313,24 @@
     <ul class="footer-global">
       <li class="footer-tagline">
         <h2>Let's Connect!</h2>
-        <p>
-          Feel free to reach out with any questions, collaborations, or just to
-          chat about design.
-        </p>
+        <ul class="footer-socials-list">
+          <li class="footer-item">
+            <a href="mailto:alejandrabernuyvaldivia@gmail.com">Email</a>
+          </li>
+        </ul>
       </li>
       <li class="footer-highlights">
         <h2>Awards & Recognition</h2>
         <ul class="footer-awards-list">
+          <li class="footer-item">Dean’s List – 2022-2025</li>
+
           <li class="footer-item">
-            <a href="#">Dean’s List – Year or Term</a>
-          </li>
-          <li class="footer-item">
-            <a href="#">Your Award – Name of Student Award and Year</a>
-          </li>
-          <li class="footer-item">
-            <a href="#">Honourable Mention – Project or Competition Name</a>
-          </li>
-          <li class="footer-item">
-            <a href="#">Other Recognition or Accolade</a>
+            <a
+              href="https://graphis.com/entry/102fc165-4e40-4bb5-9b94-558130fb186c"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Honourable Mention – Graphis New Talent Awards 2025</a
+            >
           </li>
         </ul>
       </li>
@@ -318,9 +338,30 @@
       <li class="footer-contact-social">
         <h2>Contact & Social</h2>
         <ul class="footer-socials-list">
-          <li class="footer-item"><a href="#">Insta</a></li>
-          <li class="footer-item"><a href="#">LinkedIn</a></li>
-          <li class="footer-item"><a href="#">Behance</a></li>
+          <li class="footer-item">
+            <a
+              href="https://www.instagram.com/a.bernuy_design/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Insta</a
+            >
+          </li>
+          <li class="footer-item">
+            <a
+              href="https://www.linkedin.com/in/alejandra-bernuy-v/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+          <li class="footer-item">
+            <a
+              href="https://www.behance.net/alejandrabernuy"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Behance</a
+            >
+          </li>
         </ul>
       </li>
 
@@ -354,28 +395,6 @@
       };
 
       window.addEventListener("scroll", myScrollFunc);
-    </script>
-    <!-- Custom Cursor -->
-    <div id="custom-cursor"></div>
-
-    <script>
-      const cursor = document.getElementById("custom-cursor");
-
-      // Track mouse movement separately from scale transform
-      document.addEventListener("mousemove", (e) => {
-        cursor.style.left = `${e.clientX}px`;
-        cursor.style.top = `${e.clientY}px`;
-      });
-
-      // Add hover effects
-      document.querySelectorAll("a, button, .hover-target").forEach((el) => {
-        el.addEventListener("mouseenter", () => {
-          cursor.classList.add("hover");
-        });
-        el.addEventListener("mouseleave", () => {
-          cursor.classList.remove("hover");
-        });
-      });
     </script>
   </body>
 </html>

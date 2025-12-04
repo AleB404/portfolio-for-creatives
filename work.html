@@ -68,22 +68,6 @@
         <h1 class="hero-headline">Hello, I'm Alejandra Bernuy,</h1>
         <h2 class="h2-full-width">a multidisciplinary designer</h2>
       </div>
-      <footer class="hero-footer">
-        <ul class="hero-footer-navigation">
-          <li>
-            <!-- Update with your real Instagram link -->
-            <a href="#" class="nav-link-primary">Instagram</a>
-          </li>
-          <li>
-            <!-- Update with your real email address -->
-            <a
-              href="mailto:alejandrabernuyvaldivia@gmail.com"
-              class="nav-link-primary"
-              >Email</a
-            >
-          </li>
-        </ul>
-      </footer>
     </section>
 
     <main class="main-work-section">
@@ -199,7 +183,7 @@
           <li class="work-page-grid-item">
             <figure>
               <img
-                src="assets/temp/first-name-last-name--project-title--category-1.jpg"
+                src="assets/origem/alejandra-bernuy--origem--1--capstone-project--branding--packaging-design--illustration--graphic-design--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
                 width="1920"
                 height="1080"
                 class="rounded-large"
@@ -207,7 +191,7 @@
                 alt="Describe your project"
               />
             </figure>
-            <a href="origem.html">
+            <a href="#">
               <div
                 class="project-details-overlay overlay rounded-large centered-text"
               >
@@ -238,27 +222,91 @@
 
       window.addEventListener("scroll", myScrollFunc);
     </script>
-    <!-- Custom Cursor -->
-    <div id="custom-cursor"></div>
+    <ul class="footer-global">
+      <li class="footer-tagline">
+        <h2>Let's Connect!</h2>
+        <ul class="footer-socials-list">
+          <li class="footer-item">
+            <a href="mailto:alejandrabernuyvaldivia@gmail.com">Email</a>
+          </li>
+        </ul>
+      </li>
+      <li class="footer-highlights">
+        <h2>Awards & Recognition</h2>
+        <ul class="footer-awards-list">
+          <li class="footer-item">Dean’s List – 2022-2025</li>
+
+          <li class="footer-item">
+            <a
+              href="https://graphis.com/entry/102fc165-4e40-4bb5-9b94-558130fb186c"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Honourable Mention – Graphis New Talent Awards 2025</a
+            >
+          </li>
+        </ul>
+      </li>
+
+      <li class="footer-contact-social">
+        <h2>Contact & Social</h2>
+        <ul class="footer-socials-list">
+          <li class="footer-item">
+            <a
+              href="https://www.instagram.com/a.bernuy_design/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Insta</a
+            >
+          </li>
+          <li class="footer-item">
+            <a
+              href="https://www.linkedin.com/in/alejandra-bernuy-v/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+          <li class="footer-item">
+            <a
+              href="https://www.behance.net/alejandrabernuy"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Behance</a
+            >
+          </li>
+        </ul>
+      </li>
+
+      <li class="footer-full-width">
+        <p><a href="#top">Smooth scroll to the top</a></p>
+        <p class="footer-fineprint">
+          &copy; <span id="copyright-years">2020-</span>. Hand crafted with
+          <span class="heart">❤</span>
+          by Alejandra Bernuy.
+        </p>
+        <script>
+          document.getElementById("copyright-years").textContent +=
+            new Date().getFullYear();
+        </script>
+      </li>
+    </ul>
+    <div id="myID" class="bottomMenu hide">
+      <a href="project-2.html">Next Project</a>
+    </div>
 
     <script>
-      const cursor = document.getElementById("custom-cursor");
+      myID = document.getElementById("myID");
 
-      // Track mouse movement separately from scale transform
-      document.addEventListener("mousemove", (e) => {
-        cursor.style.left = `${e.clientX}px`;
-        cursor.style.top = `${e.clientY}px`;
-      });
+      var myScrollFunc = function () {
+        var y = window.scrollY;
+        if (y >= 800) {
+          myID.className = "bottomMenu show";
+        } else {
+          myID.className = "bottomMenu hide";
+        }
+      };
 
-      // Add hover effects
-      document.querySelectorAll("a, button, .hover-target").forEach((el) => {
-        el.addEventListener("mouseenter", () => {
-          cursor.classList.add("hover");
-        });
-        el.addEventListener("mouseleave", () => {
-          cursor.classList.remove("hover");
-        });
-      });
+      window.addEventListener("scroll", myScrollFunc);
     </script>
   </body>
 </html>
