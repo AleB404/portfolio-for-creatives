@@ -1830,7 +1830,7 @@ That’s a wrap, class! 🧑‍🎓✨
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .play-two-column {
     grid-template-columns: 1fr;
   }
@@ -1861,4 +1861,56 @@ That’s a wrap, class! 🧑‍🎓✨
   height: 100%;
   border: 0;
   border-radius: inherit; /* keeps the rounded corners */
+}
+/*/*/ /*/*/ /*
+/*/ /*/*/ /*/*
+/* VARIATION — Left column: medium + small, Right column: large */
+.play-media-grid-reverse {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 2rem;
+  align-items: center;
+}
+
+/* Left column: medium + small stacked, aligned right */
+.col-left-reverse {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* aligns media to the RIGHT */
+  gap: 1.5rem;
+}
+
+/* Right column: large card aligned left */
+.col-right-reverse {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* aligns media to the LEFT */
+}
+
+/* Sizes match the previous grid */
+.play-card.large {
+  width: 100%;
+  max-width: 520px;
+}
+
+.play-card.medium {
+  width: 100%;
+  max-width: 420px;
+}
+
+.play-card.small {
+  width: 100%;
+  max-width: 260px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .play-media-grid-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .col-left-reverse,
+  .col-right-reverse {
+    align-items: center; /* centered on mobile */
+  }
 }
