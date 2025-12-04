@@ -735,8 +735,8 @@ a.nav-link-primary:hover {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: top;
+  justify-content: flex-start;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
@@ -1218,6 +1218,10 @@ a.nav-link-primary:hover {
   width: 100%;
   margin-bottom: 2rem;
 }
+.big-idea {
+  width: 100%;
+  margin-top: 5rem;
+}
 
 /* Project image styling */
 .project-image {
@@ -1573,6 +1577,10 @@ to keep your styles reusable and consistent.
   }
   .col-2 {
     width: 100%;
+  }
+
+  .big-idea {
+    width: 50%;
   }
 
   .stagger {
