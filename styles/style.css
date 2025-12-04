@@ -1802,6 +1802,11 @@ That’s a wrap, class! 🧑‍🎓✨
   width: 100%;
   max-width: 260px;
 }
+.play-card.large,
+.play-card.medium,
+.play-card.small {
+  min-width: 160px; /* ensures they can’t shrink to nothing */
+}
 
 /* Media card wrapper */
 .play-card {
@@ -1829,20 +1834,6 @@ That’s a wrap, class! 🧑‍🎓✨
   border-radius: inherit; /* ensures corners stay smooth */
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .play-two-column {
-    grid-template-columns: 1fr;
-  }
-
-  .play-media-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .play-media-grid > :first-child {
-    grid-column: span 1;
-  }
-}
 /* Vimeo inside cards */
 .play-card .video-wrapper {
   position: relative;
@@ -1867,7 +1858,7 @@ That’s a wrap, class! 🧑‍🎓✨
 /* VARIATION — Left column: medium + small, Right column: large */
 .play-media-grid-reverse {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 520px;
   column-gap: 2rem;
   align-items: center;
 }
@@ -1885,32 +1876,38 @@ That’s a wrap, class! 🧑‍🎓✨
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* aligns media to the LEFT */
+  justify-content: center;
 }
-
-/* Sizes match the previous grid */
-.play-card.large {
-  width: 100%;
-  max-width: 520px;
-}
-
-.play-card.medium {
-  width: 100%;
-  max-width: 420px;
-}
-
-.play-card.small {
-  width: 100%;
-  max-width: 260px;
+.col-right-reverse,
+.col-left-reverse {
+  min-width: 0; /* Allows proper grid shrink without collapse */
 }
 
 /* Responsive */
-@media (max-width: 900px) {
-  .play-media-grid-reverse {
+@media (max-width: 992px) {
+  .play-two-column {
     grid-template-columns: 1fr;
   }
 
+  .play-media-grid,
+  .play-media-grid-reverse,
+  .play-media-grid-custom {
+    /* added custom grid */
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+
+  .col-left,
   .col-left-reverse,
+  .col-right,
   .col-right-reverse {
-    align-items: center; /* centered on mobile */
+    width: 100%;
+    align-items: center; /* center cards on mobile */
+  }
+
+  .play-card.large,
+  .play-card.medium,
+  .play-card.small {
+    max-width: 100%; /* cards scale to container */
   }
 }
