@@ -392,7 +392,7 @@ h2 {
   font-size: 2rem;
   font-family: var(--font-family-heading);
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--h2-color);
 }
 
@@ -1574,6 +1574,8 @@ to keep your styles reusable and consistent.
     width: 100%; /* Adjust this width for larger screens if needed */
     flex-direction: row;
     gap: 6rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
   }
   .col-2 {
     width: 100%;
