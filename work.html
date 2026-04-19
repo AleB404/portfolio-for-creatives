@@ -4,23 +4,37 @@
     <title>Alejandra Bernuy | Work</title>
     <meta
       name="description"
-      content="Multidisciplinary designer specializing in branding, UI/UX, and illustration, crafting strategic, narrative-driven work rooted in clarity, creativity, and human connection."
+      content="Multidisciplinary designer specializing in branding, UI/UX, and illustration."
     />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:image" content="screenshot.jpg" />
+
+    <!-- Reset -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
+
+    <!-- Google Fonts: IBM Plex Serif + Molle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Molle:ital@1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Your stylesheet -->
     <link rel="stylesheet" href="./styles/style.css" />
+
     <!-- Favicons -->
     <link
       rel="icon"
@@ -36,282 +50,154 @@
     <link rel="apple-touch-icon" href="assets/branding-images/newlogo.png" />
   </head>
 
-  <body class="work-page" id="top">
-    <section class="hero">
-      <header class="hero-header">
-        <ul class="nav-branding">
-          <!-- Logo (standalone LI) -->
-          <li class="nav-branding-logo">
-            <a href="index.html">
-              <img
-                src="assets/branding-images/newlogo.svg"
-                alt="Your portfolio logo"
-              />
-            </a>
-          </li>
-          <li class="nav-branding-item">
-            <ul class="nav-branding-group">
-              <li class="nav-branding-item">
-                <a href="work.html" class="nav-link-primary">Work</a>
-              </li>
-              <li class="nav-branding-item">
-                <a href="play.html" class="nav-link-primary">Play</a>
-              </li>
-              <li class="nav-branding-item">
-                <a href="about.html" class="nav-link-primary">About</a>
-              </li>
-            </ul>
-          </li>
+  <body id="top">
+    <!-- ========== NAVIGATION ========== -->
+    <header class="site-nav">
+      <a href="index.html" class="nav-logo">
+        <img
+          src="assets/branding-images/newlogo.svg"
+          alt="Alejandra Bernuy logo"
+        />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="work.html">WORK</a></li>
+          <li><a href="play.html">PLAY</a></li>
+          <li><a href="about.html">ABOUT</a></li>
         </ul>
-      </header>
-      <div class="hero-headline-wrapper">
-        <h1 class="hero-headline">Hello, I'm Alejandra Bernuy,</h1>
-        <h2 class="h2-full-width">
-          a multidisciplinary designer with a passion for storytelling
-        </h2>
+      </nav>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello!<br />I'm</p>
+        <h1 class="hero-name">Alejandra</h1>
+        <p class="hero-role">a visual designer</p>
       </div>
     </section>
 
-    <main class="main-work-section">
-      <section class="portfolio">
-        <ul class="grid">
-          <li class="work-page-grid-item">
-            <figure>
-              <img
-                src="assets/project-1/alejandra-bernuy--ritmo-van--graphic-design--poster-design--music-festival--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--graphis-honorable.jpg"
-                width="1920"
-                height="1080"
-                class="rounded-large"
-                loading="lazy"
-                alt="Describe your project"
-              />
-            </figure>
-            <a href="ritmovan.html">
-              <div
-                class="project-details-overlay overlay rounded-large centered-text"
-              >
-                <h1 class="work-grid-project-title">RitmoVan</h1>
-                <h4 class="work-grid-project-category">
-                  Poster design - Social media - AR
-                </h4>
-              </div>
-            </a>
-          </li>
-          <li class="work-page-grid-item">
-            <figure>
-              <img
-                src="assets/sol-del-cusco/alejandra-bernuy--sol-del-cusco--2--graphic-design--packaging-design--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
-                width="1920"
-                height="1080"
-                class="rounded-large"
-                loading="lazy"
-                alt="Describe your project"
-              />
-            </figure>
-            <a href="sol-del-cusco.html">
-              <div
-                class="project-details-overlay overlay rounded-large centered-text"
-              >
-                <h1 class="work-grid-project-title">Sol del Cusco</h1>
-                <h4 class="work-grid-project-category">Packaging Redesign</h4>
-              </div>
-            </a>
-          </li>
+    <!-- ========== WORK GRID ========== -->
+    <main class="portfolio-grid">
+      <a href="ritmovan.html" class="grid-item">
+        <img
+          src="assets/project-1/alejandra-bernuy--ritmo-van--graphic-design--poster-design--music-festival--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--graphis-honorable.jpg"
+          alt="RitmoVan project"
+          loading="lazy"
+        />
+        <div class="grid-item-overlay">
+          <p class="item-title">RitmoVan</p>
+          <p class="item-category">Poster design · Social media · AR</p>
+        </div>
+      </a>
 
-          <li class="work-page-grid-item">
-            <figure>
-              <img
-                src="assets/project-3/alejandra-bernuy--everyone-everywhere--digital-product--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
-                width="1920"
-                height="1080"
-                class="rounded-large"
-                loading="lazy"
-                alt="Describe your project"
-              />
-            </figure>
-            <a href="everyone-everywhere.html">
-              <div
-                class="project-details-overlay overlay rounded-large centered-text"
-              >
-                <h1 class="work-grid-project-title">Everyone Everywhere</h1>
-                <h4 class="work-grid-project-category">
-                  Digital Product - Game Design - Art Direction
-                </h4>
-              </div>
-            </a>
-          </li>
-          <li class="work-page-grid-item">
-            <figure>
-              <img
-                src="assets/hide-and-seek/alejandra-bernuy--hide-and-seek--5--illustration--character-design--storytelling--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes.png"
-                width="1920"
-                height="1080"
-                class="rounded-large"
-                loading="lazy"
-                alt="Describe your project"
-              />
-            </figure>
-            <a href="hide-and-seek.html">
-              <div
-                class="project-details-overlay overlay rounded-large centered-text"
-              >
-                <h1 class="work-grid-project-title">Hide and Seek</h1>
-                <h4 class="work-grid-project-category">
-                  Character Illustration
-                </h4>
-              </div>
-            </a>
-          </li>
-          <li class="work-page-grid-item">
-            <figure>
-              <img
-                src="assets/project-5/alejandra-bernuy--don’t-cheat-yourself--awareness-campaign--ai-misuse--advertising--illustration--storyboard--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
-                width="1920"
-                height="1080"
-                class="rounded-large"
-                loading="lazy"
-                alt="Background with geometric shapes floating"
-              />
-            </figure>
-            <a href="don't-cheat-yourself.html">
-              <div
-                class="project-details-overlay overlay rounded-large centered-text"
-              >
-                <h1 class="work-grid-project-title">Don't Cheat Yourself</h1>
-                <h4 class="work-grid-project-category">
-                  Advertising - Storyboarding - Awareness
-                </h4>
-              </div>
-            </a>
-          </li>
+      <a href="sol-del-cusco.html" class="grid-item">
+        <img
+          src="assets/sol-del-cusco/alejandra-bernuy--sol-del-cusco--2--graphic-design--packaging-design--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
+          alt="Sol del Cusco project"
+          loading="lazy"
+        />
+        <div class="grid-item-overlay">
+          <p class="item-title">Sol del Cusco</p>
+          <p class="item-category">Packaging Redesign</p>
+        </div>
+      </a>
 
-          <li class="work-page-grid-item">
-            <figure>
-              <img
-                src="assets/origem/alejandra-bernuy--origem--1--capstone-project--branding--packaging-design--illustration--graphic-design--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
-                width="1920"
-                height="1080"
-                class="rounded-large"
-                loading="lazy"
-                alt="Describe your project"
-              />
-            </figure>
-            <a href="#">
-              <div
-                class="project-details-overlay overlay rounded-large centered-text"
-              >
-                <h1 class="work-grid-project-title">Origem</h1>
-                <h4 class="work-grid-project-category">Capstone Project</h4>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </section>
+      <a href="hide-and-seek.html" class="grid-item">
+        <img
+          src="assets/hide-and-seek/alejandra-bernuy--hide-and-seek--5--illustration--character-design--storytelling--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes.png"
+          alt="Hide and Seek project"
+          loading="lazy"
+        />
+        <div class="grid-item-overlay">
+          <p class="item-title">Hide and Seek</p>
+          <p class="item-category">Character Illustration</p>
+        </div>
+      </a>
+
+      <a href="everyone-everywhere.html" class="grid-item">
+        <img
+          src="assets/project-3/alejandra-bernuy--everyone-everywhere--digital-product--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
+          alt="Everyone Everywhere project"
+          loading="lazy"
+        />
+        <div class="grid-item-overlay">
+          <p class="item-title">Everyone Everywhere</p>
+          <p class="item-category">
+            Digital Product · Game Design · Art Direction
+          </p>
+        </div>
+      </a>
+
+      <a href="#" class="grid-item">
+        <img
+          src="assets/origem/alejandra-bernuy--origem--1--capstone-project--branding--packaging-design--illustration--graphic-design--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
+          alt="Origem project"
+          loading="lazy"
+        />
+        <div class="grid-item-overlay">
+          <p class="item-title">Origem</p>
+          <p class="item-category">Capstone Project</p>
+        </div>
+      </a>
+
+      <a href="don't-cheat-yourself.html" class="grid-item">
+        <img
+          src="assets/project-5/alejandra-bernuy--don't-cheat-yourself--awareness-campaign--ai-misuse--advertising--illustration--storyboard--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
+          alt="Don't Cheat Yourself project"
+          loading="lazy"
+        />
+        <div class="grid-item-overlay">
+          <p class="item-title">Don't Cheat Yourself</p>
+          <p class="item-category">Advertising · Storyboarding · Awareness</p>
+        </div>
+      </a>
     </main>
 
-    <div id="myID" class="bottomMenu hide">
-      <a href="#">Back to top</a>
-    </div>
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        <h2 class="footer-cta">Let's chat?</h2>
+        <a href="mailto:alejandrabernuydesign@gmail.com" class="footer-email"
+          >alejandrabernuydesign@gmail.com</a
+        >
+      </div>
+      <div class="footer-right">
+        <a
+          href="https://www.instagram.com/a.bernuy_design/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/alejandra-bernuy-v/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a
+          href="https://www.behance.net/alejandrabernuy"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Behance"
+        >
+          <i class="fa-brands fa-behance"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Back to top -->
+    <a href="#top" class="back-to-top" id="backToTop">↑</a>
 
     <script>
-      myID = document.getElementById("myID");
-
-      var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 800) {
-          myID.className = "bottomMenu show";
-        } else {
-          myID.className = "bottomMenu hide";
-        }
-      };
-
-      window.addEventListener("scroll", myScrollFunc);
-    </script>
-    <ul class="footer-global">
-      <li class="footer-tagline">
-        <h2>Let's Connect!</h2>
-        <ul class="footer-socials-list">
-          <li class="footer-item">
-            <a href="mailto:alejandrabernuyvaldivia@gmail.com">Email</a>
-          </li>
-        </ul>
-      </li>
-      <li class="footer-highlights">
-        <h2>Awards & Recognition</h2>
-        <ul class="footer-awards-list">
-          <li class="footer-item">Dean’s List – 2022-2025</li>
-
-          <li class="footer-item">
-            <a
-              href="https://graphis.com/entry/102fc165-4e40-4bb5-9b94-558130fb186c"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Honourable Mention – Graphis New Talent Awards 2025</a
-            >
-          </li>
-        </ul>
-      </li>
-
-      <li class="footer-contact-social">
-        <h2>Contact & Social</h2>
-        <ul class="footer-socials-list">
-          <li class="footer-item">
-            <a
-              href="https://www.instagram.com/a.bernuy_design/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Insta</a
-            >
-          </li>
-          <li class="footer-item">
-            <a
-              href="https://www.linkedin.com/in/alejandra-bernuy-v/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >LinkedIn</a
-            >
-          </li>
-          <li class="footer-item">
-            <a
-              href="https://www.behance.net/alejandrabernuy"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Behance</a
-            >
-          </li>
-        </ul>
-      </li>
-
-      <li class="footer-full-width">
-        <p><a href="#top">Smooth scroll to the top</a></p>
-        <p class="footer-fineprint">
-          &copy; <span id="copyright-years">2020-</span>. Hand crafted with
-          <span class="heart">❤</span>
-          by Alejandra Bernuy.
-        </p>
-        <script>
-          document.getElementById("copyright-years").textContent +=
-            new Date().getFullYear();
-        </script>
-      </li>
-    </ul>
-    <div id="myID" class="bottomMenu hide">
-      <a href="project-2.html">Next Project</a>
-    </div>
-
-    <script>
-      myID = document.getElementById("myID");
-
-      var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 800) {
-          myID.className = "bottomMenu show";
-        } else {
-          myID.className = "bottomMenu hide";
-        }
-      };
-
-      window.addEventListener("scroll", myScrollFunc);
+      const btn = document.getElementById("backToTop");
+      window.addEventListener("scroll", () => {
+        btn.classList.toggle("visible", window.scrollY > 600);
+      });
     </script>
   </body>
 </html>

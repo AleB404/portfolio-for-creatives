@@ -1,2031 +1,1268 @@
-/*
- * =============================================
- * PORTFOLIO FOR CREATIVES – MAIN STYLESHEET
- * =============================================
- * Author: James Neufeld
- * Version: 2.1 | Last Updated: April 13, 2025
- * License: GNU General Public License v3.0 (GPL-3.0)
- * https://www.gnu.org/licenses/gpl-3.0.en.html
- * 
- * CONTENTS:                    DESIGN SYSTEM:
- * 1. Base Styles               - Comprehensive color & font theming 🎨
- * 2. Typography                - Mobile-first responsive architecture 📱
- * 3. Layout Components
- * 4. Page Templates
- * 5. Responsive Breakpoints
- * =============================================
- */
+/* =============================================
+   ALEJANDRA BERNUY — PORTFOLIO STYLESHEET
+   =============================================
 
-/* 
-███████  ██████  ███    ██ ████████ ███████ 
-██      ██    ██ ████   ██    ██    ██      
-█████   ██    ██ ██ ██  ██    ██    ███████ 
-██      ██    ██ ██  ██ ██    ██         ██ 
-██       ██████  ██   ████    ██    ███████ 
-*/
+   TABLE OF CONTENTS
+   -----------------
+   1.  Design Tokens (CSS variables)
+   2.  Reset & Base
+   3.  Typography
+   4.  Shared: Navigation
+   5.  Shared: Footer
+   6.  Shared: Back-to-top Button
+   7.  Shared: Text Selection
+   8.  PAGE — Homepage  (index.html)
+       8a. Hero
+       8b. Portfolio Grid
+   9.  PAGE — About     (about.html)
+       9a. Top section (photo + intro)
+       9b. Bottom section (Experience / Education / Awards)
+   10. PAGE — 404 Error    (404.html)
+   11. PAGE — Project      (ritmovan.html + all project pages)
+   12. PAGE — Case Study   (everyone-everywhere.html)
+   13. Responsive / Media Queries
 
-/* ------------------------------- */
-/* 🌐 Google Fonts - Customize Your Site's Typography */
-/* You can add your own fonts here, but be mindful of performance */
-/* ------------------------------- */
+   ============================================= */
 
-/* TODO: Replace these Google Fonts with the ones you want to use on your site. */
-/* Remember, the more fonts you load, the longer it can take for your page to load. */
+/* =============================================
+   1. DESIGN TOKENS
+   ============================================= */
 
-/* Asap (for headers or special text) */
-@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap");
-
-/* Noto Sans (for headers or special text) */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-
-/* Rubik Font (clean and modern for body text) */
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap");
-
-/* Inter Font (great for readability and minimal design) */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-/*
-
-/* 
-██ ███    ███ ██████   ██████  ██████  ████████      ██████ ███████ ███████ 
-██ ████  ████ ██   ██ ██    ██ ██   ██    ██        ██      ██      ██      
-██ ██ ████ ██ ██████  ██    ██ ██████     ██        ██      ███████ ███████ 
-██ ██  ██  ██ ██      ██    ██ ██   ██    ██        ██           ██      ██ 
-██ ██      ██ ██       ██████  ██   ██    ██         ██████ ███████ ███████ 
-*/
-
-/* ------------------------------- */
-/* 🔗 Imported Stylesheets */
-/* These are external CSS files that add extra effects to your site. */
-/* ------------------------------- */
-
-/* TODO: Delete any stylesheets you don't plan to use on your site. */
-
-/* File for adding a glitch animation to your 404 error page */
-@import url("error.css");
-
-/* File for adding a scroll-to-top button or effect */
-@import url("scroll-to-top.css");
-
-/* 
-██    ██  █████  ██████  ██  █████  ██████  ██      ███████ ███████ 
-██    ██ ██   ██ ██   ██ ██ ██   ██ ██   ██ ██      ██      ██      
-██    ██ ███████ ██████  ██ ███████ ██████  ██      █████   ███████ 
- ██  ██  ██   ██ ██   ██ ██ ██   ██ ██   ██ ██      ██           ██ 
-  ████   ██   ██ ██   ██ ██ ██   ██ ██████  ███████ ███████ ███████ 
-*/
-
-/* ------------------------------- */
-/* 🎨 Theme Design Variables */
-/* Use CSS variables to quickly change your site's color scheme and typography */
-/* ------------------------------- */
-
-/* These design variables store important elements like colours and fonts.
-   You can easily change the look and feel of your site by adjusting these values. */
-
-/* TODO: Customize these variables to fit your design. You can add new ones or delete ones you don’t need. */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Molle:ital@1&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap");
 
 :root {
+  /* Colours */
+  --color-bg: #0a0a0a;
+  --color-text: #f0eaf5;
+  --color-purple: #ae9cff;
+  --color-pink: #ffa2a4;
+  --color-muted: rgba(240, 234, 245, 0.6);
+
   /* Typography */
-  --font-family-body: "Noto Sans", sans-serif;
-  --font-family-heading: "Asap", sans-serif;
-  --font-family-project-title: "Asap", sans-serif;
-  /* Core Colours */
-  --color-text-primary: #fff2f2;
-  --color-text-secondary: #333;
-  --color-accent-primary: #ff909a;
-  --color-accent-secondary: #ff057c;
-  --color-overlay-primary: #ff909a;
-  --color-highlight: lemonchiffon;
-  --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
-  /* Backgrounds */
-  --color-bg: #000000;
-  --color-bg-about: #000000;
-  --color-bg-footer: #000000;
-  --color-bg-holding-page: #ba9ded;
-  /* Headings */
-  --h1-color: #ff909a;
-  --h2-color: #ff909a;
-  --h3-color: #ff909a;
-  --h4-color: #ff909a;
-  --h5-color: #ff909a;
-  --h6-color: #ff909a;
-  /* Special Text Colours */
-  --color-text-holding-title: #fff2f2;
-  --color-text-project-category: #fff2f2;
-  --color-text-project-description: #fff2f2;
-  --color-text-project-sidebar: #fff2f2;
-  --color-text-project-title: #ff909a;
-  --color-text-work-grid-title: #fff2f2;
-  /* Link States */
-  --color-link: #ba9ded;
-  --color-link-hover: #ff909a;
-  --color-link-visited: #6d5596;
-  /* Navigation */
-  --color-nav-link: #fff2f2;
-  --color-nav-link-hover: #ba9ded;
-  --color-nav-arrow: #ba9ded;
-  --color-nav-arrow-hover: #000;
-  --color-nav-arrow-stroke: #5200ff;
-  --color-nav-arrow-stroke-hover: #000;
-  /* Components */
-  --color-bg-full-width: #f5f5f5;
-  --color-bg-project-description: #000000;
-  --color-bg-sidebar-project: orangered;
-  --color-bg-sidebar-work: lemonchiffon;
+  --font-serif: "IBM Plex Serif", Georgia, serif;
+  --font-script: "Molle", cursive;
+  --font-sans: "Open Sans", sans-serif;
 
-  /* Special Elements */
-  --color-icon-heart: darkred;
-  --color-text-holding-footer: #f8f8ff;
-  --color-bg-selection: #ba9ded;
-  --color-shadow-stroke: rgba(0, 0, 0, 0.4);
-  /* Assets */
-  --image-noise-texture: url(/assets/temp/noise.svg);
-  /* Animation Durations */
-  --duration-fast: 0.15s; /* Quick interactions (hover states) */
-  --duration-normal: 0.3s; /* Standard transitions (button clicks) */
-  --duration-slow: 0.75s; /* Prominent animations (page transitions) */
-  /* Rounded Corners */
-  --radius-sm: 0.5rem; /* Small interactive elements */
-  --radius-md: 1rem; /* Cards/containers */
-  --radius-lg: 2rem; /* Large decorative elements */
-  --radius-full: 50%; /* Circles/pills */
-  /* Padding Scale */
-  --padding-tiny: 0.5rem; /* Micro-spacing: icon padding, toggle switches */
-  --padding-small: 1rem; /* Compact spacing: mobile buttons, form tags */
-  --padding-medium: 2rem; /* Standard spacing: desktop buttons, card content */
-  --padding-large: 3rem; /* Section spacing: content blocks, banner padding */
-  --padding-jumbo: 4rem; /* Hero elements: full-width containers, page headers */
-  --padding-ultra: 8rem; /* Full-bleed spacing: edge-to-edge layouts, super-sized headers */
+  /* Spacing scale */
+  --gap-sm: 0.75rem;
+  --gap-md: 1.5rem;
+  --gap-lg: 3rem;
+  --gap-xl: 5rem;
+
+  /* Horizontal page padding per breakpoint */
+  --page-pad-mobile: 1.25rem;
+  --page-pad-tablet: 3rem;
+  --page-pad-desktop: 4rem;
 }
 
-/* Cursor base */
-#custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 32px;
-  height: 32px;
-  pointer-events: none;
-  z-index: 9999;
-  background: url("../assets/cursor/lilyrosen-cursor.svg") no-repeat center
-    center;
-  background-size: contain;
+/* =============================================
+   2. RESET & BASE
+   ============================================= */
 
-  transition: transform 0.5s ease, background-image 0s;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-/* On hover, swap image + scale */
-#custom-cursor.hover {
-  background-image: url("../assets/cursor/lilyrosen-cursor-hover.svg");
-  transform: translate(-50%, -50%) scale(1.4);
-}
-
-/* ======================
-   #BASE STYLES
-   ====================== */
-
-/* 
-███    ███  ██████  ██████  ██ ██      ███████     ███████ ██ ██████  ███████ ████████ 
-████  ████ ██    ██ ██   ██ ██ ██      ██          ██      ██ ██   ██ ██         ██    
-██ ████ ██ ██    ██ ██████  ██ ██      █████       █████   ██ ██████  ███████    ██    
-██  ██  ██ ██    ██ ██   ██ ██ ██      ██          ██      ██ ██   ██      ██    ██    
-██      ██  ██████  ██████  ██ ███████ ███████     ██      ██ ██   ██ ███████    ██    
-*/
-
-/* ------------------------------- */
-/* 📱 Responsive Design for Small Devices (Portrait Phones) */
-/* No media query needed for small devices like phones under 576px. This is the default in Bootstrap. */
-/* ------------------------------- */
-
-/* Add border-box sizing to make layout easier and enable smooth scrolling behavior */
-html {
-  box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
-  scroll-behavior: smooth; /* Adds smooth scrolling between sections */
-  /* Custom cursor (change the URL below to use your own) */
-
-  /* TODO: Replace the URL above to add a custom cursor. 
-     If you want to use the default browser cursor, just delete this line. */
-}
-
-/* Ensure all elements, including pseudo-elements, follow border-box sizing */
 *,
-*:before,
-*:after {
-  box-sizing: inherit; /* Inherits the border-box setting from the html tag */
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-family-body);
-  color: var(--color-text-primary);
-  background: var(--color-bg);
-  display: flex;
-  flex-direction: column;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-serif);
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ------------------------------- */
-/* 🖍️ Text Highlight Styles */
-/* This changes the background color when you highlight text (like when you click and drag to select it) */
-/* ------------------------------- */
-
-::selection {
-  background: var(
-    --color-bg-selection
-  ); /* Uses your custom color for highlighted text */
-}
-
-/* ---------------------------------------- */
-/* 🖼️ Responsive Image Styles */
-/* These styles make your images and icons look good on any screen size */
-/* ---------------------------------------- */
-
-/* Make all images and SVGs scale nicely */
 img,
 svg {
-  max-width: 100%; /* Keeps the image from getting too big */
-  height: auto; /* Keeps the image’s original proportions */
-  vertical-align: top; /* Removes little gaps under images (from line-height) */
-  object-fit: contain; /* Optional: Makes sure the whole image fits inside its box */
-  /* Try 'cover' if you want it to fill the space, or remove this line if not needed */
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* ---------------------------------------- */
-/* 🎨 Utility Classes for Styling Elements  */
-/* Use these helper classes to quickly apply 
-   common styles across your portfolio site */
-/* ---------------------------------------- */
-
-/* Optimal line length for readability (~60 characters) */
-.max-text-width {
-  max-width: 60ch;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Small interactive elements (buttons, inputs) */
-.rounded-small {
-  border-radius: var(--radius-sm);
+ul,
+ol {
+  list-style: none;
 }
 
-/* Default containers (cards, dropdowns) */
-.rounded-medium {
-  border-radius: var(--radius-md);
+/* =============================================
+   3. TYPOGRAPHY — global defaults
+   ============================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  line-height: 1.1;
 }
 
-/* Large decorative elements (modals, banners) */
-.rounded-large {
-  border-radius: var(--radius-lg);
+p {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.65;
 }
 
-/* Perfect circles (avatars, icons) */
-.rounded-full {
-  border-radius: var(--radius-full);
+em {
+  font-style: italic;
 }
 
-/* Horizontally centers a block element (must have a defined width) */
-.centered-block {
-  margin: 0 auto;
+strong {
+  font-weight: 600;
 }
 
-/* Centers your text (great for headings or buttons) */
-.centered-text {
+/* =============================================
+   4. SHARED — NAVIGATION
+   ============================================= */
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem var(--page-pad-mobile);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-bg);
+}
+
+.nav-logo img {
+  width: 2.5rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--color-pink);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-purple);
+}
+
+/* =============================================
+   5. SHARED — FOOTER
+   ============================================= */
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: var(--gap-lg) var(--page-pad-mobile) var(--gap-md); /* reduced top on mobile */
+  margin-top: var(--gap-md); /* tighter gap above footer on mobile */
+  flex-wrap: wrap;
+  gap: var(--gap-md);
+}
+
+.footer-cta {
+  font-family: var(--font-script);
+  font-size: clamp(2.75rem, 9vw, 5.5rem);
+  font-style: italic;
+  color: var(--color-purple);
+  line-height: 1;
+  margin-bottom: 0.6rem;
+}
+
+.footer-email {
+  font-family: var(--font-serif);
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-weight: 300;
+  color: var(--color-text);
+  transition: color 0.2s ease;
+}
+
+.footer-email:hover {
+  color: var(--color-purple);
+}
+
+.footer-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-right a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1.5px solid var(--color-text);
+  border-radius: 0.4rem;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.footer-right a:hover {
+  border-color: var(--color-purple);
+  color: var(--color-purple);
+}
+
+/* =============================================
+   6. SHARED — BACK TO TOP
+   ============================================= */
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--color-purple);
+  color: #fff;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 200;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+}
+
+/* =============================================
+   7. SHARED — TEXT SELECTION
+   ============================================= */
+
+::selection {
+  background: var(--color-purple);
+  color: #fff;
+}
+
+/* =============================================
+   8. PAGE — HOMEPAGE
+   ============================================= */
+
+/* 8a. Hero
+   ------------------------------------------ */
+
+.hero {
+  padding: 3rem var(--page-pad-mobile) 2rem;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* "Hello! I'm" */
+.hero-greeting {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 7vw, 5rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-purple);
+  line-height: 1.15;
+  margin-bottom: 0.05em;
+}
+
+/* "Alejandra" — oversized script */
+.hero-name {
+  font-family: var(--font-script);
+  font-size: clamp(4.5rem, 20vw, 14rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-purple);
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+  margin-left: -0.04em; /* optical alignment */
+}
+
+/* "a visual designer" — right-aligned, small */
+.hero-role {
+  font-family: var(--font-serif);
+  font-size: clamp(0.85rem, 2.2vw, 1.2rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-text);
+  text-align: right;
+  align-self: flex-end;
+  margin-top: 0.4rem;
+  opacity: 0.8;
+}
+
+/* 8b. Portfolio Grid
+   ------------------------------------------ */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* single column on mobile */
+  gap: var(--gap-sm);
+  padding: var(--gap-sm) var(--page-pad-mobile);
+  margin-top: var(--gap-sm);
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  display: block;
+  aspect-ratio: 4 / 3;
+  background: #111;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Overlay: hidden until hover */
+.grid-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(155, 127, 212, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1.25rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
   text-align: center;
 }
 
-/* Smooth transition when applying transformations – improves hover experience */
-.rotate {
-  transition: transform 0.3s ease;
+.grid-item:hover .grid-item-overlay,
+.grid-item:focus .grid-item-overlay {
+  opacity: 1;
 }
 
-/* Rotates the element slightly on hover – adds a playful effect */
-.rotate:hover {
-  transform: rotate(4deg);
+.grid-item:hover img {
+  transform: scale(1.04);
 }
 
-.padding-jumbo {
-  padding: var(--padding-tiny);
+.item-title {
+  font-family: var(--font-serif);
+  font-size: clamp(0.95rem, 2vw, 1.5rem);
+  font-weight: 600;
+  color: #fff;
 }
 
-/* Puts the box on its own line and adds space underneath */
-.margin-bottom {
-  display: block; /* Makes it a block so it stacks nicely */
-  margin-bottom: 1rem; /* Adds space below – helps with layout breathing room */
+.item-category {
+  font-family: var(--font-serif);
+  font-size: clamp(0.7rem, 1.4vw, 0.9rem);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.width-third,
-.width-two-thirds {
+/* =============================================
+   9. PAGE — ABOUT
+   ============================================= */
+
+.about-page {
+  padding: var(--gap-md) var(--page-pad-mobile);
+}
+
+/* 9a. Top section: photo + intro
+   ------------------------------------------ */
+
+.about-top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  margin-bottom: var(--gap-lg);
+}
+
+.about-photo-col {
+  flex: 0 0 auto;
+}
+
+.about-photo {
   width: 100%;
-}
-
-/* ---------------------------------------- */
-/* 🎥 Responsive Embedded Video Styles      */
-/* These styles keep your videos looking sharp and correctly sized on any device */
-/* ---------------------------------------- */
-
-/* The container holds the video and maintains a 16:9 aspect ratio */
-.project-video-container {
-  position: relative;
+  max-width: 380px;
+  border-radius: 0.5rem;
   overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (because 9 ÷ 16 = 0.5625) */
-  margin-bottom: 2rem;
 }
 
-.project-video-iframe {
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-intro-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  justify-content: flex-start;
+}
+
+/* "Nice to meet you!" */
+.about-heading {
+  font-family: var(--font-script);
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-purple);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.about-bio {
+  font-family: var(--font-serif);
+  font-size: clamp(0.88rem, 1.4vw, 1rem);
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--color-text);
+  max-width: 56ch;
+}
+
+/* 9b. Bottom section: Experience | Education + Awards
+   ------------------------------------------ */
+
+.about-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+}
+
+.about-section-col {
+  flex: 1;
+}
+
+/* Large pink serif headings: "Experience", "Education", "Awards" */
+.about-section-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.75rem, 7vw, 5rem);
+  font-weight: 600;
+  color: var(--color-pink);
+  line-height: 1;
+  margin-bottom: var(--gap-md);
+}
+
+.awards-heading {
+  margin-top: var(--gap-lg);
+}
+
+/* Entry list */
+.about-entries {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+.about-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.entry-date {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+.entry-role {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.45;
+}
+
+.entry-org {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-muted);
+  line-height: 1.4;
+}
+
+.about-award-link {
+  color: var(--color-text);
+  transition: color 0.2s ease;
+}
+
+.about-award-link:hover {
+  color: var(--color-purple);
+}
+
+/* =============================================
+   10. PAGE — 404 ERROR (404.html)
+   ============================================= */
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem var(--page-pad-mobile) 3rem;
+  min-height: 60vh;
+  gap: 0;
+}
+
+/* Mountain SVG illustration */
+.error-mountain {
+  width: min(420px, 88vw);
+  height: auto;
+  display: block;
+  margin-bottom: -0.25em; /* pull title up close under mountain */
+}
+
+/* "Oops!" — mixed fonts in one heading */
+.error-title {
+  font-size: clamp(4rem, 18vw, 9rem);
+  line-height: 1;
+  color: var(--color-purple);
+  margin-bottom: 1rem;
+}
+
+/* The leading "O" — Molle script */
+.error-title-O {
+  font-family: var(--font-script);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* "ops!" — IBM Plex Serif regular */
+.error-title-rest {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Subtitle line */
+.error-subtitle {
+  font-family: var(--font-serif);
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-pink);
+  max-width: 40ch;
+  line-height: 1.5;
+}
+
+/* =============================================
+   11. PAGE — PROJECT (all project pages)
+   =============================================
+
+   Structure per page:
+   .project-page              outer wrapper
+     .project-hero            title + tags + hero image
+     .project-overview        description paragraph + award link
+     .project-divider         thin rule
+     .project-section         alternating text | image rows
+     .project-section-solo    text-only section (no image)
+     .project-videos          video embed grid
+     .project-nav             prev / next arrows
+   ============================================= */
+
+.project-page {
+  padding: var(--gap-md) var(--page-pad-mobile);
+}
+
+/* ── Hero: title block + hero image stacked on mobile ── */
+
+.project-hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  margin-bottom: var(--gap-lg);
+}
+
+.project-hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+/* Project title — large, purple, serif */
+.project-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.75rem, 8vw, 5.5rem);
+  font-weight: 600;
+  color: var(--color-purple);
+  line-height: 1;
+}
+
+/* Subtitle — italic, muted */
+.project-subtitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-muted);
+  line-height: 1.3;
+}
+
+/* Tags row */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.project-tag {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-purple);
+  border: 1px solid var(--color-purple);
+  border-radius: 2rem;
+  padding: 0.3rem 0.85rem;
+  white-space: nowrap;
+}
+
+/* Hero image — full width, rounded */
+.project-hero-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.project-hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Overview: description + award ── */
+
+.project-overview {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-lg);
+  max-width: 72ch;
+}
+
+.project-description {
+  font-family: var(--font-sans);
+  font-size: clamp(0.92rem, 1.5vw, 1.05rem);
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--color-text);
+}
+
+.project-award-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--color-pink);
+  transition: color 0.2s ease;
+}
+
+.project-award-link:hover {
+  color: var(--color-purple);
+}
+
+/* ── Divider ── */
+
+.project-divider {
+  border: none;
+  border-top: 1px solid rgba(240, 234, 245, 0.12);
+  margin: var(--gap-lg) 0;
+}
+
+/* ── Content sections: text + image side by side ── */
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  margin-bottom: var(--gap-lg);
+}
+
+/* On desktop, reversed variant flips the column order */
+.project-section--reversed {
+  /* direction swap applied in media query below */
+}
+
+.project-section-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.project-section-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 600;
+  color: var(--color-pink);
+  line-height: 1.05;
+}
+
+.project-section-text p {
+  font-family: var(--font-sans);
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--color-text);
+  max-width: 52ch;
+}
+
+.project-section-image {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.project-section-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Solo text section (no image) ── */
+
+.project-section-solo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-lg);
+  max-width: 64ch;
+}
+
+.project-section-solo p {
+  font-family: var(--font-sans);
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--color-text);
+}
+
+/* ── Video embeds ── */
+
+.project-videos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  margin-bottom: var(--gap-lg);
+}
+
+.project-video-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #111;
+}
+
+.project-video-wrap iframe {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   border: none;
 }
 
-/* The iframe is absolutely positioned to fill the container */
-.responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
+/* ── Prev / Next navigation ── */
 
-/* ---------------------------------------- */
-/* 🧭 Responsive Navigation (Coming Soon)   */
-/* This section is in progress — you'll build a mobile-friendly nav bar here */
-/* ---------------------------------------- */
-
-.responsive-nav {
+.project-nav {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  background: lightblue;
-  padding: var(--padding-small);
+  align-items: center;
+  padding: var(--gap-md) 0;
+  border-top: 1px solid rgba(240, 234, 245, 0.12);
+  margin-top: var(--gap-lg);
 }
 
-/* ------------------------------------------------------------------ */
-/* 🔤 Global & Mobile Typography                                      */
-/* Heading styles that scale nicely for mobile-first, responsive sites */
-/* ------------------------------------------------------------------ */
-
-/* 
-████████ ██    ██ ██████   ██████   ██████  ██████   █████  ██████  ██   ██ ██    ██ 
-   ██     ██  ██  ██   ██ ██    ██ ██       ██   ██ ██   ██ ██   ██ ██   ██  ██  ██  
-   ██      ████   ██████  ██    ██ ██   ███ ██████  ███████ ██████  ███████   ████   
-   ██       ██    ██      ██    ██ ██    ██ ██   ██ ██   ██ ██      ██   ██    ██    
-   ██       ██    ██       ██████   ██████  ██   ██ ██   ██ ██      ██   ██    ██    
-*/
-
-/* Heading Styles (h1 - h6) */
-
-h1 {
-  font-size: 2.2rem;
-  font-family: var(--font-family-heading);
-  line-height: 1.2;
+.project-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
   font-weight: 600;
-  margin-bottom: 1rem;
-  color: var(--h1-color);
-}
-
-h2 {
-  font-size: 2rem;
-  font-family: var(--font-family-heading);
-  line-height: 1.2;
-  margin-bottom: 0.5rem;
-  color: var(--h2-color);
-}
-
-h3 {
-  font-size: 1.325rem;
-  font-family: var(--font-family-heading);
-  margin-bottom: 1rem;
-  line-height: 1.2;
-  color: var(--h3-color);
-}
-
-h4 {
-  font-size: 1.2rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  color: var(--h4-color);
-}
-
-h5 {
-  font-size: 1.1rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  color: var(--h5-color);
-}
-
-h6 {
-  font-size: 1rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  color: var(--h6-color);
-}
-
-/* ------------------------------------------------------------------ */
-/* 📝 Paragraph and Text Styles                                       */
-/* Base text styles for body copy, bold, italic, and fine print       */
-/* ------------------------------------------------------------------ */
-
-p {
-  font-size: 1.1rem;
-  font-weight: 400;
-  line-height: 1.65;
-  margin-bottom: 1rem;
-}
-
-strong {
-  font-weight: 700; /* Makes text bold */
-}
-
-em {
-  font-style: italic; /* Adds emphasis with italic style */
-}
-
-/* ------------------------------------------------------------------ */
-/* 🎨 Custom Class Styles for Headlines, Projects, and Highlights     */
-/* Use these utility classes to style key text elements across pages  */
-/* ------------------------------------------------------------------ */
-
-/* Main hero headline — usually sits in the intro section */
-.hero-headline {
-  color: var(--color-overlay-primary); /* Uses your brand's dominant color */
-  max-width: 40ch; /* Optimal line length for readability (~40 characters) */
-  text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
-  margin-inline: auto; /* Horizontally centers the text in its container */
-  font-size: 5.625rem;
-}
-
-/* Large project title — appears on individual project pages */
-.project-title {
-  margin-bottom: 2rem;
-}
-
-/* Only the H2 gets large title styling */
-.project-title h2 {
-  font-size: 3.625rem;
-  font-family: var(--font-family-project-title);
-  color: var(--color-text-project-title);
-  font-weight: 700; /* ← BOLD */
-}
-/* Normal paragraph styling */
-.project-title p {
-  color: var(--color-text-project-description);
-}
-
-/* Project description text — pairs with the project title */
-.project-description {
-  font-size: 1.225rem;
-  line-height: 1.2;
-  color: var(--color-text-project-description);
-  margin-bottom: 1rem;
-}
-
-/* 🧱 Full-width headings — useful in layouts that span edge-to-edge */
-.h1-full-width,
-.h2-full-width {
-  width: 100%;
-  padding: var(--padding-small);
-}
-
-/* ✨ Highlighted text — great for emphasis */
-.highlight-primary {
-  color: var(--color-accent-secondary);
-}
-
-.highlight-gradient {
-  background: var(--color-gradient-hero);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: bold;
-}
-
-/* 📂 Project grid title — used in grid view (like a portfolio gallery) */
-.work-grid-project-title {
-  font-size: 2.875rem;
-  color: var(--color-text-work-grid-title);
-}
-
-/* 🏷️ Project category label — displays the type or role of the project */
-.work-grid-project-category {
-  color: var(--color-text-project-category);
-}
-
-.project-subtitle {
-  font-size: 1.325rem;
-  line-height: 1.3;
-  font-weight: 400; /* ← REGULAR */
-  font-style: italic; /* ← ITALIC */
-  color: var(--color-text-project-title);
-  margin-bottom: 0.75rem;
-  opacity: 0.9;
-}
-
-.styled-list {
-  margin: 1rem 0;
-  padding-left: 1.4rem;
-  list-style-type: disc;
-  font-size: 1.1rem;
-  line-height: 1.65;
-}
-
-.styled-list li {
-  margin-bottom: 0.5rem;
-}
-
-.styled-list-about {
-  margin: 1rem 0;
-  padding-left: 1.4rem;
-  font-size: 1.1rem;
-  line-height: 1.65;
-}
-
-.styled-list-about li {
-  margin-bottom: 0.5rem;
-}
-
-/*
-
-
-
-██   ██ ██    ██ ██████  ███████ ██████  ██      ██ ███    ██ ██   ██ ███████ 
-██   ██  ██  ██  ██   ██ ██      ██   ██ ██      ██ ████   ██ ██  ██  ██      
-███████   ████   ██████  █████   ██████  ██      ██ ██ ██  ██ █████   ███████ 
-██   ██    ██    ██      ██      ██   ██ ██      ██ ██  ██ ██ ██  ██       ██ 
-██   ██    ██    ██      ███████ ██   ██ ███████ ██ ██   ████ ██   ██ ███████ 
-
-*/
-
-/* -------------------------------------------------------------------------- */
-/* 🔗 Hyperlink Styles — LVHFA                                                */
-/* LVHFA = Link, Visited, Hover, Focus, Active                                */
-/* These are the five main states a hyperlink can be in                       */
-/* -------------------------------------------------------------------------- */
-
-/* Unvisited link */
-a:link {
-  color: var(--color-link);
-  text-decoration: none; /* Removes underline */
-}
-
-/* Visited link — after a user clicks and returns */
-a:visited {
-  color: var(--color-link-visited);
-}
-
-/* Hover — when a user hovers their mouse over the link */
-a:hover {
-  color: var(--color-link-hover);
-}
-
-/* Focus — when a link is focused (keyboard navigation) */
-a:focus {
-  outline: 1px solid var(--color-accent-primary);
-}
-
-/* Active — when the link is actively being clicked or tapped */
-a:active {
-  color: var(--color-link-hover);
-  /* Useful for mobile tap interactions */
-}
-
-/* -------------------------------------------------------------------------- */
-/* 🧭 Hyperlink Class Styles                                                  */
-/* These are custom styles for specific types of navigation links             */
-/* -------------------------------------------------------------------------- */
-
-a.nav-link-primary {
-  color: var(--color-nav-link);
-}
-a.nav-link-primary:hover {
-  color: var(--color-nav-link-hover);
-}
-/* -------------------------------------------------------------------------- */
-/* 🧭 Previous & Next Project Navigation Arrows                               */
-/* These styles are for the left and right arrows used to move between       */
-/* individual project pages in your portfolio. Includes stroke effect styles.*/
-/* -------------------------------------------------------------------------- */
-
-/* Default and visited state for navigation arrows */
-
-.navigation-arrow:link,
-.navigation-arrow:visited {
-  color: var(--color-nav-arrow);
-}
-
-/* Hover and active (clicked) states — makes arrows feel interactive */
-.navigation-arrow:active,
-.navigation-arrow:hover {
-  color: var(--color-nav-arrow-hover);
-}
-
-/* 🖋️ Optional stroke effect for a bold, outlined arrow look */
-
-.stroke:link,
-.stroke:visited {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--color-nav-arrow-stroke);
-}
-
-.stroke:active,
-.stroke:hover {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--color-nav-arrow-stroke-hover);
-}
-
-/* 
-
-██   ██ ███████ ██████   ██████  
-██   ██ ██      ██   ██ ██    ██ 
-███████ █████   ██████  ██    ██ 
-██   ██ ██      ██   ██ ██    ██ 
-██   ██ ███████ ██   ██  ██████  
-                                 
-*/
-
-/* -------------------------------------------------------------------------- */
-/* 🦸 Hero Section Layout                                                     */
-/* Full-page intro area with logo, headline, icon, and footer nav            */
-/* Great place for first impression and personal branding                    */
-/* -------------------------------------------------------------------------- */
-
-.hero {
-  width: 100%;
-  min-height: 80vh; /* Takes up most of the screen height */
-  display: flex;
-  flex-direction: column;
-}
-.hero-header {
-  min-height: 4rem; /* Space reserved for logo + nav */
-}
-
-.nav-branding {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: var(--padding-small);
-  align-items: center;
-}
-
-.nav-branding-group-wrapper {
-  padding: var(--padding-small);
-}
-
-.nav-branding-group {
-  display: flex;
-  flex-direction: row;
-}
-.nav-branding-item {
-  padding: var(--padding-tiny);
-}
-
-.nav-branding-logo {
-  width: 3rem;
-  /* TODO: Adjust the width of the logo on mobile devices here */
-}
-
-.hero-headline-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  gap: 0.1rem;
-  align-items: left;
-  justify-content: center;
-  padding: var(--padding-small);
-  text-align: left; /* Keeps text centered */
-  width: 80%;
-}
-
-.hero-icon {
-  font-size: 4rem;
-}
-
-.hero-footer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-.hero-footer-navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: var(--padding-small);
-}
-
-/*
-
- ██████  ██████  ███    ███ ██████   ██████  ███    ██ ███████ ███    ██ ████████ ███████ 
-██      ██    ██ ████  ████ ██   ██ ██    ██ ████   ██ ██      ████   ██    ██    ██      
-██      ██    ██ ██ ████ ██ ██████  ██    ██ ██ ██  ██ █████   ██ ██  ██    ██    ███████ 
-██      ██    ██ ██  ██  ██ ██      ██    ██ ██  ██ ██ ██      ██  ██ ██    ██         ██ 
- ██████  ██████  ██      ██ ██       ██████  ██   ████ ███████ ██   ████    ██    ███████ 
-                                                                                          
-*/
-
-/* -------------------------------------------------------------------------- */
-/* 🔧 Full-Width Section Components                                             */
-/* These components create flexible, full-screen sections for your portfolio   */
-/* Perfect for highlighting key information and projects                      */
-/* -------------------------------------------------------------------------- */
-
-.full-width-section {
-  width: 100%;
-  min-height: 80vh; /* Takes up most of the screen height */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(
-    --color-bg-full-width
-  ); /* Background color for full-width sections */
-  margin-bottom: 1rem;
-}
-
-.full-width-headline-wrapper {
-  width: 100%;
-  min-height: 60vh; /* Ensures the headline takes up a good portion of the screen */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--padding-small);
-  text-align: center; /* Keeps the text centered */
-}
-
-.section-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: top;
-  justify-content: flex-start;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
-
-.section-item h2 {
-  font-size: 2rem; /* your default h2 size */
-  font-family: var(--font-family-heading);
-  color: var(var(--color-text-project-description)); /* white in your theme */
-  font-weight: 700; /* BOLD */
-  margin-bottom: 1rem;
-}
-
-/* Base stagger layout */
-.stagger {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-  margin: 1rem 0;
-}
-
-.stagger h2 {
-  font-size: 2rem; /* your default h2 size */
-  font-family: var(--font-family-heading);
-  color: var(var(--color-text-project-description)); /* white in your theme */
-  font-weight: 700; /* BOLD */
-  margin: 1;
-  line-height: 1.1;
-}
-
-/* Column container */
-.stagger-column {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  flex: 1;
-}
-
-/* Inner wrapper — this is what aligns vertically */
-.inner {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-/* Alignment utilities */
-.align-top .inner {
-  justify-content: flex-start;
-}
-
-.align-bottom .inner {
-  justify-content: flex-end;
-}
-
-/* Wrapper for arrow + content layout */
-.inner-with-arrow {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 0.75rem;
-}
-
-.arrow-col {
-  width: 2rem; /* fixed box width */
-  height: 2rem; /* fixed box height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto; /* prevent flex grow/shrink */
-}
-
-.arrow-col img {
-  width: 100% !important; /* force full container width */
-  height: 100% !important; /* force full container height */
-  object-fit: contain; /* preserve aspect ratio */
-  max-width: none !important; /* ignore inherited max-width */
-  max-height: none !important;
-  display: block;
-}
-
-/* Extra improvement for top section */
-.align-top .inner-with-arrow {
-  margin-top: 0;
-}
-
-/* Tags / categories */
-.project-content .tags {
-  opacity: 0;
-}
-
-.tag {
-  display: inline-block; /* shrink to fit text */
-  border: 1px solid var(--color-nav-link-hover);
-  color: var(--color-nav-link-hover);
-  padding: 0.5rem 1rem; /* adjust as needed */
-  border-radius: var(--radius-lg);
-  white-space: nowrap; /* optional: prevent text wrap inside tag */
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  color: var(--color-text);
+  transition: color 0.2s ease;
 }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap; /* allows multi-row layout */
-  gap: 0.75rem; /* spacing between tags */
-  max-width: 700px; /* optional: limit container width */
+.project-nav-link:hover {
+  color: var(--color-purple);
 }
 
-.top-padding-small {
-  padding-top: var(--padding-small);
+.project-nav-link--prev {
+  /* sits left naturally */
 }
 
-.bordered-figure {
-  border: 1px solid var(--color-text-primary);
-  border-radius: var(--radius-md); /* match your image radius */
-  overflow: hidden; /* makes image corners clip to the figure’s radius */
-  display: inline-block; /* makes border wrap tight */
+.project-nav-link--next {
+  margin-left: auto;
 }
 
-/* 
+/* =============================================
+   12. PAGE — CASE STUDY (everyone-everywhere.html)
+   =============================================
 
-██     ██  ██████  ██████  ██   ██     ██████   █████   ██████  ███████ 
-██     ██ ██    ██ ██   ██ ██  ██      ██   ██ ██   ██ ██       ██      
-██  █  ██ ██    ██ ██████  █████       ██████  ███████ ██   ███ █████   
-██ ███ ██ ██    ██ ██   ██ ██  ██      ██      ██   ██ ██    ██ ██      
- ███ ███   ██████  ██   ██ ██   ██     ██      ██   ██  ██████  ███████ 
+   New classes only — all shared project classes
+   (.project-hero, .project-section, etc.) still apply.
 
-*/
+   cs-video-hero      full-width autoplay intro video
+   cs-chapter-heading large purple chapter title
+   cs-cards           challenge + approach two-column cards
+   cs-list            bullet list inside cards
+   cs-full-image      edge-to-edge single image
+   cs-grid-2x2        2×2 mixed media grid
+   cs-video-wrap      16:9 iframe wrapper (shared inside cs- contexts)
+   cs-pair            two equal side-by-side images
+   cs-pillar          gameplay pillar row (text + asymmetric media)
+   ============================================= */
 
-/* -------------------------------------------------------------------------- */
-/* 🔲 Work Page Layout Components                                               */
-/* These styles create the layout for your work portfolio and project pages    */
-/* The goal is to showcase your projects and provide a responsive, clean UI  */
-/* -------------------------------------------------------------------------- */
-
-/* Work wrapper (takes up available space) */
-.main-work-section {
-  flex: 1;
+/* ── Full-width intro video ── */
+.cs-video-hero {
+  margin-bottom: var(--gap-lg);
 }
 
-/* Padding around work grid and project page */
-.portfolio,
-.project-wrapper,
-.work-sidebar-wrapper {
-  padding: var(
-    --padding-tiny
-  ); /* Padding to keep content from touching edges */
+/* ── Chapter heading ("Visual Identity") ── */
+.cs-chapter-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 600;
+  color: var(--color-purple);
+  line-height: 1;
+  margin-bottom: var(--gap-lg);
 }
 
-/* Work Sidebar on Mobile */
-.work-sidebar {
-  width: 100%;
-  background: var(
-    --color-bg-sidebar-work
-  ); /* Background color for the sidebar */
-}
-
-/* Main Work Area with Sidebar on Mobile */
-.work-details {
-  width: 100%;
-}
-
-/* Defining the work page grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Creates a responsive grid */
-  grid-gap: 1rem; /* Space between grid items */
-  /* The auto-fit and minmax() function help ensure responsiveness across screen sizes */
-}
-
-/* Individual Work Grid Item */
-.work-page-grid-item {
-  width: 100%;
-  height: auto;
-  position: relative; /* Needed to position the overlay */
-}
-
-/* Project container for background and padding */
-.project-container {
-  background: var(--color-accent-primary); /* Set project background color */
-  padding: var(--padding-medium);
-}
-
-/* Overlay (appears on hover) */
-.overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0; /* Initially invisible */
-  transition: var(--duration-slow) ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: var(--padding-small);
-  background-color: var(
-    --color-overlay-primary
-  ); /* Background color of the overlay */
-  transition: opacity var(--duration-normal), visibility var(--duration-normal);
-}
-
-/* Hover effect on work page grid items */
-.work-page-grid-item:hover .overlay {
-  visibility: visible; /* Make overlay visible on hover */
-  opacity: 0.8; /* Set opacity on hover */
-}
-
-/* Optional container for future overlay customization */
-.project-details-overlay {
-  /* Placeholder: no custom styles yet */
-}
-
-/*
-
-███████ ██ ██████  ███████ ██████   █████  ██████  
-██      ██ ██   ██ ██      ██   ██ ██   ██ ██   ██ 
-███████ ██ ██   ██ █████   ██████  ███████ ██████  
-     ██ ██ ██   ██ ██      ██   ██ ██   ██ ██   ██ 
-███████ ██ ██████  ███████ ██████  ██   ██ ██   ██ 
-                                                   
-                                                   
-*/
-
-/* -------------------------------------------------------------------------- */
-/* 🗂️ Sidebar Navigation Styles                                                 */
-/* This section contains styles for the sidebar navigation on the portfolio    */
-/* website. The aim is to create a simple and clean sidebar for better access. */
-/* -------------------------------------------------------------------------- */
-
-/* Sidebar navigation list styles */
-.sidebar-nav-list {
-  padding: var(--padding-small); /* Adds padding around the navigation list */
-}
-
-/* Individual navigation item styles */
-.sidebar-nav-item {
-  margin-bottom: 1rem; /* Space between each navigation item */
-}
-
-/* 
-
- █████  ██████   ██████  ██    ██ ████████ 
-██   ██ ██   ██ ██    ██ ██    ██    ██    
-███████ ██████  ██    ██ ██    ██    ██    
-██   ██ ██   ██ ██    ██ ██    ██    ██    
-██   ██ ██████   ██████   ██████     ██    
-                                           
-*/
-
-/* -------------------------------------------------------------------------- */
-/* 📚 About Page Grid Styles                                                   */
-/* These styles structure the layout of the "About" page using a grid system.  */
-/* The grid has 3 main sections: an image, text, and footer.                   */
-/* -------------------------------------------------------------------------- */
-
-/* Grid container for the About section */
-.about-grid {
-  display: grid; /* Set to grid layout */
-  grid-template-columns: 1fr; /* Single column layout for mobile and smaller screens */
-  grid-gap: 3rem; /* Space between grid items */
-  background: var(--color-bg-about); /* Background color for the section */
-  padding: var(--padding-small); /* Padding around the grid */
-  flex: 1; /* Flex-grow to take up available space */
-}
-
-/* Image section in the About page grid */
-.about-grid-image {
-  grid-column: 1 / 2; /* Image spans the first column */
-  grid-row: 1 / 2; /* Image spans the first row */
-}
-
-/* Text section in the About page grid */
-.about-grid-text {
-  grid-column: 1 / 2; /* Text spans the first column */
-  grid-row: 2 / 3; /* Text spans the second row */
-}
-.about-grid-text h2 {
-  font-weight: 700;
-}
-/* 
-
-███████  ██████   ██████  ████████ ███████ ██████  
-██      ██    ██ ██    ██    ██    ██      ██   ██ 
-█████   ██    ██ ██    ██    ██    █████   ██████  
-██      ██    ██ ██    ██    ██    ██      ██   ██ 
-██       ██████   ██████     ██    ███████ ██   ██ 
-                                                   
-*/
-
-/* -------------------------------------------------------------------------- */
-/* 📱 MOBILE FOOTER LAYOUT                                                    */
-/* Designed with mobile-first approach using CSS Grid                          */
-/* -------------------------------------------------------------------------- */
-
-.footer-global {
-  display: grid;
-  grid-template-columns: 1fr; /* Single column layout */
-  grid-gap: 3rem; /* Consistent spacing between sections */
-  min-height: auto; /* Allows footer to expand based on content, no fixed height */
-  background: var(--color-bg-footer); /* Using CSS variable for theming */
-  padding: var(--padding-small); /* Internal spacing */
-
-  /* Note: Using 'fr' units ensures proper scaling across devices */
-}
-
-/* -------------------------------------------------------------------------- */
-/* 🧩 FOOTER SECTION PLACEMENT                                                */
-/* Each component stacks vertically in mobile view                             */
-/* -------------------------------------------------------------------------- */
-
-.footer-tagline {
-  grid-column: 1 / 2; /* Full width (single column) */
-  grid-row: 1 / 2;
-}
-.footer-highlights {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
-.footer-contact-social {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-}
-/* -------------------------------------------------------------------------- */
-/* 🌊 FULL-WIDTH BOTTOM SECTION                                               */
-/* Typically used for copyright/legal information                             */
-/* -------------------------------------------------------------------------- */
-.footer-full-width {
-  grid-column: 1 / 2;
-  grid-row: 4 / 5;
-  text-align: center; /* Center copyright text */
-  align-self: end; /* Push to bottom */
-}
-
-/* ------------------------------- */
-/* 📜 Reusable footer list styles */
-/* ------------------------------- */
-.footer-list {
-  margin-bottom: 2rem;
-}
-.footer-awards-list {
-  margin-bottom: 2rem;
-}
-.footer-works-list {
-  margin-bottom: 2rem;
-}
-.footer-socials-list {
-  margin-bottom: 2rem;
-}
-
-/* -------------------------------------------------------------------------- */
-/* 📏 Footer Item Spacing                                                     */
-/* -------------------------------------------------------------------------- */
-
-/* Apply this class to ALL list items (awards, works, social, bullets) */
-.footer-item {
-  line-height: 1.2; /* Consistent line height for footer items to improve spacing */
-  margin-bottom: 0.25rem;
-}
-
-/* ------------------------------- */
-/* ▪️ Bullet List Style */
-/* Square bullets with compact spacing */
-/* ------------------------------- */
-
-.footer-bullet-list {
-  list-style-type: square;
-  list-style-position: inside;
-  margin-bottom: 1rem;
-}
-
-.footer-bullet-list .footer-item {
-  margin-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  text-indent: -0.5rem; /* Pulls text back toward bullet */
-}
-
-/* -------------------------------------------------------------------------- */
-/* ✨ Footer Special Elements                                                 */
-/* -------------------------------------------------------------------------- */
-
-/* Heart icon for copyright/love notes */
-.heart {
-  color: var(--color-icon-heart); /* Color for heart icon */
-}
-
-.footer-fineprint {
-  font-size: 0.875rem; /* Slightly smaller for disclaimers or captions */
-  color: var(--color-text-secondary); /* Themed color */
-}
-
-/* New item badges */
-.badge-new {
-  background: var(--color-highlight);
-  padding: 0.1rem;
-  font-size: 0.8125rem;
-  text-transform: uppercase;
-}
-
-/* -------------------------------------------------------------------------- */
-/* 🌐 MINIMAL FOOTER (ALTERNATIVE VERSION)                                    */
-/* A simpler alternative to the CSS Grid footer - ideal for beginners          */
-/* -------------------------------------------------------------------------- */
-
-.footer-global-wrapper {
-  padding: var(--padding-small);
-}
-
-/* 
-
-██████  ██████   ██████       ██ ███████  ██████ ████████     ██████   █████   ██████  ███████ 
-██   ██ ██   ██ ██    ██      ██ ██      ██         ██        ██   ██ ██   ██ ██       ██      
-██████  ██████  ██    ██      ██ █████   ██         ██        ██████  ███████ ██   ███ █████   
-██      ██   ██ ██    ██ ██   ██ ██      ██         ██        ██      ██   ██ ██    ██ ██      
-██      ██   ██  ██████   █████  ███████  ██████    ██        ██      ██   ██  ██████  ███████ 
-                                                                                               
-*/
-
-/* ---------------------------------------------------------------------------------- */
-/* Project Page Layout - This section contains the layout for project pages,         */
-/* including the project image, description, sidebar, and navigation arrows.         */
-/* ---------------------------------------------------------------------------------- */
-
-/* Wrapper for the main project section and sidebar */
-.project-wrapper,
-.work-sidebar-wrapper {
+/* ── Challenge / Approach cards ── */
+.cs-cards {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: var(--gap-md);
+  margin-bottom: var(--gap-lg);
 }
 
-/* Full-width wrapper for the project section */
-.project-wrapper-full-width {
-  width: 100%;
-  padding: var(--padding-small);
-}
-
-/* Container for the project content with full-width display */
-.project-full-width {
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-/* Sidebar Styles */
-.project-aside {
-  width: 100%;
-  padding: var(--padding-small);
-  display: flex;
-  flex-direction: column;
-  color: var(--color-text-project-sidebar);
-  background: var(--color-bg-sidebar-project);
-}
-
-/* Container for project images with center alignment */
-.project-image-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 1rem; /* Space below the image */
-}
-
-/* Container for project description */
-.project-description-container {
+.cs-card {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  flex-direction: column;
-  background: var(--color-bg-project-description);
-  width: 100%;
-  margin-bottom: 2rem; /* Space below the description */
+  gap: var(--gap-md);
+  padding: var(--gap-md);
+  border: 1px solid rgba(240, 234, 245, 0.1);
+  border-radius: 0.75rem;
 }
 
-/* Column styles for two-column layouts */
-.col-2 {
-  width: 100%;
-  margin-bottom: 2rem;
-}
-.big-idea {
-  width: 100%;
-  margin-top: 5rem;
+/* Second card gets a slightly dimmer bg to differentiate */
+.cs-card--bottom {
+  background: rgba(174, 156, 255, 0.04);
 }
 
-/* Project image styling */
-.project-image {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-/* Project details section */
-.project-details {
-  width: 100%;
-  padding: var(--padding-small);
-  background: var(
-    --color-gradient-project-details
-  ); /* TODO: Remove gradient background if you prefer a simpler design */
+.cs-card-arrow {
+  flex: 0 0 2rem;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.3rem;
 }
 
-/* Previous/Next Arrow Styles */
+.cs-card-arrow img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
-.project-navigation {
-  display: flex;
-  flex-direction: row;
+.cs-card-content {
   flex: 1;
-  align-items: flex-end;
-  justify-content: space-between;
-  width: 100%;
 }
 
-/* Styling for left and right arrows */
-.arrow-left,
-.arrow-right {
-  width: 50%;
-}
-.arrow-right {
-  text-align: right;
-}
-
-.arrow {
-  padding: 0;
-}
-
-/*
-
-██████  ██       ██████   ██████      ██ ██████  ███████ ███████ ██    ██ ███    ███ ███████ 
-██   ██ ██      ██    ██ ██          ██  ██   ██ ██      ██      ██    ██ ████  ████ ██      
-██████  ██      ██    ██ ██   ███   ██   ██████  █████   ███████ ██    ██ ██ ████ ██ █████   
-██   ██ ██      ██    ██ ██    ██  ██    ██   ██ ██           ██ ██    ██ ██  ██  ██ ██      
-██████  ███████  ██████   ██████  ██     ██   ██ ███████ ███████  ██████  ██      ██ ███████ 
-                                                                                             
-*/
-
-/* Blog and Resume page styles */
-
-.text-section {
-  width: 100%;
-  background: var(--color-bg);
-  padding: var(--padding-small);
-}
-.list-item {
-  line-height: 1.3;
-  list-style-type: disc;
-  margin-left: 1.2rem;
-}
-
-/* 
-
-██   ██  ██████  ██      ██████  ██ ███    ██  ██████  
-██   ██ ██    ██ ██      ██   ██ ██ ████   ██ ██       
-███████ ██    ██ ██      ██   ██ ██ ██ ██  ██ ██   ███ 
-██   ██ ██    ██ ██      ██   ██ ██ ██  ██ ██ ██    ██ 
-██   ██  ██████  ███████ ██████  ██ ██   ████  ██████  
-                                                       
-*/
-/* Holding page wrapper */
-.holding-page-wrapper {
+.cs-list {
+  margin-top: 0.75rem;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertically center logo */
-  align-items: center; /* horizontally center */
-  min-height: 100vh; /* full viewport height */
+  gap: 0.4rem;
+  padding-left: 1rem;
+  list-style: disc;
+}
+
+.cs-list li {
+  font-family: var(--font-sans);
+  font-size: clamp(0.88rem, 1.4vw, 1rem);
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+/* ── Full-width single image ── */
+.cs-full-image {
   width: 100%;
-  text-align: center;
-  padding: 2rem;
-  box-sizing: border-box;
-  background-color: var(
-    --color-bg-holding-page,
-    #ba9ded
-  ); /* fallback included */
-}
-
-/* Inner container for the logo/link */
-.holding-page-inner-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex-grow: 1; /* make sure it expands to fill available space */
-}
-
-/* Logo link */
-.holding-page-link {
-  display: inline-block;
-}
-
-/* Logo image */
-.holding-page-animation img {
-  display: block;
-  width: 250px; /* increase size */
-  max-width: 50vw; /* responsive max width */
-  height: auto;
-}
-
-/* Footer */
-.holding-page-footer {
-  width: 100%;
-  text-align: center;
-  margin-top: auto; /* keeps footer at the bottom */
-  padding-bottom: 1rem;
-}
-
-/* Footer text */
-.holding-page-copyright {
-  font-size: 0.8rem;
-  color: #000000; /* make it visible on purple bg */
-  margin: 0;
-}
-
-/*
-███████ ██████  ██████   ██████  ██████  
-██      ██   ██ ██   ██ ██    ██ ██   ██ 
-█████   ██████  ██████  ██    ██ ██████  
-██      ██   ██ ██   ██ ██    ██ ██   ██ 
-███████ ██   ██ ██   ██  ██████  ██   ██ 
-*/
-
-/* TODO: Customize your 404 Error Page */
-
-/* A great 404 page is a chance to leave a memorable impression when visitors land on a page that doesn't exist. Consider customizing this page to be more engaging, humorous, or on-brand with your site. Check out error.css for the gradient and glitch effect. */
-
-.error-headline-wrapper {
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  padding: var(--padding-small);
-  text-align: center;
-  margin: 0 auto;
-}
-
-.error-page-animation {
-  width: 25rem;
-}
-.error-page-title {
-  color: #ff909a;
-  font-weight: 700;
-  font-size: 7rem;
-}
-/*
-
-██████  ██       █████  ██    ██ 
-██   ██ ██      ██   ██  ██  ██  
-██████  ██      ███████   ████   
-██      ██      ██   ██    ██    
-██      ███████ ██   ██    ██    
-*/
-
-/* Play Page Styles
-––––––––––––––––––––––––––––––––––––––––––––––––––
-Custom styles specific to the "Play" page layout and content.
-
-✅ Masonry layout is defined separately in masonry.css  
-✅ Lightbox functionality is handled via Lightbox2 (in /lightbox2 folder)  
-✅ Rotate and other utility classes are already included in the base styles (this file)
-
-Use this section to style elements that are *unique to the Play page*.
-For common layout or effects, continue using the base utility classes
-to keep your styles reusable and consistent.
-*/
-
-.play-page {
-  /* Add page-specific layout or container styles here */
-}
-
-/*
-
-███████ ██   ██ ███████ ████████  ██████ ██   ██ ██████   ██████   ██████  ██   ██ 
-██      ██  ██  ██         ██    ██      ██   ██ ██   ██ ██    ██ ██    ██ ██  ██  
-███████ █████   █████      ██    ██      ███████ ██████  ██    ██ ██    ██ █████   
-     ██ ██  ██  ██         ██    ██      ██   ██ ██   ██ ██    ██ ██    ██ ██  ██  
-███████ ██   ██ ███████    ██     ██████ ██   ██ ██████   ██████   ██████  ██   ██ 
-
-*/
-
-/* Sketchbook Page Styles */
-
-.sketchbook-page {
-  display: grid;
-  place-items: center;
-}
-
-/*
-
-███    ███ ███████ ██████  ██  █████       ██████  ██    ██ ███████ ██████  ██ ███████ ███████ 
-████  ████ ██      ██   ██ ██ ██   ██     ██    ██ ██    ██ ██      ██   ██ ██ ██      ██      
-██ ████ ██ █████   ██   ██ ██ ███████     ██    ██ ██    ██ █████   ██████  ██ █████   ███████ 
-██  ██  ██ ██      ██   ██ ██ ██   ██     ██ ▄▄ ██ ██    ██ ██      ██   ██ ██ ██           ██ 
-██      ██ ███████ ██████  ██ ██   ██      ██████   ██████  ███████ ██   ██ ██ ███████ ███████ 
-
-*/
-
-/* Media Queries for Layout Adjustments */
-
-/* Medium devices (tablets, 768px and up) */
-
-@media (min-width: 768px) {
-  /* TODO: Adjust  layout for tablets */
-}
-
-/* Large devices (desktops, 992px and up) */
-
-/* Switch from mobile to desktop navigation */
-
-@media (min-width: 992px) {
-  /* TODO: Add or adjust styles here for large devices. */
-
-  .width-third {
-    width: 33.333%;
-  }
-  .width-two-thirds {
-    width: 66.666%;
-  }
-  .holding-page-title {
-    font-size: 2rem;
-  }
-
-  h1 {
-    font-size: 4.275rem;
-  }
-
-  h2 {
-    font-size: 2.25rem;
-  }
-
-  h3 {
-    font-size: 1.625rem;
-  }
-
-  .h1-full-width,
-  .h2-full-width {
-    width: 70%;
-    padding: var(--padding-small);
-  }
-  .padding-jumbo {
-    padding: var(--padding-jumbo);
-  }
-
-  .nav-branding-logo {
-    width: 5rem;
-    /* TODO: Adjust the width of the logo on large devices here. */
-  }
-
-  .nav-branding {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: var(--padding-jumbo);
-    align-items: center;
-  }
-
-  .hero {
-    min-height: 100vh;
-  }
-
-  .hero-headline {
-    font-size: 7.625rem;
-  }
-
-  .hero-headline-wrapper {
-    flex-direction: column;
-    padding-top: var(--padding-jumbo);
-    padding-bottom: var(--padding-jumbo);
-    padding-left: var(--padding-jumbo);
-    padding-right: var(--padding-jumbo);
-    width: 65%;
-  }
-  .error-headline-wrapper {
-    padding-top: var(--padding-small);
-    padding-bottom: var(--padding-small);
-    padding-left: var(--padding-ultra);
-    padding-right: var(--padding-ultra);
-  }
-
-  .error-404 {
-    font-size: 5rem;
-  }
-
-  /* Work Page Grid for Large Devices */
-
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 1rem;
-  }
-
-  /* Grayscale filter with full-colour on hover and tap */
-
-  .work-page-grid-item a.grayscale img {
-    filter: grayscale(100);
-  }
-
-  .work-page-grid-item > a.grayscale:active img,
-  .work-page-grid-item > a.grayscale:hover img {
-    filter: grayscale(0);
-  }
-
-  /* Padding around work grid and project page */
-
-  .portfolio,
-  .project-wrapper,
-  .work-sidebar-wrapper {
-    padding: var(--padding-jumbo);
-  }
-
-  /* Project Page Flex Direction on Large Devices */
-
-  .project-wrapper,
-  .work-sidebar-wrapper {
-    flex-direction: row;
-  }
-
-  /* Project Full Width Styles */
-
-  .project-wrapper-full-width {
-    padding: var(--padding-small) var(--padding-jumbo);
-  }
-
-  /* Sidebar on Large Devices */
-
-  .project-aside {
-    width: 35%;
-    height: 80vh;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 8rem;
-    padding-right: 2rem;
-  }
-
-  /* Main Project Image Area on Large Devices */
-
-  .project-details {
-    width: 65%;
-  }
-
-  .project-image-container,
-  .project-description-container {
-    flex-direction: row;
-    gap: 6rem;
-  }
-
-  .section-container {
-    width: 100%; /* Adjust this width for larger screens if needed */
-    flex-direction: row;
-    gap: 6rem;
-    padding-bottom: 2rem;
-    padding-top: 2rem;
-  }
-  .col-2 {
-    width: 100%;
-  }
-
-  .big-idea {
-    width: 50%;
-  }
-
-  .stagger {
-    flex-direction: row;
-    align-items: stretch;
-    gap: 2rem;
-    min-height: 400px;
-  }
-
-  .stagger-column {
-    width: 50%;
-  }
-
-  .inner {
-    height: 100%;
-  }
-
-  .project-navigation {
-    justify-content: flex-start;
-  }
-
-  /* About Page Grid for Large Devices */
-
-  .about-grid {
-    padding: var(--padding-jumbo);
-    grid-template-columns: 2fr 3fr;
-  }
-
-  .about-grid-image {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-  .about-grid-text {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-  }
-
-  /* ------------------------------- */
-  /* 🖥️ FOOTER GRID - DESKTOP LAYOUT */
-  /* ------------------------------- */
-
-  .footer-global {
-    padding-top: var(--padding-jumbo);
-    padding-right: var(--padding-jumbo);
-    padding-bottom: 0;
-    padding-left: var(--padding-jumbo);
-    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
-  }
-
-  /* Column 1: Tagline/Message */
-  .footer-tagline {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-
-  /* Column 2: Awards & Works */
-  .footer-highlights {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-  }
-
-  /* Column 3: Contact & Social */
-  .footer-contact-social {
-    grid-row: 1 / 2;
-    grid-column: 3 / 4;
-  }
-
-  /* ------------------------------- */
-  /* 📏 FULL-WIDTH BOTTOM SECTION */
-  /* ------------------------------- */
-  .footer-full-width {
-    grid-row: 2 / 3;
-    grid-column: 1 / 4; /* Spans all three columns */
-    text-align: center;
-    align-self: end; /* Aligns content to bottom */
-  }
-
-  /* Work Sidebar on Large Devices */
-
-  .work-sidebar {
-    width: 25%;
-    height: 80vh;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 1rem;
-  }
-
-  /* Main Work Area on Large Devices */
-
-  .work-details {
-    width: 75%;
-  }
-}
-
-/* X-Large devices (large desktops, 1200px and up)*/
-
-@media (min-width: 1200px) {
-  /* TODO: Add styles here for X-large devices. */
-
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  }
-}
-
-/* XX-Large devices (larger desktops, 1400px and up) */
-
-@media (min-width: 1400px) {
-  /* TODO: Add styles here for XX-large devices. */
-
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  }
-}
-
-@media (hover: none) and (pointer: coarse) {
-  #custom-cursor {
-    display: none !important;
-  }
-}
-
-/*
-
-███████ ██ ███    ██
-██      ██ ████   ██
-█████   ██ ██ ██  ██
-██      ██ ██  ██ ██
-██      ██ ██   ████
-                                              
-That’s a wrap, class! 🧑‍🎓✨
-
-*/
-
-/* 🎉 You made it to the end! */
-/* This is a great place to celebrate your progress, add Easter eggs, or leave notes for your future self. */
-/* Happy coding, and don’t forget to take breaks, stay hydrated, and share your work proudly. 💻✨🎨 */
-
-/* ----------------------------------------------
-   PLAY SECTION (Safe, Independent Grid)
----------------------------------------------- */
-
-.project-play-section {
-  background: var(--color-bg);
-  color: var(--color-text-project-description);
-  width: 100%;
-  padding-top: var(--padding-jumbo);
-  padding-bottom: var(--padding-jumbo);
-}
-
-/* Two-column layout */
-.play-two-column {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: var(--padding-jumbo);
-  align-items: start;
-}
-
-.play-text-block h2 {
-  color: var(--h2-color);
-  margin-bottom: var(--padding-small);
-  font-weight: 700; /* BOLD */
-}
-
-.play-text-block p {
-  max-width: 48ch;
-  line-height: 1.5;
-}
-
-/* NEW — asymmetric media layout */
-.play-media-grid-custom {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  column-gap: 2rem;
-  align-items: center;
-}
-
-/* Left column */
-.col-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* aligns cards to the RIGHT */
-  gap: 1.5rem;
-}
-
-/* Right column */
-.col-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertically centers the small card */
-}
-
-.play-card.large {
-  width: 100%;
-  max-width: 520px;
-}
-
-.play-card.medium {
-  width: 100%;
-  max-width: 420px;
-}
-
-.play-card.small {
-  width: 100%;
-  max-width: 260px;
-}
-.play-card.large,
-.play-card.medium,
-.play-card.small {
-  min-width: 160px; /* ensures they can’t shrink to nothing */
-}
-
-/* Media card wrapper */
-.play-card {
-  background: #000;
-  padding: 0;
-  border-radius: var(--radius-md);
+  border-radius: 0.5rem;
   overflow: hidden;
-  display: block;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin-bottom: var(--gap-lg);
 }
 
-.play-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-}
-
-/* Media elements */
-.play-card img,
-.play-card video {
+.cs-full-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: block;
   object-fit: cover;
-  display: block;
-  border-radius: inherit; /* ensures corners stay smooth */
 }
 
-/* Vimeo inside cards */
-.play-card .video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 ratio */
-  height: 0;
-  overflow: hidden;
-  border-radius: inherit;
-}
-
-.play-card iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: inherit; /* keeps the rounded corners */
-}
-/*/*/ /*/*/ /*
-/*/ /*/*/ /*/*
-/* VARIATION — Left column: medium + small, Right column: large */
-.play-media-grid-reverse {
-  display: grid;
-  grid-template-columns: 1fr 520px;
-  column-gap: 2rem;
-  align-items: center;
-}
-
-/* Left column: medium + small stacked, aligned right */
-.col-left-reverse {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* aligns media to the RIGHT */
-  gap: 1.5rem;
-}
-
-/* Right column: large card aligned left */
-.col-right-reverse {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* aligns media to the LEFT */
-  justify-content: center;
-}
-.col-right-reverse,
-.col-left-reverse {
-  min-width: 0; /* Allows proper grid shrink without collapse */
-}
-
-/* ----------------------------------------------
-   2×2 MEDIA GRID SECTION
----------------------------------------------- */
-
-.project-media-grid-section {
-  width: 100%;
-  padding-top: var(--padding-jumbo);
-  padding-bottom: var(--padding-jumbo);
-}
-
-/* 2×2 grid — equally spaced */
-.media-grid-2x2 {
+/* ── 2×2 media grid ── */
+.cs-grid-2x2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--padding-jumbo); /* same spacing as your existing grids */
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-lg);
 }
 
-/* card wrapper */
-.media-card {
-  display: block;
+.cs-grid-item {
+  border-radius: 0.5rem;
   overflow: hidden;
-  border-radius: var(--radius-md);
-  background: #000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  background: #111;
 }
 
-/* For images */
-.media-card img {
+.cs-grid-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* For Vimeo & video wrappers */
-.media-wrapper {
+/* ── Shared 16:9 video wrapper used inside case study ── */
+.cs-video-wrap {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 ratio */
-  height: 0;
+  padding-top: 56.25%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #111;
+}
+
+.cs-video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ── Equal pair of images ── */
+.cs-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-lg);
+}
+
+.cs-pair-item {
+  border-radius: 0.5rem;
   overflow: hidden;
 }
 
-.media-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+.cs-pair-item img {
   width: 100%;
   height: 100%;
-  border: 0;
-  border-radius: inherit;
+  object-fit: cover;
+  display: block;
 }
 
-/* ----------------------------------------------
-   MOBILE — unified responsive rules (single source of truth)
----------------------------------------------- */
-/* ----------------------------------------------
-   MOBILE — clean, unified rules
----------------------------------------------- */
-@media (max-width: 992px) {
-  /* 1. All play grids collapse into one column */
-  .project-play-section .play-two-column,
-  .project-play-section .play-media-grid,
-  .project-play-section .play-media-grid-reverse,
-  .project-play-section .play-media-grid-custom {
-    grid-template-columns: 1fr !important;
-    row-gap: 1.5rem !important; /* spacing between stacked left + right blocks */
+/* ── Gameplay pillars (Celebration / Education / Collaboration) ── */
+.cs-pillar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+  margin-bottom: var(--gap-xl);
+}
+
+.cs-pillar-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.cs-pillar-text p {
+  font-family: var(--font-sans);
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--color-text);
+  max-width: 52ch;
+}
+
+/* Media area: large video/image + side column of two smaller ones */
+.cs-pillar-media {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.cs-pillar-media-main {
+  /* takes most of the width on desktop */
+}
+
+.cs-pillar-media-side {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-sm);
+}
+
+.cs-pillar-media-mid,
+.cs-pillar-media-sm {
+  flex: 1;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.cs-pillar-media-mid img,
+.cs-pillar-media-sm img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =============================================
+   13. RESPONSIVE — MEDIA QUERIES
+   ============================================= */
+
+/* Tablet (640px+)
+   ------------------------------------------ */
+@media (min-width: 640px) {
+  /* Nav */
+  .site-nav {
+    padding: 1.75rem var(--page-pad-tablet);
   }
 
-  /* 2. Children become full-width blocks */
-  .project-play-section .play-two-column > *,
-  .project-play-section .play-media-grid > *,
-  .project-play-section .play-media-grid-reverse > *,
-  .project-play-section .play-media-grid-custom > * {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: block !important;
+  /* Homepage */
+  .hero {
+    padding: 4rem var(--page-pad-tablet) 2rem;
   }
 
-  /* 3. Inside each column, spacing between cards = 1.5rem */
-  .project-play-section .col-left,
-  .project-play-section .col-left-reverse,
-  .project-play-section .col-right,
-  .project-play-section .col-right-reverse {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 1.5rem !important; /* consistent spacing between multiple cards */
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns from tablet up */
+    padding: var(--gap-sm) var(--page-pad-tablet);
   }
 
-  /* 4. Fallback for older browsers (gap substitute) */
-  .project-play-section .col-left > .play-card,
-  .project-play-section .col-left-reverse > .play-card,
-  .project-play-section .col-right > .play-card,
-  .project-play-section .col-right-reverse > .play-card {
-    margin-bottom: 1.5rem;
+  /* Footer */
+  .site-footer {
+    padding: var(--gap-xl) var(--page-pad-tablet) var(--gap-md);
+    margin-top: var(--gap-lg);
   }
 
-  /* Remove fallback margin on last card */
-  .project-play-section .col-left > .play-card:last-child,
-  .project-play-section .col-left-reverse > .play-card:last-child,
-  .project-play-section .col-right > .play-card:last-child,
-  .project-play-section .col-right-reverse > .play-card:last-child {
-    margin-bottom: 0;
+  /* About */
+  .about-page {
+    padding: var(--gap-lg) var(--page-pad-tablet);
   }
 
-  /* 5. Single-card right columns — ensure they match the same spacing */
-  .project-play-section .col-right,
-  .project-play-section .col-right-reverse {
-    padding-top: 1.5rem !important; /* matches col-left gap exactly */
+  /* Photo + text side by side on tablet */
+  .about-top {
+    flex-direction: row;
+    align-items: flex-start;
   }
 
-  /* 6. Make play-cards scale nicely */
-  .project-play-section .play-card.large,
-  .project-play-section .play-card.medium,
-  .project-play-section .play-card.small {
-    width: 100% !important;
-    max-width: 100% !important;
+  .about-photo-col {
+    flex: 0 0 280px;
+  }
+
+  .about-photo {
+    max-width: 100%;
+  }
+  /* Project pages */
+  .project-page {
+    padding: var(--gap-lg) var(--page-pad-tablet);
+  }
+
+  .project-section {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--gap-lg);
+  }
+
+  .project-section--reversed {
+    flex-direction: row-reverse;
+  }
+
+  .project-section-text,
+  .project-section-image {
+    flex: 1;
+  }
+
+  .project-videos {
+    flex-direction: row;
+  }
+
+  .project-videos .project-video-wrap {
+    flex: 1;
+  }
+  /* Case study */
+  .cs-cards {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .cs-card {
+    flex: 1;
+  }
+}
+
+/* Desktop (1024px+)
+   ------------------------------------------ */
+@media (min-width: 1024px) {
+  /* Nav */
+  .site-nav {
+    padding: 2rem var(--page-pad-desktop);
+  }
+
+  .nav-logo img {
+    width: 3.25rem;
+  }
+
+  .nav-links {
+    gap: 2.5rem;
+  }
+
+  .nav-links a {
+    font-size: 0.88rem;
+  }
+
+  /* Homepage */
+  .hero {
+    padding: 5rem var(--page-pad-desktop) 3rem;
+  }
+
+  .portfolio-grid {
+    gap: 1rem;
+    padding: 1rem var(--page-pad-desktop);
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: var(--gap-xl) var(--page-pad-desktop) var(--gap-md);
+  }
+
+  /* About */
+  .about-page {
+    padding: var(--gap-lg) var(--page-pad-desktop);
+  }
+
+  .about-photo-col {
+    flex: 0 0 360px;
+  }
+
+  .about-top {
+    gap: var(--gap-lg);
+    margin-bottom: var(--gap-xl);
+  }
+
+  /* Experience and Education side by side on desktop */
+  .about-bottom {
+    flex-direction: row;
+    gap: var(--gap-xl);
+    align-items: flex-start;
+  }
+  /* Project pages */
+  .project-page {
+    padding: var(--gap-lg) var(--page-pad-desktop);
+  }
+
+  .project-hero {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--gap-xl);
+  }
+
+  .project-hero-text {
+    flex: 0 0 38%;
+    position: sticky;
+    top: 6rem; /* sticks while hero image scrolls */
+  }
+
+  .project-hero-image {
+    flex: 1;
+  }
+  /* Case study */
+  .cs-grid-2x2 {
+    gap: var(--gap-md);
+  }
+
+  .cs-pair {
+    gap: var(--gap-md);
+  }
+
+  /* Gameplay pillars: text 35% | media 65% side by side */
+  .cs-pillar {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--gap-xl);
+  }
+
+  /* Alt variant (Education): media left, text right */
+  .cs-pillar--alt {
+    flex-direction: row-reverse;
+  }
+
+  .cs-pillar-text {
+    flex: 0 0 32%;
+  }
+
+  .cs-pillar-media {
+    flex: 1;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  /* Alt media: side column left, main right */
+  .cs-pillar-media--alt {
+    flex-direction: row-reverse;
+  }
+
+  .cs-pillar-media-main {
+    flex: 1.4;
+  }
+
+  .cs-pillar-media-side {
+    flex: 1;
+    flex-direction: column;
+  }
+}
+
+/* Large desktop (1280px+)
+   ------------------------------------------ */
+@media (min-width: 1280px) {
+  .about-photo-col {
+    flex: 0 0 400px;
   }
 }
