@@ -8,17 +8,30 @@
     />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Reset -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Molle:ital@1&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Shared stylesheet -->
     <link rel="stylesheet" href="./styles/style.css" />
 
     <!-- Favicons -->
@@ -36,536 +49,460 @@
     <link rel="apple-touch-icon" href="assets/branding-images/newlogo.png" />
   </head>
 
-  <body class="project-1">
-    <header class="hero-header">
-      <ul class="nav-branding">
-        <!-- Logo (standalone LI) -->
-        <li class="nav-branding-logo">
-          <a href="index.html">
-            <img
-              src="assets/branding-images/newlogo.svg"
-              alt="Your portfolio logo"
-            />
-          </a>
-        </li>
-        <li class="nav-branding-item">
-          <ul class="nav-branding-group">
-            <li class="nav-branding-item">
-              <a href="work.html" class="nav-link-primary">Work</a>
-            </li>
-            <li class="nav-branding-item">
-              <a href="play.html" class="nav-link-primary">Play</a>
-            </li>
-            <li class="nav-branding-item">
-              <a href="about.html" class="nav-link-primary">About</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+  <body id="top">
+    <!-- ========== NAVIGATION ========== -->
+    <header class="site-nav">
+      <a href="index.html" class="nav-logo">
+        <img
+          src="assets/branding-images/newlogo.svg"
+          alt="Alejandra Bernuy logo"
+        />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="work.html">WORK</a></li>
+          <li><a href="play.html">PLAY</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </nav>
     </header>
-    <div class="project-wrapper-full-width">
-      <aside class="project-full-width">
-        <div class="project-description-container">
-          <div class="project-title col-2">
-            <h2>Everyone Everywhere</h2>
-            <h3 class="project-subtitle">Multiplayer Cultural Game</h3>
-            <p>
-              Everyone Everywhere brings people together by letting them
-              experience life from different cultural perspectives. Through fun
-              mini-games inspired by real-world challenges, children ages 7–10
-              learn how diverse traditions, customs, and social situations shape
-              everyday life, nurturing empathy and curiosity through play.
-            </p>
-            <p>
-              Designed by <em>Alejandra Bernuy</em> and
-              <a
-                href="https://www.behance.net/tannermcmahon1"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><em>Tanner McMahon</em></a
-              >
-            </p>
 
-            <ul class="tags top-padding-small">
-              <li class="tag">Digital Product</li>
-              <li class="tag">UI/UX</li>
-              <li class="tag">Game Design</li>
-              <li class="tag">Art Direction</li>
-              <li class="tag">Illustration</li>
+    <main class="project-page">
+      <!-- ════════════════════════════════════════
+           HERO — title + tags + hero image
+           ════════════════════════════════════════ -->
+      <section class="project-hero">
+        <div class="project-hero-text">
+          <h1 class="project-title">Everyone Everywhere</h1>
+          <p class="project-subtitle">Multiplayer Cultural Game</p>
+          <ul class="project-tags">
+            <li class="project-tag">Digital Product</li>
+            <li class="project-tag">UI / UX</li>
+            <li class="project-tag">Game Design</li>
+            <li class="project-tag">Art Direction</li>
+            <li class="project-tag">Illustration</li>
+          </ul>
+        </div>
+        <figure class="project-hero-image">
+          <img
+            src="assets/project-3/alejandra-bernuy--everyone-everywhere3--digital-product--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
+            alt="Everyone Everywhere — game interface"
+            width="1500"
+            height="1500"
+            loading="eager"
+          />
+        </figure>
+      </section>
+
+      <!-- ════════════════════════════════════════
+           OVERVIEW
+           ════════════════════════════════════════ -->
+      <section class="project-overview">
+        <p class="project-description">
+          Everyone Everywhere brings people together by letting them experience
+          life from different cultural perspectives. Through fun mini-games
+          inspired by real-world challenges, children ages 7–10 learn how
+          diverse traditions, customs, and social situations shape everyday
+          life, nurturing empathy and curiosity through play.
+        </p>
+        <p class="project-description">
+          Designed by <em>Alejandra Bernuy</em> and
+          <a
+            href="https://www.behance.net/tannermcmahon1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-award-link"
+            ><em>Tanner McMahon</em></a
+          >
+        </p>
+      </section>
+
+      <hr class="project-divider" />
+
+      <!-- ════════════════════════════════════════
+           HERO VIDEO — autoplay loop
+           ════════════════════════════════════════ -->
+      <div class="project-video-wrap cs-video-hero">
+        <iframe
+          src="https://player.vimeo.com/video/1141027066?autoplay=1&loop=1&muted=1&background=1"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          title="Everyone Everywhere — gameplay overview"
+        ></iframe>
+      </div>
+
+      <hr class="project-divider" />
+
+      <!-- ════════════════════════════════════════
+           CHANGE OF DIRECTION — text + gif
+           ════════════════════════════════════════ -->
+      <section class="project-section">
+        <div class="project-section-text">
+          <h2 class="project-section-heading">Change of direction</h2>
+          <p>
+            The project started as an app helping immigrants in Canada navigate
+            local social conventions. But research made us question its premise:
+            it asked newcomers to adapt without inviting others to do the same.
+            That insight shifted our vision. We reimagined it as a shared
+            experience that promotes understanding and celebrates cultural
+            diversity across the world.
+          </p>
+        </div>
+        <figure class="project-section-image">
+          <img
+            src="assets/project-3/alejandra-bernuy--everyone-everywhere--g1--digital-product--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate.gif"
+            alt="Everyone Everywhere — concept evolution"
+            width="1500"
+            height="1500"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+
+      <!-- ════════════════════════════════════════
+           CHALLENGE + APPROACH — two cards
+           ════════════════════════════════════════ -->
+      <section class="cs-cards">
+        <!-- Challenge -->
+        <div class="cs-card">
+          <div class="cs-card-arrow">
+            <img
+              src="assets/project-3/ee-orange-arrow.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
+          <div class="cs-card-content">
+            <h2 class="project-section-heading">Challenge</h2>
+            <ul class="cs-list">
+              <li>Limited understanding of experiences beyond one's own.</li>
+              <li>Language and cultural barriers create distance.</li>
+              <li>Existing tools focus on assimilation, not exchange.</li>
+              <li>Few inclusive spaces for cultural interaction.</li>
             </ul>
           </div>
-          <div class="section-item col-2">
-            <figure>
+        </div>
+        <!-- Our Approach -->
+        <div class="cs-card cs-card--bottom">
+          <div class="cs-card-arrow">
+            <img
+              src="assets/project-3/ee-green-arrow.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
+          <div class="cs-card-content">
+            <h2 class="project-section-heading">Our Approach</h2>
+            <ul class="cs-list">
+              <li>
+                Players explore diverse cultural perspectives through play.
+              </li>
+              <li>Non-verbal, collaborative gameplay builds connection.</li>
+              <li>Creates a playful, inclusive environment.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr class="project-divider" />
+
+      <!-- ════════════════════════════════════════
+           VISUAL IDENTITY heading
+           ════════════════════════════════════════ -->
+      <h2 class="cs-chapter-heading">Visual Identity</h2>
+
+      <!-- Moodboard -->
+      <section class="project-section-solo">
+        <h2 class="project-section-heading">Moodboard</h2>
+        <p>
+          We chose bright colours to evoke enthusiasm and reflect the game's
+          diversity.
+        </p>
+      </section>
+      <figure class="cs-full-image">
+        <img
+          src="assets/project-3/alejandra-bernuy--everyone-everywhere--mb--digital-product--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate.jpg"
+          alt="Everyone Everywhere — moodboard"
+          width="1920"
+          height="1080"
+          loading="lazy"
+        />
+      </figure>
+
+      <!-- Illustration style -->
+      <section class="project-section project-section--reversed">
+        <div class="project-section-text">
+          <h2 class="project-section-heading">Illustration style</h2>
+          <p>
+            Initially aiming for semi-realistic characters, we ultimately opted
+            for simplified, stylized, and memorable designs that support
+            personalization and fun, immersive animations.
+          </p>
+        </div>
+        <figure class="project-section-image">
+          <img
+            src="assets/project-3/alejandra-bernuy--everyone-everywhere--g2--digital-product--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate.gif"
+            alt="Everyone Everywhere — character illustration style"
+            width="1500"
+            height="1500"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+
+      <!-- 2×2 media grid -->
+      <section class="cs-grid-2x2">
+        <figure class="cs-grid-item">
+          <div class="cs-video-wrap">
+            <iframe
+              src="https://player.vimeo.com/video/1143350937?autoplay=1&loop=1&muted=1&background=1"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </figure>
+        <figure class="cs-grid-item">
+          <img
+            src="assets/project-3/alejandra-bernuy--everyone-everywhere--11--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
+            alt="Everyone Everywhere — UI screen"
+            loading="lazy"
+          />
+        </figure>
+        <figure class="cs-grid-item">
+          <img
+            src="assets/project-3/alejandra-bernuy--everyone-everywhere--10--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
+            alt="Everyone Everywhere — UI screen"
+            loading="lazy"
+          />
+        </figure>
+        <figure class="cs-grid-item">
+          <div class="cs-video-wrap">
+            <iframe
+              src="https://player.vimeo.com/video/1143356357?autoplay=1&loop=1&muted=1&background=1"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </figure>
+      </section>
+
+      <!-- Two side-by-side screenshots -->
+      <section class="cs-pair">
+        <figure class="cs-pair-item">
+          <img
+            src="assets/project-3/alejandra-bernuy--everyone-everywhere--2--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
+            alt="Everyone Everywhere — screen 2"
+            loading="lazy"
+          />
+        </figure>
+        <figure class="cs-pair-item">
+          <img
+            src="assets/project-3/alejandra-bernuy--everyone-everywhere--3--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
+            alt="Everyone Everywhere — screen 3"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+
+      <hr class="project-divider" />
+
+      <!-- ════════════════════════════════════════
+           GAMEPLAY PILLARS — Celebration / Education / Collaboration
+           Each: text left, asymmetric media right
+           ════════════════════════════════════════ -->
+
+      <!-- Celebration -->
+      <section class="cs-pillar">
+        <div class="cs-pillar-text">
+          <h2 class="project-section-heading">Celebration</h2>
+          <p>
+            Short mini-game rounds inspired by each country's culture,
+            traditions, and everyday life turn global differences into moments
+            of fun and discovery.
+          </p>
+        </div>
+        <div class="cs-pillar-media">
+          <div class="cs-pillar-media-main">
+            <div class="cs-video-wrap">
+              <iframe
+                src="https://player.vimeo.com/video/1143333437?autoplay=1&loop=1&muted=1&background=1"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                title="Celebration mini-game"
+              ></iframe>
+            </div>
+          </div>
+          <div class="cs-pillar-media-side">
+            <figure class="cs-pillar-media-mid">
               <img
-                src="assets/project-3/alejandra-bernuy--everyone-everywhere3--digital-product--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
-                width="1500"
-                height="1500"
-                alt="Your Photo"
-                class="rounded-medium"
+                src="assets/project-3/alejandra-bernuy--everyone-everywhere--4--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
+                alt="Celebration — screen 4"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="cs-pillar-media-sm">
+              <img
+                src="assets/project-3/alejandra-bernuy--everyone-everywhere--5--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
+                alt="Celebration — screen 5"
                 loading="lazy"
               />
             </figure>
           </div>
         </div>
-        <div class="project-description-container">
-          <ul class="project-navigation">
-            <li class="arrow-left">
-              <a href="sol-del-cusco.html" class="navigation-arrow"
-                ><i class="fa-sharp fa-solid fa-arrow-left fa-2x"></i
-              ></a>
-            </li>
-            <li class="arrow-right">
-              <a href="hide-and-seek.html" class="navigation-arrow"
-                ><i class="fa-sharp fa-solid fa-arrow-right fa-2x"></i
-              ></a>
-            </li>
-          </ul>
+      </section>
+
+      <!-- Education -->
+      <section class="cs-pillar cs-pillar--alt">
+        <div class="cs-pillar-text">
+          <h2 class="project-section-heading">Education</h2>
+          <p>
+            Players learn by doing. Each interactive mini-game invites them to
+            tap, move, and make choices as they explore different cultural
+            settings. With information kits available during and after gameplay,
+            every challenge becomes a chance for hands-on learning and deeper
+            cultural understanding.
+          </p>
         </div>
-      </aside>
-      <main class="project-full-width">
-        <div class="project-video-container">
-          <iframe
-            src="https://player.vimeo.com/video/1141027066?autoplay=1&loop=1&muted=1&background=1"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-            class="project-video-iframe rounded-medium"
-          >
-          </iframe>
-        </div>
-        <div class="section-container">
-          <div class="section-item h2 col-2">
-            <h2>Change of direction</h2>
-            <p>
-              The project started as an app helping immigrants in Canada
-              navigate local social conventions. But research made us question
-              its premise: it asked newcomers to adapt without inviting others
-              to do the same. That insight shifted our vision. We reimagined it
-              as a shared experience that promotes understanding and celebrates
-              cultural diversity across the world.
-            </p>
-          </div>
-          <div class="section-item col-2">
-            <figure>
+        <div class="cs-pillar-media cs-pillar-media--alt">
+          <div class="cs-pillar-media-side">
+            <figure class="cs-pillar-media-mid">
               <img
-                src="assets/project-3/alejandra-bernuy--everyone-everywhere--g1--digital-product--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate.gif"
-                width="1500"
-                height="1500"
-                alt="Your Photo"
-                class="rounded-medium"
+                src="assets/project-3/alejandra-bernuy--everyone-everywhere--6--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
+                alt="Education — screen 6"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="cs-pillar-media-sm">
+              <img
+                src="assets/project-3/alejandra-bernuy--everyone-everywhere--7--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
+                alt="Education — screen 7"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+          <div class="cs-pillar-media-main">
+            <div class="cs-video-wrap">
+              <iframe
+                src="https://player.vimeo.com/video/1143339679?autoplay=1&loop=1&muted=1&background=1"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                title="Education mini-game"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Collaboration -->
+      <section class="cs-pillar">
+        <div class="cs-pillar-text">
+          <h2 class="project-section-heading">Collaboration</h2>
+          <p>
+            Players work together to complete tasks, learning from each other
+            and depending on one another to succeed. Collaboration is emphasized
+            through team animations and interactive friend interactions, making
+            every contribution meaningful.
+          </p>
+        </div>
+        <div class="cs-pillar-media">
+          <div class="cs-pillar-media-main">
+            <div class="cs-video-wrap">
+              <iframe
+                src="https://player.vimeo.com/video/1143339763?autoplay=1&loop=1&muted=1&background=1"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                title="Collaboration mini-game"
+              ></iframe>
+            </div>
+          </div>
+          <div class="cs-pillar-media-side">
+            <figure class="cs-pillar-media-mid">
+              <img
+                src="assets/project-3/alejandra-bernuy--everyone-everywhere--8--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
+                alt="Collaboration — screen 8"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="cs-pillar-media-sm">
+              <img
+                src="assets/project-3/alejandra-bernuy--everyone-everywhere--9--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
+                alt="Collaboration — screen 9"
+                loading="lazy"
               />
             </figure>
           </div>
         </div>
-        <div class="stagger">
-          <!-- CHALLENGE (top-aligned) -->
-          <div class="stagger-column align-top">
-            <div class="inner">
-              <div class="inner-with-arrow">
-                <div class="arrow-col">
-                  <img src="assets/project-3/ee-orange-arrow.svg" alt="arrow" />
-                </div>
+      </section>
 
-                <div>
-                  <h2>Challenge</h2>
-                  <ul class="styled-list">
-                    <li>
-                      Limited understanding of experiences beyond one’s own.
-                    </li>
-                    <li>Language and cultural barriers create distance.</li>
-                    <li>Existing tools focus on assimilation, not exchange.</li>
-                    <li>Few inclusive spaces for cultural interaction.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+      <!-- ════════════════════════════════════════
+           PREV / NEXT
+           ════════════════════════════════════════ -->
+      <nav class="project-nav" aria-label="Project navigation">
+        <a
+          href="sol-del-cusco.html"
+          class="project-nav-link project-nav-link--prev"
+        >
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Previous</span>
+        </a>
+        <a
+          href="hide-and-seek.html"
+          class="project-nav-link project-nav-link--next"
+        >
+          <span>Next project</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </nav>
+    </main>
 
-          <!-- OUR APPROACH (bottom-aligned) -->
-          <div class="stagger-column align-bottom">
-            <div class="inner">
-              <div class="inner-with-arrow">
-                <div class="arrow-col">
-                  <img src="assets/project-3/ee-green-arrow.svg" alt="arrow" />
-                </div>
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        <h2 class="footer-cta">Let's chat?</h2>
+        <a href="mailto:alejandrabernuydesign@gmail.com" class="footer-email"
+          >alejandrabernuydesign@gmail.com</a
+        >
+      </div>
+      <div class="footer-right">
+        <a
+          href="https://www.instagram.com/a.bernuy_design/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/alejandra-bernuy-v/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a
+          href="https://www.behance.net/alejandrabernuy"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Behance"
+        >
+          <i class="fa-brands fa-behance"></i>
+        </a>
+      </div>
+    </footer>
 
-                <div>
-                  <h2>Our Approach</h2>
-                  <ul class="styled-list">
-                    <li>
-                      Players explore diverse cultural perspectives through
-                      play.
-                    </li>
-                    <li>
-                      Non-verbal, collaborative gameplay builds connection.
-                    </li>
-                    <li>Creates a playful, inclusive environment.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-description-container">
-          <div class="project-title col-2">
-            <h2>Visual Identity</h2>
-          </div>
-        </div>
-        <div class="project-description-container">
-          <div class="section-item h2 col-2">
-            <h2>Moodboard</h2>
-            <p>
-              We chose bright colours to evoke enthusiasm and reflect the game’s
-              diversity.
-            </p>
-          </div>
-        </div>
-        <figure class="project-image">
-          <img
-            src="assets/project-3/alejandra-bernuy--everyone-everywhere--mb--digital-product--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate.jpg"
-            width="1920"
-            height="1080"
-            loading="lazy"
-            alt="Describe your project"
-            class="rounded-medium"
-          />
-        </figure>
-        <div class="section-container">
-          <div class="section-item h2 col-2">
-            <h2>Illustration style</h2>
-            <p>
-              Initially aiming for semi-realistic characters, we ultimately
-              opted for simplified, stylized, and memorable designs that support
-              personalization and fun, immersive animations.
-            </p>
-          </div>
-          <div class="section-item col-2">
-            <figure>
-              <img
-                src="assets/project-3/alejandra-bernuy--everyone-everywhere--g2--digital-product--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate.gif"
-                width="1500"
-                height="1500"
-                alt="Your Photo"
-                class="rounded-medium"
-              />
-            </figure>
-          </div>
-        </div>
-        <section class="project-media-grid-section">
-          <div class="media-grid-2x2">
-            <!-- Item 1 -->
-            <figure class="media-card">
-              <div class="media-wrapper">
-                <iframe
-                  src="https://player.vimeo.com/video/1143350937?autoplay=1&loop=1&muted=1&background=1"
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </figure>
-
-            <!-- Item 2 -->
-            <figure class="media-card">
-              <img
-                src="assets/project-3/alejandra-bernuy--everyone-everywhere--11--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
-                alt="Example"
-              />
-            </figure>
-
-            <!-- Item 3 -->
-            <figure class="media-card">
-              <img
-                src="assets/project-3/alejandra-bernuy--everyone-everywhere--10--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
-                alt="Example"
-              />
-            </figure>
-
-            <!-- Item 4 -->
-            <figure class="media-card">
-              <div class="media-wrapper">
-                <iframe
-                  src="https://player.vimeo.com/video/1143356357?autoplay=1&loop=1&muted=1&background=1"
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </figure>
-          </div>
-        </section>
-
-        <div class="section-container">
-          <div class="section-item col-2">
-            <figure>
-              <img
-                src="assets/project-3/alejandra-bernuy--everyone-everywhere--2--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
-                width="1500"
-                height="1500"
-                alt="Your Photo"
-                class="rounded-medium"
-              />
-            </figure>
-          </div>
-          <div class="section-item col-2">
-            <figure>
-              <img
-                src="assets/project-3/alejandra-bernuy--everyone-everywhere--3--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
-                width="1500"
-                height="1500"
-                alt="Your Photo"
-                class="rounded-medium"
-              />
-            </figure>
-          </div>
-        </div>
-
-        <section class="project-play-section">
-          <div class="play-two-column">
-            <!-- LEFT COLUMN -->
-            <div class="play-text-block">
-              <h2>Celebration</h2>
-              <p>
-                Short mini-game rounds inspired by each country’s culture,
-                traditions, and everyday life turn global differences into
-                moments of fun and discovery.
-              </p>
-            </div>
-
-            <!-- RIGHT COLUMN -->
-            <div class="play-media-grid-custom">
-              <div class="col-left">
-                <figure class="play-card large">
-                  <div class="video-wrapper">
-                    <iframe
-                      src="https://player.vimeo.com/video/1143333437?autoplay=1&loop=1&muted=1&background=1"
-                      frameborder="0"
-                      allow="autoplay; fullscreen; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </figure>
-
-                <figure class="play-card medium">
-                  <img
-                    src="assets/project-3/alejandra-bernuy--everyone-everywhere--4--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
-                    width="1500"
-                    height="1500"
-                    alt="Your Photo"
-                    class="rounded-medium"
-                  />
-                </figure>
-              </div>
-
-              <div class="col-right">
-                <figure class="play-card small">
-                  <img
-                    src="assets/project-3/alejandra-bernuy--everyone-everywhere--5--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
-                    width="1500"
-                    height="1500"
-                    alt="Your Photo"
-                    class="rounded-medium"
-                  />
-                </figure>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="project-play-section">
-          <div class="play-two-column">
-            <!-- LEFT COLUMN -->
-            <div class="play-text-block">
-              <h2>Education</h2>
-              <p>
-                Players learn by doing. Each interactive mini-game invites them
-                to tap, move, and make choices as they explore different
-                cultural settings. With information kits available during and
-                after gameplay, every challenge becomes a chance for hands-on
-                learning and deeper cultural understanding.
-              </p>
-            </div>
-
-            <!-- RIGHT COLUMN -->
-            <div class="play-media-grid-reverse">
-              <!-- LEFT COLUMN: medium + small -->
-              <div class="col-left-reverse">
-                <figure class="play-card medium">
-                  <img
-                    src="assets/project-3/alejandra-bernuy--everyone-everywhere--6--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
-                    width="1500"
-                    height="1500"
-                    alt="Your Photo"
-                    class="rounded-medium"
-                  />
-                </figure>
-
-                <figure class="play-card small">
-                  <img
-                    src="assets/project-3/alejandra-bernuy--everyone-everywhere--7--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
-                    width="1500"
-                    height="1500"
-                    alt="Your Photo"
-                    class="rounded-medium"
-                  />
-                </figure>
-              </div>
-
-              <!-- RIGHT COLUMN: large -->
-              <div class="col-right-reverse">
-                <figure class="play-card large">
-                  <div class="video-wrapper">
-                    <iframe
-                      src="https://player.vimeo.com/video/1143339679?autoplay=1&loop=1&muted=1&background=1"
-                      frameborder="0"
-                      allow="autoplay; fullscreen; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </figure>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="project-play-section">
-          <div class="play-two-column">
-            <!-- LEFT COLUMN -->
-            <div class="play-text-block">
-              <h2>Collaboration</h2>
-              <p>
-                Players work together to complete tasks, learning from each
-                other and depending on one another to succeed. Collaboration is
-                emphasized through team animations and interactive friend
-                interactions, making every contribution meaningful.
-              </p>
-            </div>
-
-            <!-- RIGHT COLUMN -->
-            <div class="play-media-grid-custom">
-              <div class="col-left">
-                <figure class="play-card large">
-                  <div class="video-wrapper">
-                    <iframe
-                      src="https://player.vimeo.com/video/1143339763?autoplay=1&loop=1&muted=1&background=1"
-                      frameborder="0"
-                      allow="autoplay; fullscreen; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </figure>
-
-                <figure class="play-card medium">
-                  <img
-                    src="assets/project-3/alejandra-bernuy--everyone-everywhere--8--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
-                    width="1500"
-                    height="1500"
-                    alt="Your Photo"
-                    class="rounded-medium"
-                  />
-                </figure>
-              </div>
-
-              <div class="col-right">
-                <figure class="play-card small">
-                  <img
-                    src="assets/project-3/alejandra-bernuy--everyone-everywhere--9--game-design--art-direction--ui-ux--figma--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--2026--bdes.jpg"
-                    width="1500"
-                    height="1500"
-                    alt="Your Photo"
-                    class="rounded-medium"
-                  />
-                </figure>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-    <ul class="footer-global">
-      <li class="footer-tagline">
-        <h2>Let's Connect!</h2>
-        <ul class="footer-socials-list">
-          <li class="footer-item">
-            <a href="mailto:alejandrabernuyvaldivia@gmail.com">Email</a>
-          </li>
-        </ul>
-      </li>
-      <li class="footer-highlights">
-        <h2>Awards & Recognition</h2>
-        <ul class="footer-awards-list">
-          <li class="footer-item">Dean’s List – 2022-2025</li>
-
-          <li class="footer-item">
-            <a
-              href="https://graphis.com/entry/102fc165-4e40-4bb5-9b94-558130fb186c"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Honourable Mention – Graphis New Talent Awards 2025</a
-            >
-          </li>
-        </ul>
-      </li>
-
-      <li class="footer-contact-social">
-        <h2>Contact & Social</h2>
-        <ul class="footer-socials-list">
-          <li class="footer-item">
-            <a
-              href="https://www.instagram.com/a.bernuy_design/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Insta</a
-            >
-          </li>
-          <li class="footer-item">
-            <a
-              href="https://www.linkedin.com/in/alejandra-bernuy-v/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >LinkedIn</a
-            >
-          </li>
-          <li class="footer-item">
-            <a
-              href="https://www.behance.net/alejandrabernuy"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Behance</a
-            >
-          </li>
-        </ul>
-      </li>
-
-      <li class="footer-full-width">
-        <p><a href="#top">Smooth scroll to the top</a></p>
-        <p class="footer-fineprint">
-          &copy; <span id="copyright-years">2020-</span>. Hand crafted with
-          <span class="heart">❤</span>
-          by Alejandra Bernuy.
-        </p>
-        <script>
-          document.getElementById("copyright-years").textContent +=
-            new Date().getFullYear();
-        </script>
-      </li>
-    </ul>
-    <div id="myID" class="bottomMenu hide">
-      <a href="hide-and-seek.html">Next Project</a>
-    </div>
-
+    <a href="#top" class="back-to-top" id="backToTop">↑</a>
     <script>
-      myID = document.getElementById("myID");
-
-      var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 800) {
-          myID.className = "bottomMenu show";
-        } else {
-          myID.className = "bottomMenu hide";
-        }
-      };
-
-      window.addEventListener("scroll", myScrollFunc);
+      const btn = document.getElementById("backToTop");
+      window.addEventListener("scroll", () => {
+        btn.classList.toggle("visible", window.scrollY > 600);
+      });
     </script>
   </body>
 </html>

@@ -4,21 +4,34 @@
     <title>RitmoVan | Alejandra Bernuy</title>
     <meta
       name="description"
-      content="Branding, poster design, AR/AERO and social media for RitmoVan, a five-day Latin American festival bringing vibrant music and dance to Vancouver’s PNE Amphitheatre, Stanley Park, and Deer Lake Park."
+      content="Branding, poster design, AR/AERO and social media for RitmoVan, a five-day Latin American festival in Vancouver."
     />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Reset -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Molle:ital@1&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Shared stylesheet -->
     <link rel="stylesheet" href="./styles/style.css" />
 
     <!-- Favicons -->
@@ -36,254 +49,215 @@
     <link rel="apple-touch-icon" href="assets/branding-images/newlogo.png" />
   </head>
 
-  <body class="project-1">
-    <header class="hero-header">
-      <ul class="nav-branding">
-        <!-- Logo (standalone LI) -->
-        <li class="nav-branding-logo">
-          <a href="index.html">
-            <img
-              src="assets/branding-images/newlogo.svg"
-              alt="Your portfolio logo"
-            />
-          </a>
-        </li>
-        <li class="nav-branding-item">
-          <ul class="nav-branding-group">
-            <li class="nav-branding-item">
-              <a href="work.html" class="nav-link-primary">Work</a>
-            </li>
-            <li class="nav-branding-item">
-              <a href="play.html" class="nav-link-primary">Play</a>
-            </li>
-            <li class="nav-branding-item">
-              <a href="about.html" class="nav-link-primary">About</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+  <body id="top">
+    <!-- ========== NAVIGATION ========== -->
+    <header class="site-nav">
+      <a href="index.html" class="nav-logo">
+        <img
+          src="assets/branding-images/newlogo.svg"
+          alt="Alejandra Bernuy logo"
+        />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="work.html">WORK</a></li>
+          <li><a href="play.html">PLAY</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </nav>
     </header>
-    <div class="project-wrapper-full-width">
-      <aside class="project-full-width">
-        <div class="project-description-container">
-          <div class="project-title col-2">
-            <h2>RitmoVan</h2>
-            <h3 class="project-subtitle">Latin American Music Festival</h3>
-            <p>
-              RitmoVan is a five-day celebration of Latin American culture
-              bringing vibrant rhythms and dance to Vancouver’s PNE
-              Amphitheatre, Stanley Park, and Deer Lake. From salsa and cumbia
-              to rock, funk, and folklore, it unites Latin American communities
-              and music lovers across Metro Vancouver.
-            </p>
-            <p>
-              Graphis New Talent Awards 2025
-              <a
-                href="https://graphis.com/entry/102fc165-4e40-4bb5-9b94-558130fb186c"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Honorable Mention
-              </a>
-            </p>
 
-            <ul class="tags top-padding-small">
-              <li class="tag">Branding</li>
-              <li class="tag">Poster Design</li>
-              <li class="tag">AERO/AR</li>
-              <li class="tag">Social Media</li>
-            </ul>
-          </div>
-          <div class="section-item col-2">
-            <figure>
-              <img
-                src="assets/project-1/alejandra-bernuy--ritmo-van--2--graphic-design--poster-design--music-festival--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--graphis-honorable.jpg"
-                width="1500"
-                height="1500"
-                alt="Your Photo"
-                class="rounded-medium"
-                loading="lazy"
-              />
-            </figure>
-          </div>
-        </div>
-        <div class="project-description-container">
-          <ul class="project-navigation">
-            <li class="arrow-left">
-              <a href="#" class="navigation-arrow"
-                ><i class="fa-sharp fa-solid fa-arrow-left fa-2x"></i
-              ></a>
-            </li>
-            <li class="arrow-right">
-              <a href="sol-del-cusco.html" class="navigation-arrow"
-                ><i class="fa-sharp fa-solid fa-arrow-right fa-2x"></i
-              ></a>
-            </li>
+    <!-- ========== PROJECT PAGE ========== -->
+    <main class="project-page">
+      <!-- ── HERO: title + meta + hero image ── -->
+      <section class="project-hero">
+        <div class="project-hero-text">
+          <h1 class="project-title">RitmoVan</h1>
+          <p class="project-subtitle">Latin American Music Festival</p>
+
+          <!-- Tags -->
+          <ul class="project-tags">
+            <li class="project-tag">Branding</li>
+            <li class="project-tag">Poster Design</li>
+            <li class="project-tag">AERO / AR</li>
+            <li class="project-tag">Social Media</li>
           </ul>
         </div>
-      </aside>
-      <main class="project-full-width">
-        <div class="section-container">
-          <div class="section-item h2 col-2">
-            <h2>Ideation</h2>
-            <p>
-              Many posters representing Latin America use freeform or maximalist
-              layouts to evoke energy. To convey the same cultural vibrancy
-              within a structured composition, I employed a square grid system,
-              challenging myself to balance order with expressive design.
-            </p>
-          </div>
-          <div class="section-item col-2">
-            <figure>
-              <img
-                src="assets/project-1/alejandra-bernuy--ritmo-van--3--graphic-design--poster-design--music-festival--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--graphis-honorable.jpg"
-                width="1500"
-                height="1500"
-                alt="Your Photo"
-                class="rounded-medium"
-              />
-            </figure>
-          </div>
-        </div>
-        <div class="section-container">
-          <div class="section-item h2 col-2">
-            <h2>Process</h2>
-            <p>
-              Throughout the design process, I explored different typefaces and
-              compositions to balance expressiveness with legibility. I also
-              tested multiple colour palettes to capture Latin America’s vibrant
-              tones while introducing grounding hues for visual harmony.
-            </p>
-          </div>
-          <div class="section-item col-2">
-            <figure>
-              <img
-                src="assets/project-1/alejandra-bernuy--ritmo-van--4--graphic-design--poster-design--music-festival--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--graphis-honorable.jpg"
-                width="1500"
-                height="1500"
-                alt="Your Photo"
-                class="rounded-medium"
-              />
-            </figure>
-          </div>
-        </div>
 
-        <div class="project-description-container">
-          <div class="section-item h2 col-2">
-            <h2>Results</h2>
-            <p>
-              The final poster combines five typefaces reminiscent of Latin
-              American streetscapes and media with a six-colour palette that
-              conveys the vibrancy and dynamic spirit of the culture.
-            </p>
-          </div>
+        <figure class="project-hero-image">
+          <img
+            src="assets/project-1/alejandra-bernuy--ritmo-van--2--graphic-design--poster-design--music-festival--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--graphis-honorable.jpg"
+            alt="RitmoVan main poster"
+            width="1500"
+            height="1500"
+            loading="eager"
+          />
+        </figure>
+      </section>
+
+      <!-- ── OVERVIEW: description + award ── -->
+      <section class="project-overview">
+        <p class="project-description">
+          RitmoVan is a five-day celebration of Latin American culture bringing
+          vibrant rhythms and dance to Vancouver's PNE Amphitheatre, Stanley
+          Park, and Deer Lake. From salsa and cumbia to rock, funk, and
+          folklore, it unites Latin American communities and music lovers across
+          Metro Vancouver.
+        </p>
+        <p class="project-award">
+          <a
+            href="https://graphis.com/entry/102fc165-4e40-4bb5-9b94-558130fb186c"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-award-link"
+          >
+            <i class="fa-solid fa-award"></i>
+            Graphis New Talent Awards 2025 — Honorable Mention
+          </a>
+        </p>
+      </section>
+
+      <!-- ── DIVIDER ── -->
+      <hr class="project-divider" />
+
+      <!-- ── CONTENT SECTIONS ── -->
+
+      <!-- Ideation -->
+      <section class="project-section">
+        <div class="project-section-text">
+          <h2 class="project-section-heading">Ideation</h2>
+          <p>
+            Many posters representing Latin America use freeform or maximalist
+            layouts to evoke energy. To convey the same cultural vibrancy within
+            a structured composition, I employed a square grid system,
+            challenging myself to balance order with expressive design.
+          </p>
         </div>
-        <div class="project-video-container">
+        <figure class="project-section-image">
+          <img
+            src="assets/project-1/alejandra-bernuy--ritmo-van--3--graphic-design--poster-design--music-festival--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--graphis-honorable.jpg"
+            alt="RitmoVan ideation process"
+            width="1500"
+            height="1500"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+
+      <!-- Process -->
+      <section class="project-section project-section--reversed">
+        <div class="project-section-text">
+          <h2 class="project-section-heading">Process</h2>
+          <p>
+            Throughout the design process, I explored different typefaces and
+            compositions to balance expressiveness with legibility. I also
+            tested multiple colour palettes to capture Latin America's vibrant
+            tones while introducing grounding hues for visual harmony.
+          </p>
+        </div>
+        <figure class="project-section-image">
+          <img
+            src="assets/project-1/alejandra-bernuy--ritmo-van--4--graphic-design--poster-design--music-festival--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--graphis-honorable.jpg"
+            alt="RitmoVan design process"
+            width="1500"
+            height="1500"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+
+      <!-- Results (text only — videos below) -->
+      <section class="project-section-solo">
+        <h2 class="project-section-heading">Results</h2>
+        <p>
+          The final poster combines five typefaces reminiscent of Latin American
+          streetscapes and media with a six-colour palette that conveys the
+          vibrancy and dynamic spirit of the culture.
+        </p>
+      </section>
+
+      <!-- ── VIDEO EMBEDS ── -->
+      <div class="project-videos">
+        <div class="project-video-wrap">
           <iframe
             src="https://player.vimeo.com/video/1143346070?"
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowfullscreen
-            class="project-video-iframe rounded-medium"
-          >
-          </iframe>
+            title="RitmoVan — AR experience"
+          ></iframe>
         </div>
-        <div class="project-video-container">
+        <div class="project-video-wrap">
           <iframe
             src="https://player.vimeo.com/video/1143345634?"
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowfullscreen
-            class="project-video-iframe rounded-medium"
-          >
-          </iframe>
+            title="RitmoVan — social media"
+          ></iframe>
         </div>
-      </main>
-    </div>
-    <ul class="footer-global">
-      <li class="footer-tagline">
-        <h2>Let's Connect!</h2>
-        <ul class="footer-socials-list">
-          <li class="footer-item">
-            <a href="mailto:alejandrabernuyvaldivia@gmail.com">Email</a>
-          </li>
-        </ul>
-      </li>
-      <li class="footer-highlights">
-        <h2>Awards & Recognition</h2>
-        <ul class="footer-awards-list">
-          <li class="footer-item">Dean’s List – 2022-2025</li>
+      </div>
 
-          <li class="footer-item">
-            <a
-              href="https://graphis.com/entry/102fc165-4e40-4bb5-9b94-558130fb186c"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Honourable Mention – Graphis New Talent Awards 2025</a
-            >
-          </li>
-        </ul>
-      </li>
+      <!-- ── PREV / NEXT NAVIGATION ── -->
+      <nav class="project-nav" aria-label="Project navigation">
+        <a href="#" class="project-nav-link project-nav-link--prev">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Previous</span>
+        </a>
+        <a
+          href="sol-del-cusco.html"
+          class="project-nav-link project-nav-link--next"
+        >
+          <span>Next project</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </nav>
+    </main>
 
-      <li class="footer-contact-social">
-        <h2>Contact & Social</h2>
-        <ul class="footer-socials-list">
-          <li class="footer-item">
-            <a
-              href="https://www.instagram.com/a.bernuy_design/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Insta</a
-            >
-          </li>
-          <li class="footer-item">
-            <a
-              href="https://www.linkedin.com/in/alejandra-bernuy-v/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >LinkedIn</a
-            >
-          </li>
-          <li class="footer-item">
-            <a
-              href="https://www.behance.net/alejandrabernuy"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Behance</a
-            >
-          </li>
-        </ul>
-      </li>
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        <h2 class="footer-cta">Let's chat?</h2>
+        <a href="mailto:alejandrabernuydesign@gmail.com" class="footer-email"
+          >alejandrabernuydesign@gmail.com</a
+        >
+      </div>
+      <div class="footer-right">
+        <a
+          href="https://www.instagram.com/a.bernuy_design/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/alejandra-bernuy-v/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a
+          href="https://www.behance.net/alejandrabernuy"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Behance"
+        >
+          <i class="fa-brands fa-behance"></i>
+        </a>
+      </div>
+    </footer>
 
-      <li class="footer-full-width">
-        <p><a href="#top">Smooth scroll to the top</a></p>
-        <p class="footer-fineprint">
-          &copy; <span id="copyright-years">2020-</span>. Hand crafted with
-          <span class="heart">❤</span>
-          by Alejandra Bernuy.
-        </p>
-        <script>
-          document.getElementById("copyright-years").textContent +=
-            new Date().getFullYear();
-        </script>
-      </li>
-    </ul>
-    <div id="myID" class="bottomMenu hide">
-      <a href="sol-del-cusco.html">Next Project</a>
-    </div>
+    <!-- Back to top -->
+    <a href="#top" class="back-to-top" id="backToTop">↑</a>
 
     <script>
-      myID = document.getElementById("myID");
-
-      var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 800) {
-          myID.className = "bottomMenu show";
-        } else {
-          myID.className = "bottomMenu hide";
-        }
-      };
-
-      window.addEventListener("scroll", myScrollFunc);
+      const btn = document.getElementById("backToTop");
+      window.addEventListener("scroll", () => {
+        btn.classList.toggle("visible", window.scrollY > 600);
+      });
     </script>
   </body>
 </html>
