@@ -1,267 +1,311 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <title>Play Page | Alejandra Bernuy</title>
+    <title>Play | Alejandra Bernuy</title>
     <meta
       name="description"
-      content="A selection of my oil paintings created during middle and high school while studying at the National Superior Autonomous School of Fine Arts of Peru."
+      content="A selection of oil paintings created during middle and high school while studying at the National Superior Autonomous School of Fine Arts of Peru."
     />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:image" content="screenshot.jpg" />
+
+    <!-- Reset -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Molle:ital@1&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./styles/masonry.css" />
-    <link rel="stylesheet" href="./lightbox2/dist/css/lightbox.min.css" />
+
+    <!-- Shared stylesheet -->
     <link rel="stylesheet" href="./styles/style.css" />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      href="assets/branding-images/newlogo.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="alternate icon"
+      href="assets/branding-images/newlogo.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link rel="apple-touch-icon" href="assets/branding-images/newlogo.png" />
   </head>
 
-  <body class="play-page">
-    <header class="hero-header">
-      <ul class="nav-branding">
-        <!-- Logo (standalone LI) -->
-        <li class="nav-branding-logo">
-          <a href="index.html">
-            <img
-              src="assets/branding-images/newlogo.svg"
-              alt="Your portfolio logo"
-            />
-          </a>
-        </li>
-        <li class="nav-branding-item">
-          <ul class="nav-branding-group">
-            <li class="nav-branding-item">
-              <a href="work.html" class="nav-link-primary">Work</a>
-            </li>
-            <li class="nav-branding-item">
-              <a href="play.html" class="nav-link-primary">Play</a>
-            </li>
-            <li class="nav-branding-item">
-              <a href="about.html" class="nav-link-primary">About</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+  <body id="top">
+    <!-- ========== NAVIGATION ========== -->
+    <header class="site-nav">
+      <a href="index.html" class="nav-logo">
+        <img
+          src="assets/branding-images/newlogo.svg"
+          alt="Alejandra Bernuy logo"
+        />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="work.html">WORK</a></li>
+          <li><a href="play.html">PLAY</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main class="main-work-section">
-      <section class="portfolio">
-        <ul class="masonry-grid padding-jumbo">
-          <li class="masonry-item">
-            <a
-              href="assets/play/alejandra-bernuy--oil-painting--4--pet-portrait--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
-              data-lightbox="project-1"
-              data-title="Moncho Lannister"
-            >
-              <figure class="project-image border">
-                <img
-                  src="assets/play/alejandra-bernuy--oil-painting--4--pet-portrait--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
-                  width="800"
-                  height="1200"
-                  loading="lazy"
-                  class="rotate"
-                  alt="Cherry plant"
-                  title="Cherry plant"
-                />
-              </figure>
-            </a>
-          </li>
-
-          <li class="masonry-item">
-            <a
-              href="assets/play/alejandra-bernuy--oil-painting--3--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
-              data-lightbox="project-3"
-              data-title="Mained wolf"
-            >
-              <figure class="project-image border">
-                <img
-                  src="assets/play/alejandra-bernuy--oil-painting--3--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
-                  width="1072"
-                  height="657"
-                  loading="lazy"
-                  class="rotate"
-                  alt="Mained wolf"
-                  title="Mained wolf"
-                />
-              </figure>
-            </a>
-          </li>
-          <li class="masonry-item">
-            <a
-              href="assets/play/alejandra-bernuy--oil-painting--2--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
-              data-lightbox="project-4"
-              data-title="Blueberries"
-            >
-              <figure class="project-image border">
-                <img
-                  src="assets/play/alejandra-bernuy--oil-painting--2--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
-                  width="986"
-                  height="657"
-                  loading="lazy"
-                  class="rotate"
-                  alt="Blueberries"
-                  title="Blueberries"
-                />
-              </figure>
-            </a>
-          </li>
-
-          <li class="masonry-item">
-            <a
-              href="assets/play/alejandra-bernuy--oil-painting--1--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
-              data-lightbox="project-6"
-              data-title="Easter eggs"
-            >
-              <figure class="project-image border">
-                <img
-                  src="assets/play/alejandra-bernuy--oil-painting--1--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
-                  width="523"
-                  height="657"
-                  loading="lazy"
-                  class="rotate"
-                  alt="Easter eggs"
-                  title="Easter eggs"
-                />
-              </figure>
-            </a>
-          </li>
-          <li class="masonry-item">
-            <a
-              href="assets/play/alejandra-bernuy--oil-painting--5--pet-portrait--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
-              data-lightbox="project-7"
-              data-title="Lemons"
-            >
-              <figure class="project-image border">
-                <img
-                  src="assets/play/alejandra-bernuy--oil-painting--5--pet-portrait--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
-                  width="493"
-                  height="657"
-                  loading="lazy"
-                  class="rotate"
-                  alt="Lemons"
-                  title="Lemons"
-                />
-              </figure>
-            </a>
-          </li>
-
-          <li class="masonry-item">
-            <a
-              href="assets/play/alejandra-bernuy--oil-painting--6--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
-              data-lightbox="project-9"
-              data-title="Grapes"
-            >
-              <figure class="project-image border">
-                <img
-                  src="assets/play/alejandra-bernuy--oil-painting--6--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
-                  width="985"
-                  height="657"
-                  loading="lazy"
-                  class="rotate"
-                  alt="Grapes"
-                  title="Grapes"
-                />
-              </figure>
-            </a>
-          </li>
-        </ul>
-      </section>
-    </main>
-
-    <ul class="footer-global">
-      <li class="footer-tagline">
-        <h2>Let's Connect!</h2>
-        <ul class="footer-socials-list">
-          <li class="footer-item">
-            <a href="mailto:alejandrabernuyvaldivia@gmail.com">Email</a>
-          </li>
-        </ul>
-      </li>
-      <li class="footer-highlights">
-        <h2>Awards & Recognition</h2>
-        <ul class="footer-awards-list">
-          <li class="footer-item">Dean’s List – 2022-2025</li>
-
-          <li class="footer-item">
-            <a
-              href="https://graphis.com/entry/102fc165-4e40-4bb5-9b94-558130fb186c"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Honourable Mention – Graphis New Talent Awards 2025</a
-            >
-          </li>
-        </ul>
-      </li>
-
-      <li class="footer-contact-social">
-        <h2>Contact & Social</h2>
-        <ul class="footer-socials-list">
-          <li class="footer-item">
-            <a
-              href="https://www.instagram.com/a.bernuy_design/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Insta</a
-            >
-          </li>
-          <li class="footer-item">
-            <a
-              href="https://www.linkedin.com/in/alejandra-bernuy-v/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >LinkedIn</a
-            >
-          </li>
-          <li class="footer-item">
-            <a
-              href="https://www.behance.net/alejandrabernuy"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Behance</a
-            >
-          </li>
-        </ul>
-      </li>
-
-      <li class="footer-full-width">
-        <p><a href="#top">Smooth scroll to the top</a></p>
-        <p class="footer-fineprint">
-          &copy; <span id="copyright-years">2020-</span>. Hand crafted with
-          <span class="heart">❤</span>
-          by Alejandra Bernuy.
-        </p>
-        <script>
-          document.getElementById("copyright-years").textContent +=
-            new Date().getFullYear();
-        </script>
-      </li>
-    </ul>
-    <div id="myID" class="bottomMenu hide">
-      <a href="project-2.html">Next Project</a>
+    <!-- ========== PAGE INTRO ========== -->
+    <div class="play-intro">
+      <h1 class="play-heading">Play</h1>
+      <p class="play-subheading">
+        Oil paintings from my fine arts studies in Lima, Peru.
+      </p>
     </div>
 
+    <!-- ========== MASONRY GRID ========== -->
+    <main class="play-masonry" id="playGrid">
+      <button
+        class="play-item"
+        data-src="assets/play/alejandra-bernuy--oil-painting--4--pet-portrait--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
+        data-title="Moncho Lannister"
+        aria-label="Open Moncho Lannister"
+      >
+        <img
+          src="assets/play/alejandra-bernuy--oil-painting--4--pet-portrait--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
+          alt="Moncho Lannister"
+          loading="lazy"
+        />
+      </button>
+
+      <button
+        class="play-item"
+        data-src="assets/play/alejandra-bernuy--oil-painting--3--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
+        data-title="Maned Wolf"
+        aria-label="Open Maned Wolf"
+      >
+        <img
+          src="assets/play/alejandra-bernuy--oil-painting--3--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
+          alt="Maned Wolf"
+          loading="lazy"
+        />
+      </button>
+
+      <button
+        class="play-item"
+        data-src="assets/play/alejandra-bernuy--oil-painting--2--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
+        data-title="Avatar Landscape"
+        aria-label="Open Avatar Landscape"
+      >
+        <img
+          src="assets/play/alejandra-bernuy--oil-painting--2--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
+          alt="Avatar Landscape"
+          loading="lazy"
+        />
+      </button>
+
+      <button
+        class="play-item"
+        data-src="assets/play/alejandra-bernuy--oil-painting--1--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
+        data-title="Pirates of the Caribbean Sirens"
+        aria-label="Open Pirates of the Caribbean Sirens"
+      >
+        <img
+          src="assets/play/alejandra-bernuy--oil-painting--1--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
+          alt="Pirates of the Caribbean Sirens"
+          loading="lazy"
+        />
+      </button>
+
+      <button
+        class="play-item"
+        data-src="assets/play/alejandra-bernuy--oil-painting--5--pet-portrait--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
+        data-title="Chisguete Stark"
+        aria-label="Open Chisguete Stark"
+      >
+        <img
+          src="assets/play/alejandra-bernuy--oil-painting--5--pet-portrait--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
+          alt="Chisguete Stark"
+          loading="lazy"
+        />
+      </button>
+
+      <button
+        class="play-item"
+        data-src="assets/play/alejandra-bernuy--oil-painting--6--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
+        data-title="Landscape Study"
+        aria-label="Open Landscape Study"
+      >
+        <img
+          src="assets/play/alejandra-bernuy--oil-painting--6--fine-arts--illustration--multidisciplinary-idea-student-capilano--spanish-speaker--latin-american--burnaby--vancouver--bachelor-of-design-in-visual-commmunication-graduate--bdes--.jpg"
+          alt="Landscape Study"
+          loading="lazy"
+        />
+      </button>
+    </main>
+
+    <!-- ========== LIGHTBOX OVERLAY ========== -->
+    <div
+      class="lb-overlay"
+      id="lbOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image viewer"
+      hidden
+    >
+      <button class="lb-close" id="lbClose" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <button
+        class="lb-arrow lb-arrow--prev"
+        id="lbPrev"
+        aria-label="Previous image"
+      >
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <div class="lb-content">
+        <img class="lb-img" id="lbImg" src="" alt="" />
+        <p class="lb-caption" id="lbCaption"></p>
+      </div>
+      <button
+        class="lb-arrow lb-arrow--next"
+        id="lbNext"
+        aria-label="Next image"
+      >
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        <h2 class="footer-cta">Let's chat?</h2>
+        <a href="mailto:alejandrabernuydesign@gmail.com" class="footer-email"
+          >alejandrabernuydesign@gmail.com</a
+        >
+      </div>
+      <div class="footer-right">
+        <a
+          href="https://www.instagram.com/a.bernuy_design/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/alejandra-bernuy-v/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a
+          href="https://www.behance.net/alejandrabernuy"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Behance"
+        >
+          <i class="fa-brands fa-behance"></i>
+        </a>
+      </div>
+    </footer>
+
+    <a href="#top" class="back-to-top" id="backToTop">↑</a>
+
     <script>
-      myID = document.getElementById("myID");
+      /* ── Back to top ── */
+      const topBtn = document.getElementById("backToTop");
+      window.addEventListener("scroll", () => {
+        topBtn.classList.toggle("visible", window.scrollY > 600);
+      });
 
-      var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 800) {
-          myID.className = "bottomMenu show";
-        } else {
-          myID.className = "bottomMenu hide";
+      /* ── Lightbox ── */
+      (function () {
+        const items = Array.from(document.querySelectorAll(".play-item"));
+        const overlay = document.getElementById("lbOverlay");
+        const lbImg = document.getElementById("lbImg");
+        const lbCap = document.getElementById("lbCaption");
+        const closeBtn = document.getElementById("lbClose");
+        const prevBtn = document.getElementById("lbPrev");
+        const nextBtn = document.getElementById("lbNext");
+        let current = 0;
+
+        function open(index) {
+          current = index;
+          const item = items[current];
+          lbImg.src = item.dataset.src;
+          lbImg.alt = item.dataset.title;
+          lbCap.textContent = item.dataset.title;
+          overlay.hidden = false;
+          document.body.style.overflow = "hidden";
+          closeBtn.focus();
         }
-      };
 
-      window.addEventListener("scroll", myScrollFunc);
+        function close() {
+          overlay.hidden = true;
+          document.body.style.overflow = "";
+          items[current].focus();
+        }
+
+        function go(dir) {
+          open((current + dir + items.length) % items.length);
+        }
+
+        /* Open on click */
+        items.forEach((item, i) => {
+          item.addEventListener("click", () => open(i));
+        });
+
+        /* Controls */
+        closeBtn.addEventListener("click", close);
+        prevBtn.addEventListener("click", () => go(-1));
+        nextBtn.addEventListener("click", () => go(1));
+
+        /* Click backdrop to close */
+        overlay.addEventListener("click", (e) => {
+          if (e.target === overlay) close();
+        });
+
+        /* Keyboard */
+        document.addEventListener("keydown", (e) => {
+          if (overlay.hidden) return;
+          if (e.key === "Escape") close();
+          if (e.key === "ArrowLeft") go(-1);
+          if (e.key === "ArrowRight") go(1);
+        });
+
+        /* Touch swipe */
+        let touchX = 0;
+        overlay.addEventListener(
+          "touchstart",
+          (e) => {
+            touchX = e.touches[0].clientX;
+          },
+          { passive: true },
+        );
+        overlay.addEventListener(
+          "touchend",
+          (e) => {
+            const delta = touchX - e.changedTouches[0].clientX;
+            if (Math.abs(delta) > 40) go(delta > 0 ? 1 : -1);
+          },
+          { passive: true },
+        );
+      })();
     </script>
   </body>
 </html>

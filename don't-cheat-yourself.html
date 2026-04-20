@@ -1,5 +1,4 @@
-<!--To create a page for project 4, copy one of the previous project pages-->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Don't Cheat Yourself | Alejandra Bernuy</title>
@@ -9,17 +8,30 @@
     />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Reset -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Molle:ital@1&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Shared stylesheet -->
     <link rel="stylesheet" href="./styles/style.css" />
 
     <!-- Favicons -->
@@ -37,321 +49,290 @@
     <link rel="apple-touch-icon" href="assets/branding-images/newlogo.png" />
   </head>
 
-  <body class="project-1">
-    <header class="hero-header">
-      <ul class="nav-branding">
-        <!-- Logo (standalone LI) -->
-        <li class="nav-branding-logo">
-          <a href="index.html">
-            <img
-              src="assets/branding-images/newlogo.svg"
-              alt="Your portfolio logo"
-            />
-          </a>
-        </li>
-        <li class="nav-branding-item">
-          <ul class="nav-branding-group">
-            <li class="nav-branding-item">
-              <a href="work.html" class="nav-link-primary">Work</a>
-            </li>
-            <li class="nav-branding-item">
-              <a href="play.html" class="nav-link-primary">Play</a>
-            </li>
-            <li class="nav-branding-item">
-              <a href="about.html" class="nav-link-primary">About</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+  <body id="top">
+    <!-- ========== NAVIGATION ========== -->
+    <header class="site-nav">
+      <a href="index.html" class="nav-logo">
+        <img
+          src="assets/branding-images/newlogo.svg"
+          alt="Alejandra Bernuy logo"
+        />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="work.html">WORK</a></li>
+          <li><a href="play.html">PLAY</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </nav>
     </header>
-    <div class="project-wrapper-full-width">
-      <aside class="project-full-width">
-        <div class="project-description-container">
-          <div class="project-title col-2">
-            <h2>Don't Cheat Yourself</h2>
-            <h3 class="project-subtitle">Ai Misuse Awareness Campaign</h3>
-            <p>
-              A hypothetical advertising campaign concept for the Ministry of
-              Education and Child Care, designed to discourage AI misuse and
-              promote academic integrity among high school students aged 14 to
-              18.
-            </p>
-            <p>
-              Mentor:
-              <a
-                href="https://deanleecreative.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><em>Dean Lee</em></a
-              >
-              –
-              <a
-                href="https://www.zulualphakilo.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Zulu Alpha Kilo</a
-              >
-            </p>
 
-            <p>Mentee: <em>Alejandra Bernuy</em></p>
-            <ul class="tags top-padding-small">
-              <li class="tag">Branding</li>
-              <li class="tag">Advertising</li>
-              <li class="tag">Illustration</li>
-              <li class="tag">Storyboarding</li>
-              <li class="tag">Social Media</li>
-            </ul>
-          </div>
-          <div class="section-item col-2">
-            <figure>
-              <img
-                src="assets/project-5/alejandra-bernuy--don’t-cheat-yourself--1--awareness-campaign--ai-misuse--advertising--illustration--storyboard--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
-                width="1500"
-                height="1500"
-                alt="Your Photo"
-                class="rounded-medium"
-                loading="lazy"
-              />
-            </figure>
-          </div>
-        </div>
-        <div class="project-description-container">
-          <ul class="project-navigation">
-            <li class="arrow-left">
-              <a href="hide-and-seek.html" class="navigation-arrow"
-                ><i class="fa-sharp fa-solid fa-arrow-left fa-2x"></i
-              ></a>
-            </li>
-            <li class="arrow-right">
-              <a href="#" class="navigation-arrow"
-                ><i class="fa-sharp fa-solid fa-arrow-right fa-2x"></i
-              ></a>
-            </li>
+    <main class="project-page">
+      <!-- ════════════════════════════════════════
+           HERO
+           ════════════════════════════════════════ -->
+      <section class="project-hero">
+        <div class="project-hero-text">
+          <h1 class="project-title">Don't Cheat Yourself</h1>
+          <p class="project-subtitle">AI Misuse Awareness Campaign</p>
+          <ul class="project-tags">
+            <li class="project-tag">Branding</li>
+            <li class="project-tag">Advertising</li>
+            <li class="project-tag">Illustration</li>
+            <li class="project-tag">Storyboarding</li>
+            <li class="project-tag">Social Media</li>
           </ul>
         </div>
-      </aside>
-      <main class="project-full-width">
-        <div class="section-container">
-          <div class="section-item h2 col-2">
-            <h2>Brief Overview</h2>
-            <p>Client: BC Government - Ministry of Education and Child Care</p>
-          </div>
-          <div class="section-item col-2">
-            <div class="section-item h2 col-2">
-              <h3>Problem</h3>
-              <p>
-                Many students misuse AI tools for academic dishonesty due to a
-                lack of awareness about integrity policies or because they
-                undervalue certain courses. There is a need to educate them on
-                academic integrity and the consequences of AI misuse.
-              </p>
-              <h3>Ask</h3>
-              <p>
-                To address this issue, the Ministry will launch an awareness
-                campaign encouraging students to avoid cheating. The campaign
-                includes school talk sessions led by Ministry representatives,
-                covering proper AI use, the importance of academic integrity,
-                and time management strategies.
-              </p>
-              <h3>Deliverables</h3>
-              <ul class="styled-list">
-                <li>Video campaign</li>
-                <li>Three executions</li>
-                <li>30 second length</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="section-container">
-          <div class="section-item h2 col-2">
-            <h2>Why do students cheat?</h2>
-            <p>
-              To understand the core issue, we asked why students cheat in the
-              first place. Secondary research revealed that their behavior stems
-              from an education system that prioritizes grades over learning,
-              leading students to value performance more than understanding.
-            </p>
-          </div>
-          <figure class="bordered-figure">
-            <img
-              src="assets/project-5/alejandra-bernuy--don’t-cheat-yourself--2--awareness-campaign--ai-misuse--advertising--illustration--storyboard--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
-              width="1500"
-              height="1500"
-              alt="Your Photo"
-              class="rounded-medium"
-            />
-          </figure>
-        </div>
-        <div class="project-description-container">
-          <div class="project-title big-idea">
-            <h3>Big idea</h3>
-            <h2>
-              "When you cheat in school using AI, you are cheating yourself out
-              of an education"
-            </h2>
-            <p>
-              With this big idea we aimed to shift the focus back to valuing
-              learning over grades. It encourages students to see education as
-              personal growth rather than just performance.
-            </p>
-          </div>
-        </div>
-        <div class="section-container">
-          <div class="section-item h2 col-2">
-            <h2>Visual Metaphor</h2>
-            <ul class="styled-list">
-              <li>
-                A clone of you cheating you (in a game, sport, or talent show)
-                as a metaphor for cheating yourself.
-              </li>
-              <li>
-                Tie metaphor back to education and AI through initial dialog
-                that suggests cheating and supers.
-              </li>
-              <li>Use of school day-to-day scenarios</li>
-            </ul>
-          </div>
-          <div class="section-item col-2">
-            <figure>
-              <img
-                src="assets/project-5/alejandra-bernuy--don’t-cheat-yourself--6--awareness-campaign--ai-misuse--advertising--illustration--storyboard--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
-                width="1500"
-                height="1500"
-                alt="Your Photo"
-                class="rounded-medium"
-              />
-            </figure>
-          </div>
-        </div>
-        <div class="stagger">
-          <!-- TOP aligned image -->
-          <div class="stagger-column align-top">
-            <div class="inner">
-              <figure>
-                <img
-                  src="assets/project-5/alejandra-bernuy--don’t-cheat-yourself--3--awareness-campaign--ai-misuse--advertising--illustration--storyboard--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
-                  width="1500"
-                  height="1500"
-                  alt="Your Photo"
-                  class="rounded-medium"
-                />
-              </figure>
-            </div>
-          </div>
-
-          <!-- BOTTOM aligned image -->
-          <div class="stagger-column align-bottom">
-            <div class="inner">
-              <figure>
-                <img
-                  src="assets/project-5/alejandra-bernuy--don’t-cheat-yourself--4--awareness-campaign--ai-misuse--advertising--illustration--storyboard--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
-                  width="1500"
-                  height="1500"
-                  alt="Your Photo"
-                  class="rounded-medium"
-                />
-              </figure>
-            </div>
-          </div>
-        </div>
-
-        <figure class="project-image">
+        <figure class="project-hero-image">
           <img
-            src="assets/project-5/alejandra-bernuy--don’t-cheat-yourself--5--awareness-campaign--ai-misuse--advertising--illustration--storyboard--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
-            width="1920"
-            height="1080"
-            loading="lazy"
-            alt="Describe your project"
-            class="rounded-medium"
+            src="assets/project-5/alejandra-bernuy--don’t-cheat-yourself--1--awareness-campaign--ai-misuse--advertising--illustration--storyboard--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
+            alt="Don't Cheat Yourself — campaign hero"
+            width="1500"
+            height="1500"
+            loading="eager"
           />
         </figure>
-      </main>
-    </div>
-    <ul class="footer-global">
-      <li class="footer-tagline">
-        <h2>Let's Connect!</h2>
-        <ul class="footer-socials-list">
-          <li class="footer-item">
-            <a href="mailto:alejandrabernuyvaldivia@gmail.com">Email</a>
-          </li>
-        </ul>
-      </li>
-      <li class="footer-highlights">
-        <h2>Awards & Recognition</h2>
-        <ul class="footer-awards-list">
-          <li class="footer-item">Dean’s List – 2022-2025</li>
+      </section>
 
-          <li class="footer-item">
-            <a
-              href="https://graphis.com/entry/102fc165-4e40-4bb5-9b94-558130fb186c"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Honourable Mention – Graphis New Talent Awards 2025</a
-            >
-          </li>
-        </ul>
-      </li>
-
-      <li class="footer-contact-social">
-        <h2>Contact & Social</h2>
-        <ul class="footer-socials-list">
-          <li class="footer-item">
-            <a
-              href="https://www.instagram.com/a.bernuy_design/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Insta</a
-            >
-          </li>
-          <li class="footer-item">
-            <a
-              href="https://www.linkedin.com/in/alejandra-bernuy-v/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >LinkedIn</a
-            >
-          </li>
-          <li class="footer-item">
-            <a
-              href="https://www.behance.net/alejandrabernuy"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Behance</a
-            >
-          </li>
-        </ul>
-      </li>
-
-      <li class="footer-full-width">
-        <p><a href="#top">Smooth scroll to the top</a></p>
-        <p class="footer-fineprint">
-          &copy; <span id="copyright-years">2020-</span>. Hand crafted with
-          <span class="heart">❤</span>
-          by Alejandra Bernuy.
+      <!-- ════════════════════════════════════════
+           OVERVIEW
+           ════════════════════════════════════════ -->
+      <section class="project-overview">
+        <p class="project-description">
+          A hypothetical advertising campaign concept for the Ministry of
+          Education and Child Care, designed to discourage AI misuse and promote
+          academic integrity among high school students aged 14 to 18.
         </p>
-        <script>
-          document.getElementById("copyright-years").textContent +=
-            new Date().getFullYear();
-        </script>
-      </li>
-    </ul>
-    <div id="myID" class="bottomMenu hide">
-      <a href="#">Next Project</a>
-    </div>
+        <p class="project-description">
+          Mentor:
+          <a
+            href="https://deanleecreative.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-award-link"
+            ><em>Dean Lee</em></a
+          >
+          –
+          <a
+            href="https://www.zulualphakilo.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-award-link"
+            >Zulu Alpha Kilo</a
+          >
+          &nbsp;·&nbsp; Mentee: <em>Alejandra Bernuy</em>
+        </p>
+      </section>
 
+      <hr class="project-divider" />
+
+      <!-- ════════════════════════════════════════
+           BRIEF — three columns: overview | problem + ask | deliverables
+           ════════════════════════════════════════ -->
+      <section class="dcy-brief">
+        <div class="dcy-brief-col">
+          <h2 class="project-section-heading">Brief Overview</h2>
+          <p>Client: BC Government — Ministry of Education and Child Care</p>
+        </div>
+
+        <div class="dcy-brief-col">
+          <h3 class="dcy-brief-label">Problem</h3>
+          <p>
+            Many students misuse AI tools for academic dishonesty due to a lack
+            of awareness about integrity policies or because they undervalue
+            certain courses. There is a need to educate them on academic
+            integrity and the consequences of AI misuse.
+          </p>
+          <h3 class="dcy-brief-label">Ask</h3>
+          <p>
+            To address this issue, the Ministry will launch an awareness
+            campaign encouraging students to avoid cheating. The campaign
+            includes school talk sessions led by Ministry representatives,
+            covering proper AI use, the importance of academic integrity, and
+            time management strategies.
+          </p>
+        </div>
+
+        <div class="dcy-brief-col">
+          <h3 class="dcy-brief-label">Deliverables</h3>
+          <ul class="cs-list">
+            <li>Video campaign</li>
+            <li>Three executions</li>
+            <li>30 second length</li>
+          </ul>
+        </div>
+      </section>
+
+      <hr class="project-divider" />
+
+      <!-- ════════════════════════════════════════
+           WHY DO STUDENTS CHEAT — text + image
+           ════════════════════════════════════════ -->
+      <section class="project-section">
+        <div class="project-section-text">
+          <h2 class="project-section-heading">Why do students cheat?</h2>
+          <p>
+            To understand the core issue, we asked why students cheat in the
+            first place. Secondary research revealed that their behavior stems
+            from an education system that prioritizes grades over learning,
+            leading students to value performance more than understanding.
+          </p>
+        </div>
+        <figure class="project-section-image">
+          <img
+            src="assets/project-5/alejandra-bernuy--don’t-cheat-yourself--2--awareness-campaign--ai-misuse--advertising--illustration--storyboard--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
+            alt="Don't Cheat Yourself — research insight"
+            width="1500"
+            height="1500"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+
+      <!-- ════════════════════════════════════════
+           BIG IDEA — full-width pullquote
+           ════════════════════════════════════════ -->
+      <section class="dcy-big-idea">
+        <p class="dcy-big-idea-label">Big idea</p>
+        <blockquote class="dcy-big-idea-quote">
+          "When you cheat in school using AI, you are cheating yourself out of
+          an education"
+        </blockquote>
+        <p class="dcy-big-idea-body">
+          With this big idea we aimed to shift the focus back to valuing
+          learning over grades. It encourages students to see education as
+          personal growth rather than just performance.
+        </p>
+      </section>
+
+      <hr class="project-divider" />
+
+      <!-- ════════════════════════════════════════
+           VISUAL METAPHOR — text + image
+           ════════════════════════════════════════ -->
+      <section class="project-section project-section--reversed">
+        <div class="project-section-text">
+          <h2 class="project-section-heading">Visual Metaphor</h2>
+          <ul class="cs-list">
+            <li>
+              A clone of you cheating you (in a game, sport, or talent show) as
+              a metaphor for cheating yourself.
+            </li>
+            <li>
+              Tie metaphor back to education and AI through initial dialog that
+              suggests cheating and supers.
+            </li>
+            <li>Use of school day-to-day scenarios.</li>
+          </ul>
+        </div>
+        <figure class="project-section-image">
+          <img
+            src="assets/project-5/alejandra-bernuy--don’t-cheat-yourself--6--awareness-campaign--ai-misuse--advertising--illustration--storyboard--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
+            alt="Don't Cheat Yourself — visual metaphor"
+            width="1500"
+            height="1500"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+
+      <!-- ════════════════════════════════════════
+           STORYBOARD PAIR — offset images
+           ════════════════════════════════════════ -->
+      <section class="dcy-stagger">
+        <figure class="dcy-stagger-top">
+          <img
+            src="assets/project-5/alejandra-bernuy--don’t-cheat-yourself--3--awareness-campaign--ai-misuse--advertising--illustration--storyboard--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
+            alt="Don't Cheat Yourself — storyboard A"
+            width="1500"
+            height="1500"
+            loading="lazy"
+          />
+        </figure>
+        <figure class="dcy-stagger-bottom">
+          <img
+            src="assets/project-5/alejandra-bernuy--don’t-cheat-yourself--4--awareness-campaign--ai-misuse--advertising--illustration--storyboard--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
+            alt="Don't Cheat Yourself — storyboard B"
+            width="1500"
+            height="1500"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+
+      <!-- ════════════════════════════════════════
+           FULL-WIDTH FINAL IMAGE
+           ════════════════════════════════════════ -->
+      <figure class="cs-full-image">
+        <img
+          src="assets/project-5/alejandra-bernuy--don’t-cheat-yourself--5--awareness-campaign--ai-misuse--advertising--illustration--storyboard--multidisciplinary-idea-student-capilano--spanish-speaker--vancouver--burnaby--bachelor-of-design-in-visual-commmunication-graduate--bdes.jpg"
+          alt="Don't Cheat Yourself — final campaign visual"
+          width="1920"
+          height="1080"
+          loading="lazy"
+        />
+      </figure>
+
+      <!-- ════════════════════════════════════════
+           PREV / NEXT
+           ════════════════════════════════════════ -->
+      <nav class="project-nav" aria-label="Project navigation">
+        <a
+          href="hide-and-seek.html"
+          class="project-nav-link project-nav-link--prev"
+        >
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Previous</span>
+        </a>
+        <a href="#" class="project-nav-link project-nav-link--next">
+          <span>Next project</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </nav>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        <h2 class="footer-cta">Let's chat?</h2>
+        <a href="mailto:alejandrabernuydesign@gmail.com" class="footer-email"
+          >alejandrabernuydesign@gmail.com</a
+        >
+      </div>
+      <div class="footer-right">
+        <a
+          href="https://www.instagram.com/a.bernuy_design/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/alejandra-bernuy-v/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a
+          href="https://www.behance.net/alejandrabernuy"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Behance"
+        >
+          <i class="fa-brands fa-behance"></i>
+        </a>
+      </div>
+    </footer>
+
+    <a href="#top" class="back-to-top" id="backToTop">↑</a>
     <script>
-      myID = document.getElementById("myID");
-
-      var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 800) {
-          myID.className = "bottomMenu show";
-        } else {
-          myID.className = "bottomMenu hide";
-        }
-      };
-
-      window.addEventListener("scroll", myScrollFunc);
+      const btn = document.getElementById("backToTop");
+      window.addEventListener("scroll", () => {
+        btn.classList.toggle("visible", window.scrollY > 600);
+      });
     </script>
   </body>
 </html>
